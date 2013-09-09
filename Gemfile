@@ -5,9 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -36,3 +33,24 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'heroku'
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'sqlite3'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+end
