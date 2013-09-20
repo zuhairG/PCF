@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @performer.name %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @performer.twitter %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @performer.email %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @performer.bio %>
+</p>
+
+<p>
+  <b>Performer act:</b>
+  <%= @performer.performer_act_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_performer_path(@performer) %> |
+<%= link_to 'Back', performers_path %>

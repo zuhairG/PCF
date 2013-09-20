@@ -1,4 +1,19 @@
 PCF::Application.routes.draw do
+  resources :performers
+
+
+  resources :performer_acts
+
+
+  resources :acts
+
+
+  resources :venues
+
+
+  resources :events
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
