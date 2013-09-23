@@ -7,7 +7,8 @@
 
 <p>
   <b>Event:</b>
-  <%= @act.event_id %>
+  <% temp = @act.event_id %>
+  <%= Event.find(temp).name %>
 </p>
 
 <p>

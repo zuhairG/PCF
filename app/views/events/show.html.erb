@@ -7,17 +7,18 @@
 
 <p>
   <b>Venue:</b>
-  <%= @event.venue_id %>
+  <% temp = @event.venue_id %>
+  <%= Venue.find(temp).name %>
 </p>
 
 <p>
   <b>Start time:</b>
-  <%= @event.start_time %>
+  <%= @event.start_time.strftime('%l:%M %p') %>
 </p>
 
 <p>
   <b>End time:</b>
-  <%= @event.end_time %>
+  <%= @event.end_time.strftime('%l:%M %p') %>
 </p>
 
 <p>
@@ -28,6 +29,13 @@
 <p>
   <b>Date:</b>
   <%= @event.date %>
+</p>
+
+<p>
+  <b>Acts:</b>
+  <% @event.actslist.each do |act| %>
+    <%= act %>
+    <% end %>
 </p>
 
 

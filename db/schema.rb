@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130920015304) do
+ActiveRecord::Schema.define(:version => 20130923025142) do
 
   create_table "acts", :force => true do |t|
     t.string   "name"
@@ -23,16 +23,8 @@ ActiveRecord::Schema.define(:version => 20130920015304) do
     t.datetime "updated_at",       :null => false
   end
 
-  create_table "events", :force => true do |t|
-    t.string   "name"
-    t.integer  "venue_id"
-    t.time     "start_time"
-    t.time     "end_time"
-    t.string   "description"
-    t.date     "date"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+# Could not dump table "events" because of following StandardError
+#   Unknown type 'array' for column 'acts'
 
   create_table "performer_acts", :force => true do |t|
     t.integer  "act_id"
