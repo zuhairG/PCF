@@ -6,12 +6,16 @@ describe "events/index" do
       stub_model(Event,
         :name => "Name",
         :venue_id => 1,
-        :description => "Description"
+        :description => "Description",
+        :start_time => "15:21",
+        :end_time => "15:50"
       ),
       stub_model(Event,
         :name => "Name",
         :venue_id => 1,
-        :description => "Description"
+        :description => "Description",
+        :start_time => "15:21",
+        :end_time => "15:50"
       )
     ])
   end

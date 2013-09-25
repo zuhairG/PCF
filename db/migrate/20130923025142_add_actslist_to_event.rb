@@ -1,5 +1,5 @@
 class AddActslistToEvent < ActiveRecord::Migration
   def change
-    add_column :events, :actslist, :array
+    add_column :events, :actslist, :string
   end
 end

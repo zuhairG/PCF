@@ -5,7 +5,9 @@ describe "events/show" do
     @event = assign(:event, stub_model(Event,
       :name => "Name",
       :venue_id => 1,
-      :description => "Description"
+      :description => "Description",
+      :start_time => "15:21",
+      :end_time => "15:50"
     ))
   end
 

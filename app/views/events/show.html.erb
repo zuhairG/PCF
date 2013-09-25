@@ -7,8 +7,8 @@
 
 <p>
   <b>Venue:</b>
-  <% temp = @event.venue_id %>
-  <%= Venue.find(temp).name %>
+  <%= @event.venue_id %>
+  
 </p>
 
 <p>
@@ -33,9 +33,8 @@
 
 <p>
   <b>Acts:</b>
-  <% @event.actslist.each do |act| %>
-    <%= act %>
-    <% end %>
+  <%= @event.actslist%>
+    
 </p>
 
 

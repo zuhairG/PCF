@@ -16,8 +16,7 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <% temp =event.venue_id %>
-    <td><%= Venue.find(temp).name %></td>
+    <td><%= event.venue_id %></td>
     <td><%= event.start_time.strftime('%l:%M %p') %></td>
     <td><%= event.end_time.strftime('%l:%M %p') %></td>
     <td><%= event.description %></td>
