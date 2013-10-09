@@ -1,4 +1,9 @@
 <h1>Listing events</h1>
+<ul>
+	<li>All Events</li>
+	<li>Past Events</li>
+</ul>
+
 <% @event_date.sort.each do |date, events| %>
   <h2><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
@@ -7,7 +12,7 @@
  				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
-			    		<%= event.name %> 
+			    		<h5><%= event.name.upcase %></h5>
 			    		
 			    	</div>
 			    	<div class="event-contain-right">
@@ -25,10 +30,7 @@
 				  </div>
 				</div>
 			</div>
-
-      
-
-      <br>
+		  <br>
 
   <% end %>
 <% end %>
