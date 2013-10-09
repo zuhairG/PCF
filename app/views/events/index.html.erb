@@ -3,7 +3,7 @@
   <h2><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
     
-      <strong><%= event.name %> in <%= Venue.find(event.venue_id).name %> starts at <%= event.start_time.strftime('%l:%M %p')%> ends at <%= event.end_time.strftime('%l:%M %p') %> <%= event.actslist%></strong><br>
+      <strong><%= event.name %> in <%= Venue.find(event.venue_id).name %> starts at <%= event.start_time.strftime('%l:%M %p')%> ends at <%= event.end_time.strftime('%l:%M %p') %> <% event.acts.each do |act| %> <%= act.name%> <% end %> </strong><br>
       
     
   <% end %>
