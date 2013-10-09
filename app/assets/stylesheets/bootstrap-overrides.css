@@ -38,3 +38,17 @@ li{
 	background-color: #CACACA;
 	padding: 0px 3px;
 }
+.schedule-nav-contain{
+	display: block;
+	/*border: 1px solid black;*/
+	padding: 3px;
+	white-space: nowrap;
+	overflow-x: auto;
+	max-width: 100%;
+}
+.venue-drop{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 3px;
+	float: right;
+}

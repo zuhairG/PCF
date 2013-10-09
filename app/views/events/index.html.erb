@@ -1,11 +1,16 @@
 <h1>Listing events</h1>
-<ul class="schedule-nav">
-	<li class="schedule-nav-link">All Events</li>
-	<li class="schedule-nav-link">Past Events</li>
-	<% @event_date.sort.each do |date, events| %>
-		<li class="schedule-nav-link"><%= date.strftime('%A %m/%d') %></li>
-	<% end %>
-</ul>
+<div class="schedule-nav-contain">
+	<ul class="schedule-nav">
+		<li class="schedule-nav-link">All Events</li>
+		<li class="schedule-nav-link">Past Events</li>
+		<% @event_date.sort.each do |date, events| %>
+			<li class="schedule-nav-link"><%= date.strftime('%A %m/%d') %></li>
+		<% end %>
+	</ul>
+	<div class="venue-drop">
+		Venue<span class="caret"></span>
+	</div>
+</div>
 
 <% @event_date.sort.each do |date, events| %>
   <h2><%= date.strftime('%A %m/%d') %></h2>
