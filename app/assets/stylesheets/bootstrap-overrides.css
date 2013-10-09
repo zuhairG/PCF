@@ -24,3 +24,17 @@
 li{
 	list-style: none;
 }
+
+.schedule-nav{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 3px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	max-width: 100%;
+}
+.schedule-nav-link{
+	display: inline-block;
+	background-color: #CACACA;
+	padding: 0px 3px;
+}

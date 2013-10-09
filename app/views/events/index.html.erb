@@ -1,7 +1,10 @@
 <h1>Listing events</h1>
-<ul>
-	<li>All Events</li>
-	<li>Past Events</li>
+<ul class="schedule-nav">
+	<li class="schedule-nav-link">All Events</li>
+	<li class="schedule-nav-link">Past Events</li>
+	<% @event_date.sort.each do |date, events| %>
+		<li class="schedule-nav-link"><%= date.strftime('%A %m/%d') %></li>
+	<% end %>
 </ul>
 
 <% @event_date.sort.each do |date, events| %>
@@ -31,7 +34,6 @@
 				</div>
 			</div>
 		  <br>
-
   <% end %>
 <% end %>
 
