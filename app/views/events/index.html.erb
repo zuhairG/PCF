@@ -1,32 +1,13 @@
 <h1>Listing events</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Venue</th>
-    <th>Start time</th>
-    <th>End time</th>
-    <th>Description</th>
-    <th>Date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.venue_id %></td>
-    <td><%= event.start_time.strftime('%l:%M %p') %></td>
-    <td><%= event.end_time.strftime('%l:%M %p') %></td>
-    <td><%= event.description %></td>
-    <td><%= event.date %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% @event_date.sort.each do |date, events| %>
+  <h2><%= date.strftime('%A %m/%d') %></h2>
+  <% for event in events %>
+    
+      <strong><%= event.name %> in <%= Venue.find(event.venue_id).name %> starts at <%= event.start_time.strftime('%l:%M %p')%> ends at <%= event.end_time.strftime('%l:%M %p') %> <%= event.actslist%></strong><br>
+      
+    
+  <% end %>
 <% end %>
-</table>
 
 <br />
 

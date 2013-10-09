@@ -3,4 +3,12 @@ class Event < ActiveRecord::Base
   has_one :venue
   has_many :acts
   default_scope order('date, start_time ASC')
+
+
+private 
+
+  def venue_name(id)
+    name = Venue.find(id)
+    return name
+  end  
 end
