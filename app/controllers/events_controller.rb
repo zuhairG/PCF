@@ -2,7 +2,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+  
+      @events = Event.find(:all, :order => 'date, id', :limit => 50)
+      @event_date = @events.group_by { |t| t.date }
 
     respond_to do |format|
       format.html # index.html.erb

@@ -23,8 +23,8 @@ namespace :db do
         venue.event_id = event.id
         event.venue_id = venue.id
         event.date = [Date.today, Date.tomorrow, Date.yesterday]
-        event.start_time = '15:30'
-        event.end_time = '16:30'
+        event.start_time = ['15:30', '12:30', '13:30']
+        event.end_time = ['16:30', '17:30', '14:30']
         event.description = "this is the description of this event"
         event.name = ['Pirates Game', 'Kickoff Party', 'Improv Jam', 'Organized patronage of some place', 'show1', 'show2', 'show3']
        
