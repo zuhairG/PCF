@@ -2,10 +2,34 @@
 <% @event_date.sort.each do |date, events| %>
   <h2><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
-    
-      <strong><%= event.name %> in <%= Venue.find(event.venue_id).name %> starts at <%= event.start_time.strftime('%l:%M %p')%> ends at <%= event.end_time.strftime('%l:%M %p') %> <% event.acts.each do |act| %> <%= act.name%> <% end %> </strong><br>
+  		<div class="panel-group" id="accordion">
+ 				<div class="panel panel-default">
+ 				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+		    	<div class="event-contain">
+			    	<div class="event-contain-left">
+			    		<%= event.name %> 
+			    		
+			    	</div>
+			    	<div class="event-contain-right">
+			    		<%= Venue.find(event.venue_id).name %><br>
+			    		<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
+			    	</div>
+		    	</div>
+		    	</a>
+		    	<div id="eventid<%=event.id%>" class="panel-collapse collapse">
+      			<div class="panel-body">
+      				<% event.acts.each do |act| %> 
+				      	<li><%= act.name %><li>
+				      <% end %>
+				     </div>
+				  </div>
+				</div>
+			</div>
+
       
-    
+
+      <br>
+
   <% end %>
 <% end %>
 
