@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :venue_id %><br />
-    <%= f.number_field :venue_id %>
+    <%= collection_select(:event, :venue_id, Venue.all, :id, :name)  %>
   </div>
   <div class="field">
     <%= f.label :start_time %><br />
@@ -35,6 +35,16 @@
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
+  <div class="field">
+    <%= f.label :act_id %><br />
+    <% for act in Act.find(:all) %>
+
+      <%= check_box_tag "event[act_ids][]", act.id, @event.acts.include?(act) %>
+      <%= act.name %><br/>
+ 
+    <% end %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

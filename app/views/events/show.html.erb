@@ -7,7 +7,7 @@
 
 <p>
   <b>Venue:</b>
-  <%= @event.venue_id %>
+  <%= Venue.find(@event.venue_id).name %>
   
 </p>
 
@@ -33,7 +33,9 @@
 
 <p>
   <b>Acts:</b>
-  <%= @event.actslist%>
+  <% @event.acts.each do |act| %> 
+  	<%= act.name %>
+  <% end %>
     
 </p>
 

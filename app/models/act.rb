@@ -3,4 +3,6 @@ class Act < ActiveRecord::Base
   belongs_to :event
   has_many :performer_act
   has_many :performers, through: :performer_act
+  
+  
 end

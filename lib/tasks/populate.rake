@@ -27,13 +27,13 @@ namespace :db do
         event.end_time = ['16:30', '17:30', '14:30']
         event.description = "this is the description of this event"
         event.name = ['Pirates Game', 'Kickoff Party', 'Improv Jam', 'Organized patronage of some place', 'show1', 'show2', 'show3']
-       
-        Act.populate 3 do |act|
+        
+        Act.populate 2 do |act|
           act.event_id = event.id
           act.duration = "30 minutes"
           act.description = "This is the description of this act"
           act.name = ['standup', 'improv', 'workshop']
-          event.actslist = ["standup", "improv", "workshop"]
+          event.act_id = Act.all
         end
       end
     end
