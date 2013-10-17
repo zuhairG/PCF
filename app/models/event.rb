@@ -10,7 +10,6 @@ class Event < ActiveRecord::Base
   scope :for_date, lambda {|date| where("date = ?", date) }
   scope :for_venue, lambda {|venue| where("venue_id = ?", venue) }
 
-
 private 
 
   def venue_name(id)
