@@ -13,7 +13,7 @@
 </script>
 
 <div class="schedule-nav-contain">
-  <h1>Listing events</h1>
+  <h1 class="schedule-header">Listing events</h1>
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
 		<li class="schedule-nav-link">Past Events</li>
@@ -29,25 +29,26 @@
 </div>
 
 <% @event_date.sort.each do |date, events| %>
-<h2 id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
-	<% for event in events %>
-		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
-					<div class="event-contain">
-						<div class="event-contain-left">
-							<h5><%= event.name.upcase %></h5>
-							<img class="icon-standup">
-							<img class="icon-openmic">
-							<img class="icon-improv">
-							<img class="icon-networking">
-							<img class="icon-party">
-							<img class="icon-poetry">
-							<img class="icon-happyhour">
-							<img class="icon-workshop">
-							<img class="icon-podcast">
-						</div>
-						<div class="event-contain-right">
+
+<h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
+  <% for event in events %>
+  		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
+ 				<div class="panel panel-default">
+ 				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+		    	<div class="event-contain">
+			    	<div class="event-contain-left">
+			    		<h5><%= event.name.upcase %></h5>
+			    		<img class="icon-standup">
+			    		<img class="icon-openmic">
+			    		<img class="icon-improv">
+			    		<img class="icon-networking">
+			    		<img class="icon-party">
+			    		<img class="icon-poetry">
+			    		<img class="icon-happyhour">
+			    		<img class="icon-workshop">
+			    		<img class="icon-podcast">
+			    	</div>
+			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
 								<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 								<p class="event-performers">
