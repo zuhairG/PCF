@@ -19,7 +19,7 @@
 }
 .schedule-nav-contain{
 	display: block;
-	/*border: 1px solid black;*/
+
 	padding: 3px;
 	white-space: nowrap;
 	overflow-x: auto;
@@ -42,7 +42,6 @@
 	margin: 15px 0px;
 }
 .event-contain{
-	/*border: 1px solid #CACACA;*/
 	background-color: #f5f6f6;
 }
 .event-contain-left{
