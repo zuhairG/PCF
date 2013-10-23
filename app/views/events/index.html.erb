@@ -31,7 +31,9 @@
 			    			<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 								<p class="performers">
 									<% for act in event.acts %>
-										<%= act.performers %>
+										<% for pid in act.performer_act %>
+											<%= Performer.find(pid).name %>
+										<% end%>
 									<% end%>
 								</p>
 							</div>
