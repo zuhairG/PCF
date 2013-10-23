@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+<h1 class="schedule-header">Listing events</h1>
+=======
 <div id="fb-root"></div>
 
 
-<h1 class="schedule-header">Listing events</h1>
+<h1>Listing events</h1>
+>>>>>>> 180c74cfcda4988573f9c4a31693038bed203b44
 <div class="schedule-nav-contain">
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
@@ -24,14 +28,17 @@
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
-			    		
 			    	</div>
 			    	<div class="event-contain-right">
+<<<<<<< HEAD
+			    		<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+			    		<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
+=======
 							<div class="event-contain-right-left">
-			    			<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+			    			<%= Venue.find(event.venue_id).name %><br>
 							</div>
 							<div class="event-contain-right-center">
-								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
+								<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
 							</div>
 							<div class="event-contain-right-right">
 
@@ -47,6 +54,7 @@
 									<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited for ____ performing in <%= event.name %>" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
 									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 							</div>
+>>>>>>> 180c74cfcda4988573f9c4a31693038bed203b44
 			    	</div>
 		    	</div>
 		    	</a>

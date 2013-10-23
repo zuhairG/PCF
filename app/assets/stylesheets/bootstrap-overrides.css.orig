@@ -52,7 +52,7 @@
 	width: 20%;
 	word-wrap: normal | break-word;
 	text-align: left;
-	border-right: 1px solid #CACACA;
+	/*border-right: 1px solid #CACACA;*/
 }
 .event-contain-left h5{
 	font-size: 20px;
@@ -65,6 +65,7 @@
 	width: 79%;
 	word-wrap: normal | break-word;
 	text-align: left;
+	border-left: 1px solid #CACACA;
 }
 
 /* Event Fonts */
@@ -99,6 +100,14 @@ li{
 *:hover{
 	color: #000;
 }
+<<<<<<< HEAD
+=======
+.venue-drop{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 3px;
+	float: right;
+}
 
 .event-contain-right-left{
 	display: inline-block;
@@ -117,3 +126,4 @@ li{
 	text-align:right;
 	width:20%;
 }
+>>>>>>> 180c74cfcda4988573f9c4a31693038bed203b44
