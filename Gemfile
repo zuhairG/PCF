@@ -37,7 +37,6 @@ gem 'jquery-rails'
 gem 'heroku'
 
 group :production do
-  gem 'pg'
   gem 'thin'
 end
 
