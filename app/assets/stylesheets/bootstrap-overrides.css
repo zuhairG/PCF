@@ -1,43 +1,21 @@
-.event-contain{
-	border: 1px solid black;
-}
-.event-contain-left{
-	display: inline-block;
-	vertical-align: top;
-	padding: 10px;
-	width: 20%;
-	word-wrap: normal | break-word;
-	text-align: left;
-}
-.event-contain-right{
-	display: inline-block;
-	vertical-align: top;
-	padding: 10px;
-	width: 79%;
-	word-wrap: normal | break-word;
-	text-align: left;
-	border-left: 1px solid black;
-}
-.act-contain{
-	border: 1px solid black;
-}
-
-li{
-	list-style: none;
-}
-
+/* navigation bar */
 .schedule-nav{
 	display: inline-block;
-	border: 1px solid black;
-	padding: 3px;
+	border: 1px solid #CACACA;
+	padding: 5px;
 	overflow-x: scroll;
 	white-space: nowrap;
 	max-width: 100%;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 }
 .schedule-nav-link{
 	display: inline-block;
-	background-color: #CACACA;
+	background-color: #f5f6f6;
 	padding: 0px 3px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 }
 .schedule-nav-contain{
 	display: block;
@@ -49,9 +27,79 @@ li{
 }
 .venue-drop{
 	display: inline-block;
-	border: 1px solid black;
-	padding: 3px;
+	border: 1px solid #CACACA;
+	background-color: #f5f6f6;
+	padding: 5px;
 	float: right;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+
+
+/* Event Container */
+.panel{
+	margin: 15px 0px;
+}
+.event-contain{
+	/*border: 1px solid #CACACA;*/
+	background-color: #f5f6f6;
+}
+.event-contain-left{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 20%;
+	word-wrap: normal | break-word;
+	text-align: left;
+	border-right: 1px solid #CACACA;
+}
+.event-contain-left h5{
+	font-size: 20px;
+}
+.event-contain-right{
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 79%;
+	word-wrap: normal | break-word;
+	text-align: left;
+}
+
+/* Event Fonts */
+.venue_name{
+	font-weight: 700;
+}
+
+
+
+/* Act Container */
+.act-contain{
+	border: 1px solid black;
+}
+
+
+
+/* Header Fonts */
+h1.schedule-header{
+	color: #f5f6f6;
+}
+h2.date-header{
+	font-family: 'Lily Script One', inherit;
+	letter-spacing: 1.5px;
+	margin: 50px 0px 30px 0px;
+	color: gold;
+}
+
+
+
+/* Other Styles */
+li{
+	list-style: none;
+}
+*:hover{
+	color: #000;
 }
 
 .event-contain-right-left{
