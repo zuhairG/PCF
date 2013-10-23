@@ -1,13 +1,26 @@
-<div id="fb-root"></div>
+<script>
+  $(function() {
+    $('.schedule-nav-contain a').bind('click',function(event){
+      var $anchor = $(this);
 
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 1000,'easeInOutExpo');
 
-<h1 class="schedule-header">Listing events</h1>
+      event.preventDefault();
+    });
+  });
+</script>
+
 <div class="schedule-nav-contain">
+  <h1>Listing events</h1>
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
 		<li class="schedule-nav-link">Past Events</li>
 		<% @event_date.sort.each do |date, events| %>
-			<li class="schedule-nav-link"><%= date.strftime('%A %m/%d') %></li>
+			<li class="schedule-nav-link">
+			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
+			</li>
 		<% end %>
 	</ul>
 	<div class="venue-drop">
@@ -16,7 +29,7 @@
 </div>
 
 <% @event_date.sort.each do |date, events| %>
-  <h2 class="date-header"><%= date.strftime('%A %m/%d') %></h2>
+  <h2 id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
   		<div class="panel-group" id="accordion">
  				<div class="panel panel-default">
@@ -27,26 +40,8 @@
 			    		
 			    	</div>
 			    	<div class="event-contain-right">
-							<div class="event-contain-right-left">
-			    			<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
-							</div>
-							<div class="event-contain-right-center">
-								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
-							</div>
-							<div class="event-contain-right-right">
-
-									<a href="#" 
-									  onclick="
-									    window.open(
-									      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
-									      'facebook-share-dialog', 
-									      'width=626,height=436'); 
-									    return false;">
-									  Share on Facebook
-									</a>
-									<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited for ____ performing in <%= event.name %>" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
-									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-							</div>
+			    		<%= Venue.find(event.venue_id).name %><br>
+			    		<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
 			    	</div>
 		    	</div>
 		    	</a>
