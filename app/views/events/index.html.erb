@@ -1,13 +1,26 @@
-<div id="fb-root"></div>
+<script>
+  $(function() {
+    $('.schedule-nav-contain a').bind('click',function(event){
+      var $anchor = $(this);
 
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 1000,'easeInOutExpo');
 
-<h1 class="schedule-header">Listing events</h1>
+      event.preventDefault();
+    });
+  });
+</script>
+
 <div class="schedule-nav-contain">
+  <h1>Listing events</h1>
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
 		<li class="schedule-nav-link">Past Events</li>
 		<% @event_date.sort.each do |date, events| %>
-			<li class="schedule-nav-link"><%= date.strftime('%A %m/%d') %></li>
+			<li class="schedule-nav-link">
+			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
+			</li>
 		<% end %>
 	</ul>
 	<div class="venue-drop">
@@ -16,7 +29,7 @@
 </div>
 
 <% @event_date.sort.each do |date, events| %>
-  <h2 id=<%= date.strftime('%A') %> class="date-header"><%= date.strftime('%A %m/%d') %></h2>
+  <h2 id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
   		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
  				<div class="panel panel-default">
