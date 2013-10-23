@@ -100,6 +100,14 @@ li{
 *:hover{
 	color: #000;
 }
+<<<<<<< HEAD
+=======
+.venue-drop{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 3px;
+	float: right;
+}
 
 .event-contain-right-left{
 	display: inline-block;
@@ -118,3 +126,4 @@ li{
 	text-align:right;
 	width:20%;
 }
+>>>>>>> 180c74cfcda4988573f9c4a31693038bed203b44

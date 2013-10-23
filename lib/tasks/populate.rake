@@ -32,7 +32,9 @@ namespace :db do
           act.event_id = event.id
           act.duration = "30 minutes"
           act.description = "This is the description of this act"
-          act.name = ['standup', 'improv', 'workshop']
+          act.name = ['act1','the amazing act', 'this is an act name']
+          act.act_type = ['standup', 'improv', 'workshop']
+          act.performer_id = Performer.new(:name => "jack", :bio => "Bio of performer", :twitter => "@jackyo1", :email => "jack@pcf.com").id
           event.act_id = Act.all
         end
       end
