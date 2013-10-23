@@ -86,8 +86,10 @@ h1.schedule-header{
 	color: #f5f6f6;
 }
 h2.date-header{
+	font-family: 'Lily Script One', inherit;
+	letter-spacing: 1.5px;
 	margin: 50px 0px 30px 0px;
-	color: #f5f6f6;
+	color: gold;
 }
 
 
