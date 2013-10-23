@@ -1,13 +1,13 @@
 body {
-  background-color: #fff;
+  background: url('/assets/grey_wash_wall.png') 50% 0 repeat fixed;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -24,6 +24,7 @@ a {
     color: #666;
   }
   &:hover {
+    color: transparent;
   }
 }
 

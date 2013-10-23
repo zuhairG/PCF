@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<h1 class="schedule-header">Listing events</h1>
 <div class="schedule-nav-contain">
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
@@ -13,7 +13,7 @@
 </div>
 
 <% @event_date.sort.each do |date, events| %>
-  <h2><%= date.strftime('%A %m/%d') %></h2>
+  <h2 class="date-header"><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
   		<div class="panel-group" id="accordion">
  				<div class="panel panel-default">
@@ -24,8 +24,8 @@
 			    		
 			    	</div>
 			    	<div class="event-contain-right">
-			    		<%= Venue.find(event.venue_id).name %><br>
-			    		<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
+			    		<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+			    		<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
 			    	</div>
 		    	</div>
 		    	</a>
