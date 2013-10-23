@@ -52,7 +52,7 @@
 	width: 20%;
 	word-wrap: normal | break-word;
 	text-align: left;
-	/*border-right: 1px solid #CACACA;*/
+	border-right: 1px solid #CACACA;
 }
 .event-contain-left h5{
 	font-size: 20px;
@@ -65,7 +65,6 @@
 	width: 79%;
 	word-wrap: normal | break-word;
 	text-align: left;
-	border-left: 1px solid #CACACA;
 }
 
 /* Event Fonts */
