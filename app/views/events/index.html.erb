@@ -1,3 +1,6 @@
+<div id="fb-root"></div>
+
+
 <h1>Listing events</h1>
 <div class="schedule-nav-contain">
 	<ul class="schedule-nav">
@@ -21,11 +24,28 @@
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
-			    		
 			    	</div>
 			    	<div class="event-contain-right">
-			    		<%= Venue.find(event.venue_id).name %><br>
-			    		<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
+							<div class="event-contain-right-left">
+			    			<%= Venue.find(event.venue_id).name %><br>
+							</div>
+							<div class="event-contain-right-center">
+								<%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>
+							</div>
+							<div class="event-contain-right-right">
+
+									<a href="#" 
+									  onclick="
+									    window.open(
+									      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
+									      'facebook-share-dialog', 
+									      'width=626,height=436'); 
+									    return false;">
+									  Share on Facebook
+									</a>
+									<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited for ____ performing in <%= event.name %>" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							</div>
 			    	</div>
 		    	</div>
 		    	</a>

@@ -5,7 +5,7 @@
 	display: inline-block;
 	vertical-align: top;
 	padding: 10px;
-	width: 300px;
+	width: 20%;
 	word-wrap: normal | break-word;
 	text-align: left;
 }
@@ -13,6 +13,7 @@
 	display: inline-block;
 	vertical-align: top;
 	padding: 10px;
+	width: 79%;
 	word-wrap: normal | break-word;
 	text-align: left;
 	border-left: 1px solid black;
@@ -51,4 +52,22 @@ li{
 	border: 1px solid black;
 	padding: 3px;
 	float: right;
+}
+
+.event-contain-right-left{
+	display: inline-block;
+	float:left;
+	width:30%;
+}
+.event-contain-right-center{
+	display: inline-block;
+	float:left;
+	text-align:center;
+	width:30%;
+}
+.event-contain-right-right{
+	display: inline-block;
+	float:right;
+	text-align:right;
+	width:20%;
 }
