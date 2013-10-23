@@ -70,15 +70,13 @@
 /* Event Fonts */
 .venue_name{
 	font-weight: 700;
+	height:10px;
 }
-
-
 
 /* Act Container */
 .act-contain{
 	border: 1px solid black;
 }
-
 
 
 /* Header Fonts */
@@ -106,6 +104,7 @@ li{
 	display: inline-block;
 	float:left;
 	width:30%;
+	height:40px;
 }
 .event-contain-right-center{
 	display: inline-block;
@@ -118,6 +117,15 @@ li{
 	float:right;
 	text-align:right;
 	width:20%;
+}
+.event-description{
+	display: table-row;
+	float:left;
+	text-align:left;
+	width:80%;
+}
+.event-performers{
+	font-weight: 200;
 }
 
 
