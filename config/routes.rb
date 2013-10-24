@@ -1,4 +1,6 @@
 PCF::Application.routes.draw do
+  devise_for :users
+
   resources :performers
   resources :performer_acts
   resources :acts

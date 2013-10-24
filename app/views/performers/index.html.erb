@@ -27,5 +27,6 @@
 </table>
 
 <br />
-
+<% if can? :create, Performer %>
 <%= link_to 'New Performer', new_performer_path %>
+<% end %>

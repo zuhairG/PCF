@@ -25,6 +25,6 @@
   <%= @performer.performer_act_id %>
 </p>
 
-
+<% if can? :update, @performer %>
 <%= link_to 'Edit', edit_performer_path(@performer) %> |
 <%= link_to 'Back', performers_path %>
