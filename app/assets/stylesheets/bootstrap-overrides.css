@@ -90,7 +90,27 @@ div.fixed{
 
 /* Act Container */
 .act-contain{
-	border: 1px solid black;
+	background-color: #c4c4c4;
+}
+.act-left{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 20%;
+	word-wrap: normal | break-word;
+	text-align: left;
+	border-right: 1px solid #000000;
+	color: #FFFFFF;
+}
+.act-right{
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 79%;
+	word-wrap: normal | break-word;
+	text-align: left;
+	color: #FFFFFF;
 }
 
 
