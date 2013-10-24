@@ -81,7 +81,8 @@
 			</a>
 			<div id="eventid<%=event.id%>" class="panel-collapse collapse act-contain">
 				<% event.acts.each do |act| %> 
-					<div class="act-left"><%= act.name %><img class="icon-<%= act.act_type %>">
+					<div class="act-left">
+						<%= act.name %><img class="icon-<%= act.act_type %>">
 					</div>
 					<div class="act-right">
 						<%= act.description %> ||
