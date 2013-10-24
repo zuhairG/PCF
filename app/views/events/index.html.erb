@@ -84,9 +84,9 @@
 					<div class="act-left"><%= act.name %><img class="icon-<%= act.act_type %>">
 					</div>
 					<div class="act-right">
-						<%= act.description %>
-						<% for perf in act.performers %>
-							<%= perf.name %>
+						<%= act.description %> ||
+						<% for pid in act.performer_act %>
+							<%= Performer.find(pid).name %>
 						<% end %>
 					</div>
 				<% end %>
