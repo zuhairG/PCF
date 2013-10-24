@@ -83,15 +83,19 @@
 							<p class="description"><%= event.description %></p>
 						</div>
 					</div>
-				</a>
-			</div>
-			<div id="eventid<%=event.id%>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<% event.acts.each do |act| %> 
-					<li><%= act.name %><li>
+				</div>
+			</a>
+			<div id="eventid<%=event.id%>" class="panel-collapse collapse act-contain">
+				<% event.acts.each do |act| %> 
+					<div class="act-left"><%= act.name %><img class="icon-<%= act.act_type %>">
+					</div>
+					<div class="act-right">
+						<%= act.description %> ||
+						<% for pid in act.performer_act %>
+							<%= Performer.find(pid).name %>
 						<% end %>
 					</div>
-				</div>
+				<% end %>
 			</div>
 		</div>
 	<br>
