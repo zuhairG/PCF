@@ -65,7 +65,7 @@ div.fixed{
 	vertical-align: top;
 	padding: 10px;
 	width: 20%;
-	word-wrap: normal | break-word;
+	word-wrap: normal|break-word;
 	text-align: left;
 	border-right: 1px solid #CACACA;
 }
@@ -78,7 +78,7 @@ div.fixed{
 	vertical-align: top;
 	padding: 10px;
 	width: 79%;
-	word-wrap: normal | break-word;
+	word-wrap: normal|break-word;
 	text-align: left;
 }
 
@@ -97,7 +97,7 @@ div.fixed{
 	vertical-align: top;
 	padding: 10px;
 	width: 20%;
-	word-wrap: normal | break-word;
+	word-wrap: normal|break-word;
 	text-align: left;
 	border-right: 1px solid #CACACA;
 	color: #FFFFFF;
@@ -108,7 +108,7 @@ div.fixed{
 	vertical-align: top;
 	padding: 10px;
 	width: 79%;
-	word-wrap: normal | break-word;
+	word-wrap: normal|break-word;
 	text-align: left;
 	color: #FFFFFF;
 }

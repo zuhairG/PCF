@@ -32,10 +32,10 @@
 <% @event_date.sort.each do |date, events| %>
 
 <h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
-  <div class="panel-group accordion-group" id="accordion" id=<%= date.strftime('%A')%>>
+  <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
 		<% for event in events %>
  			<div class="panel">
- 				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+ 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
