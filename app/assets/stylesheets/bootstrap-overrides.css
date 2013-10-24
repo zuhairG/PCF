@@ -37,11 +37,12 @@
 #nav-bar{
 	position: fixed;
 	background-color: #000;
-	opacity: 0.5;
+	opacity: 0.6;
 	min-height: 50px;
 	min-width: 100%;
 	z-index: 0;
 	left: 0;
+	top: 0;
 }
 div.fixed{
 	position: fixed;

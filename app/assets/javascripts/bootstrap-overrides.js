@@ -7,12 +7,12 @@ $('#nav-bar').hide();
 $(window).on('scroll',function() {
   var scrolltop = $(this).scrollTop();
 
-  if(scrolltop >= 50) {
+  if(scrolltop >= 65) {
     $('#nav-bar').fadeIn(250);
     $('.schedule-nav-contain').addClass('fixed container');
   }
    
-  else if(scrolltop <= 45) {
+  else if(scrolltop <= 60) {
     $('#nav-bar').fadeOut(250);
     $('.schedule-nav-contain').removeClass('fixed container');
   }
