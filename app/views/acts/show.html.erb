@@ -20,6 +20,7 @@
   <%= @act.duration %>
 </p>
 
-
+<% if can? :update, @act %>
 <%= link_to 'Edit', edit_act_path(@act) %> |
+<% end %>
 <%= link_to 'Back', acts_path %>

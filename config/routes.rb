@@ -1,4 +1,10 @@
 PCF::Application.routes.draw do
+  devise_for :users
+  devise_scope :user do
+    get "users/sign_in", :to => "devise/sessions#new"
+    get "users/sign_out", :to => "devise/sessions#destroy"
+    get "users/sign_up", :to => "devise/registrations#new"
+end
   resources :performers
   resources :performer_acts
   resources :acts

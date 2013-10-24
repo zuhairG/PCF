@@ -99,5 +99,6 @@
 <% end %>
 
 <br />
-
+<% if can? :create, Event %>
 <%= link_to 'New Event', new_event_path %>
+<% end %>

@@ -1,6 +1,7 @@
 class ActsController < ApplicationController
   # GET /acts
   # GET /acts.json
+  
   def index
     @acts = Act.all
 
