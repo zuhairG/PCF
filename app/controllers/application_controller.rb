@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  load_and_authorize_resource  
-  
+    
+  skip_authorize_resource
+  skip_authorization_check
   check_authorization :unless => :devise_controller?
   before_filter :authenticate_user!, :except => [:show, :index]
   
