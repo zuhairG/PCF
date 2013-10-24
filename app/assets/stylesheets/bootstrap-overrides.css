@@ -8,6 +8,7 @@
 	max-width: 100%;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	float: left;
 }
 .schedule-nav-link{
 	display: inline-block;
@@ -19,7 +20,6 @@
 }
 .schedule-nav-contain{
 	display: block;
-
 	padding: 3px;
 	white-space: nowrap;
 	overflow-x: auto;
@@ -33,6 +33,21 @@
 	float: right;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+}
+#nav-bar{
+	position: fixed;
+	background-color: #000;
+	opacity: 0.5;
+	min-height: 50px;
+	min-width: 100%;
+	z-index: 0;
+	left: 0;
+}
+div.fixed{
+	position: fixed;
+	top: 10px;
+	width: 100%;
+	padding: 0 30px 0 0;
 }
 
 
@@ -87,6 +102,9 @@ h2.date-header{
 	letter-spacing: 1.5px;
 	margin: 50px 0px 30px 0px;
 	color: gold;
+}
+p.description{
+	font-style: italic;
 }
 
 

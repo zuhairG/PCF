@@ -11,9 +11,9 @@
     });
   });
 </script>
-
+<div id="nav-bar"></div>
+<h1 class="schedule-header">Listing events</h1>
 <div class="schedule-nav-contain">
-  <h1 class="schedule-header">Listing events</h1>
 	<ul class="schedule-nav">
 		<li class="schedule-nav-link">All Events</li>
 		<li class="schedule-nav-link">Past Events</li>
@@ -27,6 +27,7 @@
 		Venue<span class="caret"></span>
 	</div>
 </div>
+
 
 <% @event_date.sort.each do |date, events| %>
 
@@ -79,7 +80,7 @@
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 						</div>
 						<div class="event-description">
-							<%= event.description %>
+							<p class="description"><%= event.description %></p>
 						</div>
 					</div>
 				</a>
