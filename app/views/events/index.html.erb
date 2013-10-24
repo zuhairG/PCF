@@ -33,43 +33,49 @@
 
 <h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <% for event in events %>
-		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
-			<div class="panel panel-default">
-			<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
-	    	<div class="event-contain">
-		    	<div class="event-contain-left">
-		    		<h5><%= event.name.upcase %></h5>
-		    		<img class="icon-standup">
-		    		<img class="icon-openmic">
-		    		<img class="icon-improv">
-		    		<img class="icon-networking">
-		    		<img class="icon-party">
-		    		<img class="icon-poetry">
-		    		<img class="icon-happyhour">
-		    		<img class="icon-workshop">
-		    		<img class="icon-podcast">
-		    	</div>
-		    	<div class="event-contain-right">
-						<div class="event-contain-right-left">
-							<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
-							<p class="event-performers">
-								<% for act in event.acts %>
-									<% for pid in act.performer_act %>
-										<%= Performer.find(pid).name %>
+  		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
+ 				<div class="panel panel-default">
+ 				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+		    	<div class="event-contain">
+			    	<div class="event-contain-left">
+			    		<h5><%= event.name.upcase %></h5>
+			    		<img class="icon-standup" src="/assets/blank.png">
+			    		<img class="icon-openmic" src="/assets/blank.png">
+			    		<img class="icon-improv" src="/assets/blank.png">
+			    		<img class="icon-networking" src="/assets/blank.png">
+			    		<img class="icon-party" src="/assets/blank.png">
+			    		<img class="icon-poetry" src="/assets/blank.png">
+			    		<img class="icon-happyhour" src="/assets/blank.png">
+			    		<img class="icon-workshop" src="/assets/blank.png">
+			    		<img class="icon-podcast" src="/assets/blank.png">
+			    	</div>
+			    	<div class="event-contain-right">
+							<div class="event-contain-right-left">
+								<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+								<p class="event-performers">
+									<% for act in event.acts %>
+										<% for pid in act.performer_act %>
+											<%= Performer.find(pid).name %>
+										<% end%>
 									<% end%>
-								<% end%>
-							</p>
-						</div>
-						<div class="event-contain-right-center">
-							<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
-						</div>
-						<div class="event-contain-right-right">
-							<div id='star' style="float:left">
-								<%= image_tag("star_unfilled.png", :height => 20)%>
+								</p>
 							</div>
-							<a href="#" onclick="window.open(
-							'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
-							'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</a>
+							<div class="event-contain-right-center">
+								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
+							</div>
+							<div class="event-contain-right-right">
+								<div id='star' style="float:left">
+									<%= image_tag("star_unfilled.png", :height => 20)%>
+								</div>
+								<a href="#" 
+								onclick="
+								window.open(
+								'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
+								'facebook-share-dialog', 
+								'width=626,height=436'); 
+								return false;">
+								Share on Facebook
+							</a>
 							<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
 							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 						</div>
