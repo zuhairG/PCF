@@ -32,10 +32,10 @@
 <% @event_date.sort.each do |date, events| %>
 
 <h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
-  <% for event in events %>
-  	<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
- 			<div class="panel accordion-group">
- 				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+  <div class="panel-group accordion-group" id="accordion" id=<%= date.strftime('%A')%>>
+		<% for event in events %>
+ 			<div class="panel">
+ 				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
@@ -79,7 +79,7 @@
 						</div>
 					</div>
 				</a>
-				<div id="eventid<%=event.id%>" class="panel-collapse collapse act-contain">
+				<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 				<% event.acts.each do |act| %> 
 					<div class="act-left">
 						<%= act.name %><img class="icon-<%= act.act_type %>">
@@ -91,11 +91,11 @@
 						<% end %>
 					</div>
 				<% end %>
+				</div>
 			</div>
-			</div>
-		</div>
 	<br>
 	<% end %>
+	</div>
 <% end %>
 
 <br />
