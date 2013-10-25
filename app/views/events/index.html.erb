@@ -67,9 +67,9 @@
 								<div id='star' style="float:left">
 									<%= image_tag("star_unfilled.png", :height => 20)%>
 								</div>
-								<a href="#" onclick="window.open(
+								<button type="button" class="btn btn-xs btn-info" href="#" class='onclick="window.open(
 								'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
-								'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</a>
+								'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</button>
 								<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
 								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 							</div>
