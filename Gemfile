@@ -40,6 +40,7 @@ gem 'heroku'
 
 group :production do
   gem 'thin'
+  gem 'pg'
 end
 
 group :development, :test do
