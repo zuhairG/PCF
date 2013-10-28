@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'heroku'
 
 group :production do
+  gem 'rails_12factor'
   gem 'thin'
   gem 'pg'
 end
