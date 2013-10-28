@@ -51,7 +51,7 @@
 			    	</div>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
-								<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+								<p class="venue_name"> <%= Venue.find(event.venue_id).name %> </p>
 								<p class="event-performers">
 									<% for act in event.acts %>
 										<% for pid in act.performer_act %>
