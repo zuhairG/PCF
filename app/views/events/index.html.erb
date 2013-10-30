@@ -1,6 +1,6 @@
 <script>
   $(function() {
-    $('#navbar a').bind('click',function(event){
+    $('#navm a').bind('click',function(event){
       var $anchor = $(this);
 
       $('html, body').stop().animate({
@@ -9,11 +9,40 @@
 			
       event.preventDefault();
     });
+		
+    $('#venues-all').click(function() {
+      $('.panel').show("slow")
+      event.preventDefault();
+    });
+		
+		$('#venuem a').click(function() {
+			var venue = $(this).html();
+			if (venue == "All") {
+	      $('.panel').show("slow")
+				$('#venuefilter').html(venue + '<span class="caret"></span>')
+	      event.preventDefault();
+			}
+			else {
+	      $('.panel').each(function(){
+					var $this = $(this);
+					if ($this.find('#venuename').html() == venue) {
+						$this.show("slow");
+						$('#venuefilter').html(venue + '<span class="caret"></span>')
+			     	event.preventDefault();      
+					}
+					else if ($this.find('#venuename').html() != venue) {
+						$this.hide("slow");
+			     	event.preventDefault();      
+					};
+				});
+			};
+    });
+		
   });
 </script>
 <div id="nav-bar"></div>
 <div id="navbar" class="fixed container">
-	<ul class="nav nav-pills">
+	<ul id="navm" class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
 			<li >
 			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
@@ -21,8 +50,11 @@
 		<% end %>
 	</ul>
 	<div class="nav">
-	    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Venue<span class="caret"></span></a>
-	    <ul class="dropdown-menu">
+	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">Venue<span class="caret"></span></a>
+	    <ul id="venuem" class="dropdown-menu">
+        <li>
+					<a id="venues-all" href="#">All</a>
+			 	</li>
 	      <% Venue.all.each do |venue| %>
 	         <li>
 						 <a href="#"><%= venue.name %></a>
@@ -57,7 +89,7 @@
 			    	</div>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
-								<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 								<p class="event-performers">
 									<% for act in event.acts %>
 										<% for pid in act.performer_act %>
