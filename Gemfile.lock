@@ -1,14 +1,3 @@
-GIT
-  remote: http://github.com/plataformatec/devise.git
-  revision: 69d28f9b0e8150aaec9f3175ddd8d1a20af0633a
-  specs:
-    devise (3.1.0)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +60,12 @@ GEM
       rails (>= 3.0.0)
     daemons (1.1.9)
     database_cleaner (1.2.0)
+    devise (3.1.1)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -221,7 +216,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails
   database_cleaner
-  devise!
+  devise
   factory_girl_rails
   heroku
   jquery-rails
