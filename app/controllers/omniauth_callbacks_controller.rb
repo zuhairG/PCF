@@ -1,4 +1,11 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+ 
+  def passthru
+    send(params[:provider]) if providers.include?(params[:provider])
+  end
+  
+  protected
+ 
   def facebook
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
@@ -10,5 +17,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.facebook_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+  end
+  
+  def providers 
+  	["facebook"]
   end
 end

@@ -5,7 +5,7 @@ PCF::Application.routes.draw do
     get "users/sign_in", :to => "devise/sessions#new"
     get "users/sign_out", :to => "devise/sessions#destroy"
     get "users/sign_up", :to => "devise/registrations#new"
-    get '/users/auth/:provider' => 'omniauth_callbacks#facebook'
+    get '/users/auth/:provider' => 'omniauth_callbacks#passthru'
 
 end
   resources :performers
