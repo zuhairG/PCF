@@ -2,7 +2,7 @@ $("#star").click(function() {
   $("#star").html('<%= image_tag("star_filled.png", :height => 20)%>')
 });
 
-$('#nav-bar').hide();
+// $('#nav-bar').hide();
    
 // $(window).on('scroll',function() {
 //   var scrolltop = $(this).scrollTop();

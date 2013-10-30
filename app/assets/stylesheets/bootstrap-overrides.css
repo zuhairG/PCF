@@ -22,6 +22,7 @@
 	border-radius: 2px;
 	font-size: 20px;
 	border-radius:5px;
+	float: left;
 }
 .schedule-nav-contain{
 	display: block;
@@ -30,7 +31,16 @@
 	overflow-x: auto;
 	max-width: 100%;
 }
-
+#pcf-logo{
+	max-height: 50px;
+	float: left;
+	z-index: 300;
+	position: relative;
+	padding: 6px;
+}
+.loginnout{
+	float: right;
+}
 /*
 #navigation {  
   display: block;
@@ -77,10 +87,10 @@
 	display: inline-block;
 	border: 1px solid #CACACA;
 	background-color: #f5f6f6;
-	padding: 5px;
-	float: right;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	padding: 10px 15px;
+	float: left;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	font-size: 20px;
 }
 #nav-bar{
