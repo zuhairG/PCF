@@ -1,10 +1,12 @@
 PCF::Application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   devise_scope :user do
     get "users/sign_in", :to => "devise/sessions#new"
     get "users/sign_out", :to => "devise/sessions#destroy"
     get "users/sign_up", :to => "devise/registrations#new"
+    get '/users/auth/:provider' => 'omniauth_callbacks#facebook'
+
 end
   resources :performers
   resources :performer_acts
