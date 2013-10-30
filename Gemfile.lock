@@ -153,14 +153,21 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sequel (3.20.0)
     shoulda-matchers (2.4.0)
       activesupport (>= 3.0.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.8)
+    taps (0.3.24)
+      rack (>= 1.0.1)
+      rest-client (>= 1.4.0, < 1.7.0)
+      sequel (~> 3.20.0)
+      sinatra (~> 1.0.0)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -195,11 +202,12 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
+  pg
   populator
   rails (= 3.2.13)
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda-matchers
-  sqlite3
+  taps
   thin
   uglifier (>= 1.0.3)
