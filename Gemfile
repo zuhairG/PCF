@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'populator'
-gem 'devise', :git => "http://github.com/plataformatec/devise.git"
+gem 'devise'
 gem 'cancan'
 gem 'omniauth'
 gem 'omniauth-facebook'
