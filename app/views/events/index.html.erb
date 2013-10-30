@@ -22,8 +22,16 @@
 		<% end %>
 	</ul>
 	<div class="venue-drop">
-		Venue<span class="caret"></span>
-	</div>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#dropdownmenu">Venue<span class="caret"></span></a>
+      <ul id="dropdownmenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+        <% Venue.all.each do |venue| %>
+           <li>
+						 <a role="menuitem" tabindex="-1"><%= venue.name %>
+						 </a>
+					 </li>
+        <% end %>
+      </ul>			
+  </div>
 </div>
 
 <body data-spy="scroll" data-target="#navbar">
