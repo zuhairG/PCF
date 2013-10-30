@@ -40,29 +40,9 @@
 		
   });
 </script>
-<div id="nav-bar"></div>
-<div id="navbar" class="fixed container">
-	<ul id="navm" class="nav nav-pills">
-		<% @event_date.sort.each do |date, events| %>
-			<li >
-			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
-			</li>
-		<% end %>
-	</ul>
-	<div class="nav">
-	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">Venue<span class="caret"></span></a>
-	    <ul id="venuem" class="dropdown-menu">
-        <li>
-					<a id="venues-all" href="#">All</a>
-			 	</li>
-	      <% Venue.all.each do |venue| %>
-	         <li>
-						 <a href="#"><%= venue.name %></a>
-					 </li>
-	      <% end %>
-	    </ul>			
-	</div>
-</div>
+
+<%= render 'navbar' %>
+
 
 <body data-spy="scroll" data-target="#navbar">
 	
@@ -94,8 +74,8 @@
 									<% for act in event.acts %>
 										<% for pid in act.performer_act %>
 											<%= Performer.find(pid).name %>
-										<% end%>
-									<% end%>
+										<% end %>
+									<% end %>
 								</p>
 							</div>
 							<div class="event-contain-right-center">
