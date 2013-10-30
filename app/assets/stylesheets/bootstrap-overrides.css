@@ -18,20 +18,19 @@
 	background-color: #f5f6f6;
 	padding: 0px 0px;
 	margin: 0px 3px;
-	float: left;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	font-size: 20px;
 	border-radius:5px;
 	float: left;
 }
-.schedule-nav-contain{
+/*.schedule-nav-contain{
 	display: block;
 	padding: 2px;
 	white-space: nowrap;
 	overflow-x: auto;
 	max-width: 100%;
-}
+}*/
 #pcf-logo{
 	max-height: 50px;
 	float: left;
