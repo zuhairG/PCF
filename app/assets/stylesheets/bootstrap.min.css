@@ -509,7 +509,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .nav-tabs.nav-justified>.active>a{border-bottom-color:#ffffff;}
 .nav-pills>li{float:left;}.nav-pills>li>a{border-radius:5px;}
 .nav-pills>li+li{margin-left:2px;}
-.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#ffffff;background-color:#428bca;}
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#ffffff;background-color:#CC9933;}
 .nav-stacked>li{float:none;}.nav-stacked>li+li{margin-top:2px;margin-left:0;}
 .nav-justified{width:100%;}.nav-justified>li{float:none;}.nav-justified>li>a{text-align:center;}
 @media (min-width:768px){.nav-justified>li{display:table-cell;width:1%;}}
