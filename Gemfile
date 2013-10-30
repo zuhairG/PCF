@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'populator'
-gem 'devise'
+gem 'devise', :git => "http://github.com/plataformatec/devise.git"
 gem 'cancan'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
