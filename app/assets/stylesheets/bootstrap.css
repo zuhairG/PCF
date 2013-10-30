@@ -3248,7 +3248,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #CC9933;
+  background-color: #428bca;
 }
 .nav-stacked > li {
   float: none;
