@@ -1,0 +1,31 @@
+<div id="nav-bar"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
+<div id="navbar" class="schedule-nav-contain fixed container">
+	<ul class="nav nav-pills">
+		<% @event_date.sort.each do |date, events| %>
+			<li >
+			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
+			</li>
+		<% end %>
+	</ul>
+	<div class="venue-drop">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#dropdownmenu">Venue<span class="caret"></span></a>
+      <ul id="dropdownmenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+        <% Venue.all.each do |venue| %>
+           <li>
+						 <a role="menuitem" tabindex="-1"><%= venue.name %>
+						 </a>
+					 </li>
+        <% end %>
+      </ul>			
+  </div>
+  <div class="loginnout">
+	  <% if user_signed_in? %>
+	    Signed in as <%= current_user.email %>. Not you?
+	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
+	  <% else %>
+	    <%= link_to "Sign Up", new_user_registration_path, :class=>"btn btn-default" %>
+	    <%= link_to "Sign In", new_user_session_path, :class=>"btn btn-default" %>
+	    <%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), :class=>"btn btn-default" %>
+	  <% end %>
+  </div>
+</div>
