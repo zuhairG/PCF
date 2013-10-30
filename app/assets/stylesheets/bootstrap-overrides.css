@@ -13,10 +13,11 @@
 .schedule-nav-link{
 	display: inline-block;
 	background-color: #f5f6f6;
-	padding: 0px 3px;
+	padding: 3px 3px;
 	margin: 0px 3px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	font-size: 20px;
 }
 .schedule-nav-contain{
 	display: block;
@@ -33,6 +34,7 @@
 	float: right;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+	font-size: 20px;
 }
 #nav-bar{
 	position: fixed;
