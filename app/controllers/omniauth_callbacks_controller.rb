@@ -4,7 +4,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     send(params[:provider]) if providers.include?(params[:provider])
   end
   
-  protected
+ 
  
   def facebook
     # You need to implement the method below in your model (e.g. app/models/user.rb)
