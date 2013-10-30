@@ -6,32 +6,38 @@
       $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top
       }, 1000,'easeInOutExpo');
-
+			
       event.preventDefault();
     });
   });
 </script>
 <div id="nav-bar"></div>
-<h1 class="schedule-header">Listing events</h1>
-<div class="schedule-nav-contain">
-	<ul class="schedule-nav">
-		<li class="schedule-nav-link">All Events</li>
-		<li class="schedule-nav-link">Past Events</li>
+<div id="navbar" class="schedule-nav-contain fixed container">
+	<ul class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
-			<li class="schedule-nav-link">
+			<li >
 			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
 			</li>
 		<% end %>
 	</ul>
 	<div class="venue-drop">
-		Venue<span class="caret"></span>
-	</div>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#dropdownmenu">Venue<span class="caret"></span></a>
+      <ul id="dropdownmenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+        <% Venue.all.each do |venue| %>
+           <li>
+						 <a role="menuitem" tabindex="-1"><%= venue.name %>
+						 </a>
+					 </li>
+        <% end %>
+      </ul>			
+  </div>
 </div>
 
-
+<body data-spy="scroll" data-target="#navbar">
+	
 <% @event_date.sort.each do |date, events| %>
-
-<h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
+<div>
+<h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
 		<% for event in events %>
  			<div class="panel">
@@ -97,6 +103,8 @@
 	<% end %>
 	</div>
 <% end %>
+</div>
+</body>
 
 <br />
 <% if can? :create, Event %>
