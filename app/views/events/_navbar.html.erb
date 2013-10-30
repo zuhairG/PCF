@@ -7,11 +7,13 @@
 			</li>
 		<% end %>
 	</ul>
-	<div class="nav">
-	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">Venue<span class="caret"></span></a>
+	<div class="nav-venue">
+	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
 	    <ul id="venuem" class="dropdown-menu">
         <li>
-					<a href="#">All</a>
+					<a href="#">All Venues</a>
+			 	</li>
+        <li class="divider"
 			 	</li>
 	      <% Venue.all.each do |venue| %>
 	      <li>
