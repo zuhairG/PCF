@@ -38,11 +38,11 @@
 			if (venue == "Starred Events") {
 	      $('.panel').each(function(){
 	      	var $this = $(this);
-					if ($this.find('#star').find('img').attr('alt') == "Star_unfilled") {
+					if ($this.find('#starred').html() == null) {
 						$this.hide("slow");
 			     	event.preventDefault();      
 					}
-					else if ($this.find('#star').find('img').attr('alt') == "Star_filled") {
+					else if ($this.find('#unstarred').html() == null) {
 						$this.show("slow");
 			     	event.preventDefault();      
 					};
@@ -68,26 +68,10 @@
   <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
   
   
-		<% for event in events %>
-		<% temp = 1 %>
-		<% if current_user %>
-    <% for star in Stared.all %>
-    <% if current_user.id == star.user_id && star.event_id == event.id %> 
-      <%= form_tag  star, method: :delete  %> 
-      <%= submit_tag "Unstar" %>
-         
-      <% temp = 0 %> 
-    <% end %>
-    <% end %>
-    
-			<% if temp == 1 %>
-    <%= form_for Stared.new do |f| %>  
-     <%=  f.hidden_field :event_id, :value => event.id %>
-     <%=  f.hidden_field :user_id, :value => current_user.id %>
-     <%=  f.submit "Star" %>
-<% end %>
-     <% end %>
-    <% end %>
+<% for event in events %>
+
+
+
  			<div class="panel">
  				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
@@ -103,6 +87,7 @@
 			    		<img class="icon-workshop" src="/assets/blank.png">
 			    		<img class="icon-podcast" src="/assets/blank.png">
 			    	</div>
+						</a>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
 								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
@@ -120,9 +105,30 @@
 							</div>
 							<div class="event-contain-right-right">
 								<div id='star' style="float:left">
+									<div id='starred'>
+									<% temp = 1 %>
+										<% if current_user %>
+										<% for star in Stared.all %>
+											<% if current_user.id == star.user_id && star.event_id == event.id %> 
+												<%= form_tag star, method: :delete  %> 
+												<%= submit_tag "Unstar" %>
 
+												<% temp = 0 %> 
+										<% end %>
+									<% end %>
+								  </div>
+									<div id='unstarred'>
+									<% if temp == 1 %>
+										<%= form_for Stared.new do |f| %>  
+											<%=  f.hidden_field :event_id, :value => event.id %>
+											<%=  f.hidden_field :user_id, :value => current_user.id %>
+											<%=  f.submit "Star" %>
+											<% end %>
+										<% end %>
+									<% end %>
+									</div>
                 
-									<%= image_tag("star_unfilled.png", :height => 20)%>
+
 								</div>
 								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
 										window.open(
@@ -135,7 +141,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				
 				<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 				<% event.acts.each do |act| %> 
 					<div class="act-left">
