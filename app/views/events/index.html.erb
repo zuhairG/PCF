@@ -33,6 +33,26 @@
 			};
     });
 		
+		$('#starredfilter').click(function() {
+			var venue = $(this).html();
+			if (venue == "Starred Events") {
+	      $('.panel').each(function(){
+	      	var $this = $(this);
+					if ($this.find('#star').find('img').attr('alt') == "Star_unfilled") {
+						$this.hide("slow");
+			     	event.preventDefault();      
+					}
+					else if ($this.find('#star').find('img').attr('alt') == "Star_filled") {
+						$this.show("slow");
+			     	event.preventDefault();      
+					};
+	      })
+			}
+			else {
+	      $('.panel').show("slow");    
+			};
+		});
+			
   });
 </script>
 

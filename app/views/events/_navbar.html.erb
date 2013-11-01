@@ -1,5 +1,7 @@
 <div id="nav-bar"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
 <div id="navbar" class="fixed container">
+	
+	
 	<div class='nav-day'>
 		<ul id="navm" class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
@@ -26,18 +28,20 @@
 	    </ul>			
 	</div>
 	
+	
 	<div class="nav-starred">
 	    <a id="starredfilter" class="btn" href="#">Starred Events</a>
 	</div>
+
+
+
 	
   <div class="loginnout">
 	  <% if user_signed_in? %>
 	    Signed in as <%= current_user.email %>. Not you?
 	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
 	  <% else %>
-	    <%= link_to "Sign Up", new_user_registration_path, :class=>"btn btn-default" %>
 	    <%= link_to "Sign In", new_user_session_path, :class=>"btn btn-default" %>
-	    <%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), :class=>"btn btn-default" %>
 	  <% end %>
   </div>
 </div>
