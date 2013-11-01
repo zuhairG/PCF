@@ -1,19 +1,22 @@
 <div id="nav-bar"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
 <div id="navbar" class="fixed container">
-	<ul id="navm" class="nav nav-pills">
+	<div class='nav-day'>
+		<ul id="navm" class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
 			<li >
 			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
 			</li>
 		<% end %>
-	</ul>
+		</ul>
+	</div>
+	
 	<div class="nav-venue">
 	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
 	    <ul id="venuem" class="dropdown-menu">
         <li>
 					<a href="#">All Venues</a>
 			 	</li>
-        <li class="divider"
+        <li class="divider">
 			 	</li>
 	      <% Venue.all.each do |venue| %>
 	      <li>
@@ -22,6 +25,11 @@
 	      <% end %>
 	    </ul>			
 	</div>
+	
+	<div class="nav-starred">
+	    <a id="starredfilter" class="btn" href="#">Starred Events</a>
+	</div>
+	
   <div class="loginnout">
 	  <% if user_signed_in? %>
 	    Signed in as <%= current_user.email %>. Not you?

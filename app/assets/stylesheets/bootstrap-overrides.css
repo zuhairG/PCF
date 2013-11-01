@@ -38,6 +38,30 @@
 	border-radius:5px;
 	float: left;
 }
+div.nav-starred:hover{background-color: #e1e1e1;}
+
+.nav-starred {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+.nav-day {
+  overflow-x:scroll;
+	max-width:400px;
+	max-height:37px;
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
 
 /*.schedule-nav-contain{
 	display: block;
