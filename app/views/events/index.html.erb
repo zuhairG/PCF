@@ -50,6 +50,7 @@
   
 		<% for event in events %>
 		<% temp = 1 %>
+		<% if current_user %>
     <% for star in Stared.all %>
     <% if current_user.id == star.user_id && star.event_id == event.id %> 
       <%= form_tag  star, method: :delete  %> 
@@ -64,10 +65,9 @@
      <%=  f.hidden_field :event_id, :value => event.id %>
      <%=  f.hidden_field :user_id, :value => current_user.id %>
      <%=  f.submit "Star" %>
-
+<% end %>
      <% end %>
     <% end %>
-     <%= link_to 'stared events', stareds_path %>
  			<div class="panel">
  				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
