@@ -66,7 +66,28 @@
 <div>	
 <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
+  
+  
 		<% for event in events %>
+		<% temp = 1 %>
+		<% if current_user %>
+    <% for star in Stared.all %>
+    <% if current_user.id == star.user_id && star.event_id == event.id %> 
+      <%= form_tag  star, method: :delete  %> 
+      <%= submit_tag "Unstar" %>
+         
+      <% temp = 0 %> 
+    <% end %>
+    <% end %>
+    
+			<% if temp == 1 %>
+    <%= form_for Stared.new do |f| %>  
+     <%=  f.hidden_field :event_id, :value => event.id %>
+     <%=  f.hidden_field :user_id, :value => current_user.id %>
+     <%=  f.submit "Star" %>
+<% end %>
+     <% end %>
+    <% end %>
  			<div class="panel">
  				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
@@ -92,12 +113,15 @@
 										<% end %>
 									<% end %>
 								</p>
+
 							</div>
 							<div class="event-contain-right-center">
 								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
 							</div>
 							<div class="event-contain-right-right">
 								<div id='star' style="float:left">
+
+                
 									<%= image_tag("star_unfilled.png", :height => 20)%>
 								</div>
 								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
