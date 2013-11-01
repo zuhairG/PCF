@@ -1,4 +1,5 @@
 class Event < ActiveRecord::Base
+
   attr_accessible :date, :description, :end_time, :name, :start_time, :venue_id, :act_ids
   has_one :venue
   has_many :acts
@@ -19,4 +20,5 @@ private
     errors.add(:start_time, "must be before end time") unless
        self.start_time < self.end_time
   end
+
 end

@@ -9,6 +9,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       format.html # index.html.erb
+      format.mobile { }
       format.json { render json: @events }
     end
   end
