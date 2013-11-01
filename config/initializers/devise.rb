@@ -258,4 +258,4 @@ Devise.setup do |config|
   require "omniauth-facebook"
   config.omniauth :facebook, "1374753419434431", "0dfa45fb776fa2406b51feb4edfec6fa"
 
-end
+end	

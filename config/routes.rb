@@ -1,4 +1,13 @@
 PCF::Application.routes.draw do
+  resources :stareds
+  resources :performers
+  resources :performer_acts
+  resources :acts
+  resources :venues
+  resources :events
+  
+match '/stared/staring/:id', :to => 'stared#staring'
+
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   devise_scope :user do
@@ -7,13 +16,7 @@ PCF::Application.routes.draw do
     get "users/sign_up", :to => "devise/registrations#new"
     get '/users/auth/:provider' => 'omniauth_callbacks#passthru'
 
-end
-  resources :performers
-  resources :performer_acts
-  resources :acts
-  resources :venues
-  resources :events
-
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
