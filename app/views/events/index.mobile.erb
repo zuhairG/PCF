@@ -12,7 +12,7 @@
 		
 		$('#venuem a').click(function() {
 			var venue = $(this).html();
-			if (venue == "All") {
+			if (venue == "All Venues") {
 	      $('.panel').show("slow")
 				$('#venuefilter').html(venue + '<span class="caret"></span>')
 	      event.preventDefault();
@@ -33,23 +33,50 @@
 			};
     });
 		
+		$('#starredfilter').click(function() {
+			var venue = $(this).html();
+			if (venue == "Starred Events") {
+	      $('.panel').each(function(){
+	      	var $this = $(this);
+					if ($this.find('#starred').html() == null) {
+						$this.hide("slow");
+			     	event.preventDefault();      
+					}
+					else if ($this.find('#unstarred').html() == null) {
+						$this.show("slow");
+			     	event.preventDefault();      
+					};
+	      })
+			}
+			else {
+	      $('.panel').show("slow");    
+			};
+		});
+			
   });
 </script>
 
 <div id="nav-bar"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
 <div id="navbar" class="fixed container">
-	<ul id="navm" class="nav nav-pills">
+	
+	
+	<div class='nav-day'>
+		<ul id="navm" class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
 			<li >
 			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
 			</li>
 		<% end %>
-	</ul>
-	<div class="nav">
-	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">Venue<span class="caret"></span></a>
+		</ul>
+	</div>
+	
+	<div class="nav-venue">
+	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
 	    <ul id="venuem" class="dropdown-menu">
         <li>
-					<a href="#">All</a>
+					<a href="#">All Venues</a>
+			 	</li>
+        <li class="divider">
 			 	</li>
 	      <% Venue.all.each do |venue| %>
 	      <li>
@@ -58,14 +85,21 @@
 	      <% end %>
 	    </ul>			
 	</div>
+	
+	
+	<div class="nav-starred">
+	    <a id="starredfilter" class="btn" href="#">Starred Events</a>
+	</div>
+
+
+
+	
   <div class="loginnout">
 	  <% if user_signed_in? %>
 	    Signed in as <%= current_user.email %>. Not you?
 	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
 	  <% else %>
-	    <%= link_to "Sign Up", new_user_registration_path, :class=>"btn btn-default" %>
 	    <%= link_to "Sign In", new_user_session_path, :class=>"btn btn-default" %>
-	    <%= link_to "Sign In with Facebook", user_omniauth_authorize_path(:facebook), :class=>"btn btn-default" %>
 	  <% end %>
   </div>
 </div>
@@ -78,7 +112,12 @@
 <div>	
 <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
-		<% for event in events %>
+  
+  
+<% for event in events %>
+
+
+
  			<div class="panel">
  				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
@@ -94,6 +133,7 @@
 			    		<img class="icon-workshop" src="/assets/blank.png">
 			    		<img class="icon-podcast" src="/assets/blank.png">
 			    	</div>
+						</a>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
 								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
@@ -104,13 +144,37 @@
 										<% end %>
 									<% end %>
 								</p>
+
 							</div>
 							<div class="event-contain-right-center">
 								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
 							</div>
 							<div class="event-contain-right-right">
 								<div id='star' style="float:left">
-									<%= image_tag("star_unfilled.png", :height => 20)%>
+									<div id='starred'>
+									<% temp = 1 %>
+										<% if current_user %>
+										<% for star in Stared.all %>
+											<% if current_user.id == star.user_id && star.event_id == event.id %> 
+												<%= form_tag star, method: :delete  %> 
+												<%= submit_tag "Unstar" %>
+
+												<% temp = 0 %> 
+										<% end %>
+									<% end %>
+								  </div>
+									<div id='unstarred'>
+									<% if temp == 1 %>
+										<%= form_for Stared.new do |f| %>  
+											<%=  f.hidden_field :event_id, :value => event.id %>
+											<%=  f.hidden_field :user_id, :value => current_user.id %>
+											<%=  f.submit "Star" %>
+											<% end %>
+										<% end %>
+									<% end %>
+									</div>
+                
+
 								</div>
 								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
 										window.open(
@@ -123,7 +187,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				
 				<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 				<% event.acts.each do |act| %> 
 					<div class="act-left">
