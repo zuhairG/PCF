@@ -22,15 +22,64 @@
 	border-radius: 2px;
 	font-size: 20px;
 	border-radius:5px;
+	float: left;
 }
-.schedule-nav-contain{
+.nav-venue {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+div.nav-starred:hover{background-color: #e1e1e1;}
+
+.nav-starred {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+.nav-day {
+  overflow-x:scroll;
+	max-width:400px;
+	max-height:37px;
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+
+/*.schedule-nav-contain{
 	display: block;
 	padding: 2px;
 	white-space: nowrap;
 	overflow-x: auto;
 	max-width: 100%;
+}*/
+#pcf-logo{
+	max-height: 50px;
+	float: left;
+	z-index: 300;
+	position: relative;
+	padding: 6px;
 }
-
+.loginnout{
+	float: right;
+}
 /*
 #navigation {  
   display: block;
@@ -77,10 +126,10 @@
 	display: inline-block;
 	border: 1px solid #CACACA;
 	background-color: #f5f6f6;
-	padding: 5px;
-	float: right;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	padding: 10px 15px;
+	float: left;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	font-size: 20px;
 }
 #nav-bar{

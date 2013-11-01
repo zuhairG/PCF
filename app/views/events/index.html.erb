@@ -1,6 +1,6 @@
 <script>
   $(function() {
-    $('.schedule-nav-contain a').bind('click',function(event){
+    $('#navm a').bind('click',function(event){
       var $anchor = $(this);
 
       $('html, body').stop().animate({
@@ -9,34 +9,41 @@
 			
       event.preventDefault();
     });
+		
+		$('#venuem a').click(function() {
+			var venue = $(this).html();
+			if (venue == "All Venues") {
+	      $('.panel').show("slow")
+				$('#venuefilter').html(venue + '<span class="caret"></span>')
+	      event.preventDefault();
+			}
+			else {
+	      $('.panel').each(function(){
+					var $this = $(this);
+					if ($this.find('#venuename').html() == venue) {
+						$this.show("slow");
+						$('#venuefilter').html(venue + '<span class="caret"></span>')
+			     	event.preventDefault();      
+					}
+					else if ($this.find('#venuename').html() != venue) {
+						$this.hide("slow");
+			     	event.preventDefault();      
+					};
+				});
+			};
+    });
+		
   });
 </script>
-<div id="nav-bar"></div>
-<div id="navbar" class="schedule-nav-contain fixed container">
-	<ul class="nav nav-pills">
-		<% @event_date.sort.each do |date, events| %>
-			<li >
-			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
-			</li>
-		<% end %>
-	</ul>
-	<div class="venue-drop">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#dropdownmenu">Venue<span class="caret"></span></a>
-      <ul id="dropdownmenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-        <% Venue.all.each do |venue| %>
-           <li>
-						 <a role="menuitem" tabindex="-1"><%= venue.name %>
-						 </a>
-					 </li>
-        <% end %>
-      </ul>			
-  </div>
-</div>
+
+<%= render 'navbar' %>
+
 
 <body data-spy="scroll" data-target="#navbar">
 	
 <% @event_date.sort.each do |date, events| %>
-<div>
+
+<div>	
 <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
   <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
   
@@ -78,7 +85,7 @@
 			    	</div>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
-								<p class="venue_name"> <%= Venue.find(event.venue_id).name %> </p>
+								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 								<p class="event-performers">
 									<% for act in event.acts %>
 										<% for pid in act.performer_act %>
