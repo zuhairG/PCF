@@ -21,7 +21,7 @@ namespace :db do
       venue.street_address = "street1"
       venue.zip_code = 15213
       
-      Event.populate 2 do |event|
+      Event.populate 3 do |event|
         venue.event_id = event.id
         event.venue_id = venue.id
         event.date = [Date.today, Date.tomorrow, Date.yesterday]
