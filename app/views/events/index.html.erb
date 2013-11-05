@@ -109,11 +109,12 @@
 									<% temp = 1 %>
 										<% if current_user %>
 										<% for star in Stared.all %>
-											<% if current_user.id == star.user_id && star.event_id == event.id %> 
-												<%= form_tag star, method: :delete  %> 
-												<%= submit_tag "Unstar" %>
-
-												<% temp = 0 %> 
+											<% if (star.user_id == current_user.id) %>
+											  <% if (star.event_id == event.id) %> 
+                          <%= button_to "Unstar", star, :method => :delete %>
+                            <% temp = 0 %>
+										<% end %>
+										
 										<% end %>
 									<% end %>
 								  </div>

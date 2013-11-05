@@ -3,7 +3,6 @@ class CreateActs < ActiveRecord::Migration
     create_table :acts do |t|
       t.string :name
       t.integer :event_id
-      t.integer :performer_act_id
       t.string :description
       t.string :duration
 

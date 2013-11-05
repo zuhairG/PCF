@@ -35,15 +35,7 @@
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
-  <div class="field">
-    <%= f.label :act_id %><br />
-    <% for act in Act.find(:all) %>
 
-      <%= check_box_tag "event[act_ids][]", act.id, @event.acts.include?(act) %>
-      <%= act.name %><br/>
- 
-    <% end %>
-  </div>
   
   <div class="actions">
     <%= f.submit %>
