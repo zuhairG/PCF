@@ -33,26 +33,33 @@
 			};
     });
 		
-		$('#starredfilter').click(function() {
-			var venue = $(this).html();
-			if (venue == "Starred Events") {
-	      $('.panel').each(function(){
-	      	var $this = $(this);
-					if ($this.find('#starred').html() == null) {
-						$this.hide("slow");
-			     	event.preventDefault();      
-					}
-					else if ($this.find('#unstarred').html() == null) {
-						$this.show("slow");
-			     	event.preventDefault();      
-					};
-	      })
-			}
-			else {
-	      $('.panel').show("slow");    
-			};
-		});
-			
+		
+    $('#starredfilter').click(function() {
+    			var venue = $(this).html();
+    			if (venue == "Starred Events") {
+    				var x = 0;
+    	      $('.panel').each(function(){
+    					x++;
+    					console.log("running panel "+x);
+    	      	var $this = $(this);
+    					console.log($this.find("input[name='commit']").attr("value"));
+    					if ($this.find("input[name='commit']").attr("value") == "Star") {
+    						$this.hide("slow");
+    			     	event.preventDefault();      
+    					}
+    					else if ($this.find("input[name='commit']").attr("value") == "Unstar") {
+    						$this.show("slow");
+    			     	event.preventDefault();      
+    					};
+    	      })
+    				$('#starredfilter').html("All Events");
+    			}
+    			else {
+    	      $('.panel').show("slow");   
+    				$('#starredfilter').html("Starred Events");
+    				$('#venuefilter').html("All Venues"); 
+    			};
+    		});	
   });
 </script>
 
@@ -158,8 +165,26 @@
 				</div>
 			</div>
 	<br>
-	<% end %>
-	</div>
+	
+	<!-- <% if date<=Date.current %>
+  		<% if event.end_time<Time.current %>
+  			<script>
+  			$( ".panel" ).fadeTo( 0, 0.5, function() {
+  			});
+  			</script>
+  		<% end %>
+  	<% end %>	 -->
+
+  <% end %>
+  	</div>
+
+  <!-- 	<% if date<=Date.current %>
+  		<script>
+  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {
+  		});
+  		</script>
+  	<% end %>	 -->
+	
 <% end %>
 </div>
 </body>
