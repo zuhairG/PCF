@@ -645,8 +645,8 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .container:before,
 .container:after {

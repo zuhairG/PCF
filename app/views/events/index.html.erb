@@ -59,7 +59,7 @@
 <%= render 'navbar' %>
 
 
-<body data-spy="scroll" data-target="#navbar">
+<div class="container" data-spy="scroll" data-target="#navbar">
 	
 <% @event_date.sort.each do |date, events| %>
 
@@ -161,7 +161,7 @@
 	</div>
 <% end %>
 </div>
-</body>
+</div>
 
 <br />
 <% if can? :create, Event %>
