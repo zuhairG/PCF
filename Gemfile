@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'populator'
 gem 'devise'
 gem 'cancan'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -39,7 +41,8 @@ gem 'jquery-rails'
 gem 'heroku'
 
 group :production do
-  gem 'thin'
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :development, :test do

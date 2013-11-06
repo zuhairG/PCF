@@ -1,5 +1,5 @@
 class Act < ActiveRecord::Base
-  attr_accessible :description, :duration, :event_id, :name, :performer_ids, :act_type
+  attr_accessible :description, :duration, :event_id, :name, :act_type
   belongs_to :event
   has_many :performer_acts
   has_many :performers, through: :performer_acts

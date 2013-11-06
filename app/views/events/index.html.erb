@@ -1,101 +1,193 @@
 <script>
   $(function() {
-    $('.schedule-nav-contain a').bind('click',function(event){
+    $('#navm a').bind('click',function(event){
       var $anchor = $(this);
 
       $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top
       }, 1000,'easeInOutExpo');
-
+			
       event.preventDefault();
     });
+		
+		$('#venuem a').click(function() {
+			var venue = $(this).html();
+			if (venue == "All Venues") {
+	      $('.panel').show("slow")
+				$('#venuefilter').html(venue + '<span class="caret"></span>')
+	      event.preventDefault();
+			}
+			else {
+	      $('.panel').each(function(){
+					var $this = $(this);
+					if ($this.find('#venuename').html() == venue) {
+						$this.show("slow");
+						$('#venuefilter').html(venue + '<span class="caret"></span>')
+			     	event.preventDefault();      
+					}
+					else if ($this.find('#venuename').html() != venue) {
+						$this.hide("slow");
+			     	event.preventDefault();      
+					};
+				});
+			};
+    });
+		
+		
+    $('#starredfilter').click(function() {
+    			var venue = $(this).html();
+    			if (venue == "Starred Events") {
+    				var x = 0;
+    	      $('.panel').each(function(){
+    					x++;
+    					console.log("running panel "+x);
+    	      	var $this = $(this);
+    					console.log($this.find("input[name='commit']").attr("value"));
+    					if ($this.find("input[name='commit']").attr("value") == "Star") {
+    						$this.hide("slow");
+    			     	event.preventDefault();      
+    					}
+    					else if ($this.find("input[name='commit']").attr("value") == "Unstar") {
+    						$this.show("slow");
+    			     	event.preventDefault();      
+    					};
+    	      })
+    				$('#starredfilter').html("All Events");
+    			}
+    			else {
+    	      $('.panel').show("slow");   
+    				$('#starredfilter').html("Starred Events");
+    				$('#venuefilter').html("All Venues"); 
+    			};
+    		});	
   });
 </script>
 
-<div class="schedule-nav-contain">
-  <h1 class="schedule-header">Listing events</h1>
-	<ul class="schedule-nav">
-		<li class="schedule-nav-link">All Events</li>
-		<li class="schedule-nav-link">Past Events</li>
-		<% @event_date.sort.each do |date, events| %>
-			<li class="schedule-nav-link">
-			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
-			</li>
-		<% end %>
-	</ul>
-	<div class="venue-drop">
-		Venue<span class="caret"></span>
-	</div>
-</div>
+<%= render 'navbar' %>
 
+
+<body data-spy="scroll" data-target="#navbar">
+	
 <% @event_date.sort.each do |date, events| %>
 
-<h2 class="date-header" id= <%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
-  <% for event in events %>
-  		<div id=<%= date.strftime('%A') %> class="panel-group" id="accordion">
- 				<div class="panel panel-default">
- 				<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#eventid<%=event.id%>">
+<div>	
+<h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
+  <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
+  
+  
+<% for event in events %>
+
+
+
+ 			<div class="panel">
+ 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
-			    		<img class="icon-standup">
-			    		<img class="icon-openmic">
-			    		<img class="icon-improv">
-			    		<img class="icon-networking">
-			    		<img class="icon-party">
-			    		<img class="icon-poetry">
-			    		<img class="icon-happyhour">
-			    		<img class="icon-workshop">
-			    		<img class="icon-podcast">
+			    		<img class="icon-standup" src="/assets/blank.png">
+			    		<img class="icon-openmic" src="/assets/blank.png">
+			    		<img class="icon-improv" src="/assets/blank.png">
+			    		<img class="icon-networking" src="/assets/blank.png">
+			    		<img class="icon-party" src="/assets/blank.png">
+			    		<img class="icon-poetry" src="/assets/blank.png">
+			    		<img class="icon-happyhour" src="/assets/blank.png">
+			    		<img class="icon-workshop" src="/assets/blank.png">
+			    		<img class="icon-podcast" src="/assets/blank.png">
 			    	</div>
+						</a>
 			    	<div class="event-contain-right">
 							<div class="event-contain-right-left">
-								<p class="venue_name"><%= Venue.find(event.venue_id).name %></p>
+								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 								<p class="event-performers">
 									<% for act in event.acts %>
 										<% for pid in act.performer_act %>
 											<%= Performer.find(pid).name %>
-										<% end%>
-									<% end%>
+										<% end %>
+									<% end %>
 								</p>
+
 							</div>
 							<div class="event-contain-right-center">
 								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
 							</div>
 							<div class="event-contain-right-right">
 								<div id='star' style="float:left">
-									<%= image_tag("star_unfilled.png", :height => 20)%>
+									<div id='starred'>
+									<% temp = 1 %>
+										<% if current_user %>
+										<% for star in Stared.all %>
+											<% if (star.user_id == current_user.id) %>
+											  <% if (star.event_id == event.id) %> 
+                          <%= button_to "Unstar", star, :method => :delete %>
+                            <% temp = 0 %>
+										<% end %>
+										
+										<% end %>
+									<% end %>
+								  </div>
+									<div id='unstarred'>
+									<% if temp == 1 %>
+										<%= form_for Stared.new do |f| %>  
+											<%=  f.hidden_field :event_id, :value => event.id %>
+											<%=  f.hidden_field :user_id, :value => current_user.id %>
+											<%=  f.submit "Star" %>
+											<% end %>
+										<% end %>
+									<% end %>
+									</div>
+                
+
 								</div>
-								<a href="#" 
-								onclick="
-								window.open(
-								'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 
-								'facebook-share-dialog', 
-								'width=626,height=436'); 
-								return false;">
-								Share on Facebook
-							</a>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
-							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-						</div>
-						<div class="event-description">
-							<%= event.description %>
+								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
+										window.open(
+										'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</button>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							</div>
+							<div class="event-description">
+								<p class="description"><%= event.description %></p>
+							</div>
 						</div>
 					</div>
-				</a>
-			</div>
-			<div id="eventid<%=event.id%>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<% event.acts.each do |act| %> 
-					<li><%= act.name %><li>
+				
+				<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
+				<% event.acts.each do |act| %> 
+					<div class="act-left">
+						<%= act.name %><img class="icon-<%= act.act_type %>">
+					</div>
+					<div class="act-right">
+						<%= act.description %> ||
+						<% for pid in act.performer_act %>
+							<%= Performer.find(pid).name %>
 						<% end %>
 					</div>
+				<% end %>
 				</div>
 			</div>
-		</div>
 	<br>
-	<% end %>
+	
+	<!-- <% if date<=Date.current %>
+  		<% if event.end_time<Time.current %>
+  			<script>
+  			$( ".panel" ).fadeTo( 0, 0.5, function() {
+  			});
+  			</script>
+  		<% end %>
+  	<% end %>	 -->
+
+  <% end %>
+  	</div>
+
+  <!-- 	<% if date<=Date.current %>
+  		<script>
+  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {
+  		});
+  		</script>
+  	<% end %>	 -->
+	
 <% end %>
+</div>
+</body>
 
 <br />
 <% if can? :create, Event %>

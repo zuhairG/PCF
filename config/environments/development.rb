@@ -34,4 +34,6 @@ PCF::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.assets.precompile += %w( application.css application-desktop.css application-mobile.css )
 end

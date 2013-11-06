@@ -11,16 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131023235940) do
+ActiveRecord::Schema.define(:version => 20131106163728) do
 
   create_table "acts", :force => true do |t|
     t.string   "name"
-    t.string   "event_id"
-    t.integer  "performer_act_id"
+    t.integer  "event_id"
     t.string   "description"
     t.string   "duration"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "performer_id"
     t.string   "act_type"
   end
@@ -34,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20131023235940) do
     t.date     "date"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "act_id"
+    t.string   "ticket_url"
   end
 
   create_table "performer_acts", :force => true do |t|
@@ -49,9 +48,15 @@ ActiveRecord::Schema.define(:version => 20131023235940) do
     t.string   "twitter"
     t.string   "email"
     t.string   "bio"
-    t.integer  "performer_act_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "stareds", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -68,6 +73,9 @@ ActiveRecord::Schema.define(:version => 20131023235940) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.boolean  "admin"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
@@ -75,13 +83,13 @@ ActiveRecord::Schema.define(:version => 20131023235940) do
 
   create_table "venues", :force => true do |t|
     t.string   "name"
-    t.integer  "event_id"
     t.string   "street_address"
     t.string   "city"
     t.string   "state"
     t.integer  "zip_code"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "url"
   end
 
 end

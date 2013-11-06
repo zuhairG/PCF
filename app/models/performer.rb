@@ -1,5 +1,5 @@
 class Performer < ActiveRecord::Base
-  attr_accessible :bio, :email, :name, :performer_act_id, :twitter, :act_ids
+  attr_accessible :bio, :email, :name, :performer_act_id, :twitter
   has_many :performer_acts
   has_many :acts, through: :performer_acts
   validates_presence_of :bio, :email, :name, :twitter

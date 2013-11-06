@@ -1,0 +1,39 @@
+<h1>Listing stareds</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if current_user != nil %>
+<% @stareds.each do |stared| %>
+  <tr>
+  
+  
+  <% if stared.user_id == current_user.id %> 
+  
+    <td><%= stared.user_id %></td>
+    <td><%= stared.event_id %></td>
+    <td><%= link_to 'Show', stared %></td>
+    <td><%= link_to 'Edit', edit_stared_path(stared) %></td>
+    <td><%= link_to 'Destroy', stared, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+
+<% end %>
+<% else %>
+
+<p> There are no stared events </p>  
+
+<% end %>
+
+</table>
+
+
+
+<br />
+
+<%= link_to 'New Stared', new_stared_path %>

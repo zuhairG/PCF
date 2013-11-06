@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   # GET /events
   # GET /events.json
+load_and_authorize_resource  
   def index
   
       @events = Event.find(:all, :order => 'date, id', :limit => 50)
@@ -8,6 +9,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.mobile { }
       format.json { render json: @events }
     end
   end

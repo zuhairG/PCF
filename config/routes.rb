@@ -1,12 +1,25 @@
 PCF::Application.routes.draw do
-  devise_for :users
-
+  resources :stareds
   resources :performers
   resources :performer_acts
   resources :acts
   resources :venues
   resources :events
+  resources :imports do
+    collection { post :import }
+  end
+  
+match '/stared/staring/:id', :to => 'stared#staring'
 
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+
+  devise_scope :user do
+    get "users/sign_in", :to => "devise/sessions#new"
+    get "users/sign_out", :to => "devise/sessions#destroy"
+    get "users/sign_up", :to => "devise/registrations#new"
+    get '/users/auth/:provider' => 'omniauth_callbacks#passthru'
+
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
