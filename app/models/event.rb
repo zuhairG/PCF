@@ -3,8 +3,8 @@ class Event < ActiveRecord::Base
   has_one :venue
   has_many :acts
   default_scope order('date, start_time ASC')
-
-  validates_presence_of :date, :description, :start_time, :end_time, :start_time, :venue_id, :act_ids  
+  # deleted the validates presence of act_ids
+  validates_presence_of :date, :description, :start_time, :end_time, :start_time, :venue_id
   validate :start_must_be_before_end_time
 
 private 
