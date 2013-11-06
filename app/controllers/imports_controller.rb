@@ -13,7 +13,7 @@ class ImportsController < ApplicationController
           @venue.state = venue["state"]
           @venue.zip_code = venue["zip_code"]
           #@venue.neighborhood = venue["neighborhood"]
-          #@venue.url = venue["url"]
+          @venue.url = venue["url"]
           @venue.save!
         end
       end
