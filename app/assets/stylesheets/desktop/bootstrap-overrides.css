@@ -263,7 +263,20 @@ li{
 .event-performers{
 	font-weight: 200;
 }
-
+/* Starred icons */
+.star_filled {
+	background:url(../star_filled.png) no-repeat ;
+	background-size: 25px 25px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+}
+.star_unfilled {
+	width:25px;
+}
 
 /* Icon sprites */
 

@@ -38,28 +38,28 @@
     			var venue = $(this).html();
     			if (venue == "Starred Events") {
     				var x = 0;
-    	      $('.panel').each(function(){
+    				$('.panel').each(function(){
     					x++;
     					console.log("running panel "+x);
-    	      	var $this = $(this);
+    					var $this = $(this);
     					console.log($this.find("input[name='commit']").attr("value"));
-    					if ($this.find("input[name='commit']").attr("value") == "Star") {
+    					if ($this.find("input[type='image']").attr("class") == "star_unfilled") {
     						$this.hide("slow");
-    			     	event.preventDefault();      
+    						event.preventDefault();      
     					}
-    					else if ($this.find("input[name='commit']").attr("value") == "Unstar") {
+    					else if ($this.find("input[type='submit']").attr("class") == "star_filled") {
     						$this.show("slow");
-    			     	event.preventDefault();      
+    						event.preventDefault();      
     					};
-    	      })
+    				})
     				$('#starredfilter').html("All Events");
     			}
     			else {
-    	      $('.panel').show("slow");   
+    				$('.panel').show("slow");   
     				$('#starredfilter').html("Starred Events");
-    				$('#venuefilter').html("All Venues"); 
+    				$('#venuefilter').html("All Venues <span class='caret'></span>"); 
     			};
-    		});	
+    		});
   });
 </script>
 
@@ -118,7 +118,7 @@
 										<% for star in Stared.all %>
 											<% if (star.user_id == current_user.id) %>
 											  <% if (star.event_id == event.id) %> 
-                          <%= button_to "Unstar", star, :method => :delete %>
+                          <%= button_to "", star, :method => :delete, :class => "star_filled" %>
                             <% temp = 0 %>
 										<% end %>
 										
@@ -130,7 +130,7 @@
 										<%= form_for Stared.new do |f| %>  
 											<%=  f.hidden_field :event_id, :value => event.id %>
 											<%=  f.hidden_field :user_id, :value => current_user.id %>
-											<%=  f.submit "Star" %>
+											<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
 											<% end %>
 										<% end %>
 									<% end %>
