@@ -5,7 +5,6 @@ class CreatePerformers < ActiveRecord::Migration
       t.string :twitter
       t.string :email
       t.string :bio
-      t.integer :performer_act_id
 
       t.timestamps
     end

@@ -33,26 +33,33 @@
 			};
     });
 		
-		$('#starredfilter').click(function() {
-			var venue = $(this).html();
-			if (venue == "Starred Events") {
-	      $('.panel').each(function(){
-	      	var $this = $(this);
-					if ($this.find('#starred').html() == null) {
-						$this.hide("slow");
-			     	event.preventDefault();      
-					}
-					else if ($this.find('#unstarred').html() == null) {
-						$this.show("slow");
-			     	event.preventDefault();      
-					};
-	      })
-			}
-			else {
-	      $('.panel').show("slow");    
-			};
-		});
-			
+		
+    $('#starredfilter').click(function() {
+    			var venue = $(this).html();
+    			if (venue == "Starred Events") {
+    				var x = 0;
+    				$('.panel').each(function(){
+    					x++;
+    					console.log("running panel "+x);
+    					var $this = $(this);
+    					console.log($this.find("input[name='commit']").attr("value"));
+    					if ($this.find("input[type='image']").attr("class") == "star_unfilled") {
+    						$this.hide("slow");
+    						event.preventDefault();      
+    					}
+    					else if ($this.find("input[type='submit']").attr("class") == "star_filled") {
+    						$this.show("slow");
+    						event.preventDefault();      
+    					};
+    				})
+    				$('#starredfilter').html("All Events");
+    			}
+    			else {
+    				$('.panel').show("slow");   
+    				$('#starredfilter').html("Starred Events");
+    				$('#venuefilter').html("All Venues <span class='caret'></span>"); 
+    			};
+    		});
   });
 </script>
 
@@ -77,15 +84,50 @@
 		    	<div class="event-contain">
 			    	<div class="event-contain-left">
 			    		<h5><%= event.name.upcase %></h5>
+			    		
+			    		<!-- displaying icons based on the type of acts --> 
+			    		<% for act in event.acts %> 
+			    		<% if act.act_type == "standup" %>
 			    		<img class="icon-standup" src="/assets/blank.png">
-			    		<img class="icon-openmic" src="/assets/blank.png">
-			    		<img class="icon-improv" src="/assets/blank.png">
-			    		<img class="icon-networking" src="/assets/blank.png">
-			    		<img class="icon-party" src="/assets/blank.png">
-			    		<img class="icon-poetry" src="/assets/blank.png">
-			    		<img class="icon-happyhour" src="/assets/blank.png">
-			    		<img class="icon-workshop" src="/assets/blank.png">
-			    		<img class="icon-podcast" src="/assets/blank.png">
+			    		<% end %> 
+			    		<% if act.act_type == "openmic" %>
+			    		  <img class="icon-openmic" src="/assets/blank.png">
+			    		<% end %> 
+			    		
+  			    	<% if act.act_type == "improv" %>
+              <img class="icon-improv" src="/assets/blank.png">
+              <% end %> 
+              
+			    		<% if act.act_type == "networking" %>
+              <img class="icon-networking" src="/assets/blank.png">
+              <% end %>
+              <% if act.act_type == "party" %>
+                <img class="icon-party" src="/assets/blank.png">
+              <% end %>
+              
+              <% if act.act_type == "poetry" %>
+                <img class="icon-poetry" src="/assets/blank.png">
+              <% end %>
+              
+              
+              <% if act.act_type == "happyhour" %>
+                <img class="icon-happyhour" src="/assets/blank.png">
+              <% end %>
+              
+              <% if act.act_type == "workshop" %>
+                <img class="icon-workshop" src="/assets/blank.png">
+              <% end %>
+              
+              <% if act.act_type == "workshop" %>
+                <img class="icon-workshop" src="/assets/blank.png">
+              <% end %>
+              
+              <% if act.act_type == "podcast" %>
+                <img class="icon-podcast" src="/assets/blank.png">
+              <% end %>
+              
+			    		<% end %> 
+
 			    	</div>
 						</a>
 			    	<div class="event-contain-right">
@@ -109,11 +151,12 @@
 									<% temp = 1 %>
 										<% if current_user %>
 										<% for star in Stared.all %>
-											<% if current_user.id == star.user_id && star.event_id == event.id %> 
-												<%= form_tag star, method: :delete  %> 
-												<%= submit_tag "Unstar" %>
-
-												<% temp = 0 %> 
+											<% if (star.user_id == current_user.id) %>
+											  <% if (star.event_id == event.id) %> 
+                          <%= button_to "", star, :method => :delete, :class => "star_filled" %>
+                            <% temp = 0 %>
+										<% end %>
+										
 										<% end %>
 									<% end %>
 								  </div>
@@ -122,7 +165,7 @@
 										<%= form_for Stared.new do |f| %>  
 											<%=  f.hidden_field :event_id, :value => event.id %>
 											<%=  f.hidden_field :user_id, :value => current_user.id %>
-											<%=  f.submit "Star" %>
+											<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
 											<% end %>
 										<% end %>
 									<% end %>
@@ -157,8 +200,26 @@
 				</div>
 			</div>
 	<br>
-	<% end %>
-	</div>
+	
+	<!-- <% if date<=Date.current %>
+  		<% if event.end_time<Time.current %>
+  			<script>
+  			$( ".panel" ).fadeTo( 0, 0.5, function() {
+  			});
+  			</script>
+  		<% end %>
+  	<% end %>	 -->
+
+  <% end %>
+  	</div>
+
+  <!-- 	<% if date<=Date.current %>
+  		<script>
+  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {
+  		});
+  		</script>
+  	<% end %>	 -->
+	
 <% end %>
 </div>
 </div>

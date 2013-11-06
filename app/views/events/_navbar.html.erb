@@ -13,8 +13,8 @@
 		</ul>
 	</div>
 	
-	<div class="nav-venue">
-	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
+	<div class="btn-group">
+	    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
 	    <ul id="venuem" class="dropdown-menu">
         <li>
 					<a href="#">All Venues</a>
@@ -29,20 +29,46 @@
 	    </ul>			
 	</div>
 	
-	
+	<% if current_user %>
 	<div class="nav-starred">
 	    <a id="starredfilter" class="btn" href="#">Starred Events</a>
+
 	</div>
-
-
+  <% end %>
 
 	
   <div class="loginnout">
+  
 	  <% if user_signed_in? %>
-	    Signed in as <%= current_user.email %>. Not you?
-	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
+	     
+	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %> </p>
 	  <% else %>
-	    <%= link_to "Sign In", new_user_session_path, :class=>"btn btn-default" %>
+	  
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Sign in <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu pull-right" role="menu">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <li> <%= f.label :email, :style=>"margin:10px;" %> 
+        <%= f.email_field :email, :autofocus => true, :style=>"margin:10px;"  %>  </li>  
+
+        <li><%= f.label :password , :style=>"margin:0px 10px;"%>
+        <%= f.password_field :password, :style=>"margin:10px;" %></li>
+
+        <% if devise_mapping.rememberable? -%>
+          <li><%= f.check_box :remember_me, :style=>"margin:0px 10px;" %> <%= f.label :remember_me %>
+        <% end %> </li>
+        
+
+        <li><%= f.submit "Sign in", :style=>"margin:0px 10px;" %></li>
+      <% end %>
+      <li> <%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook")%> </li>
+
+
+
+      </ul>
+    </div>
 	  <% end %>
   </div>
 </div>

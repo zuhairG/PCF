@@ -5,6 +5,9 @@ PCF::Application.routes.draw do
   resources :acts
   resources :venues
   resources :events
+  resources :imports do
+    collection { post :import }
+  end
   
 match '/stared/staring/:id', :to => 'stared#staring'
 

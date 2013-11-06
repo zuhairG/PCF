@@ -22,7 +22,6 @@ namespace :db do
       venue.zip_code = 15213
       
       Event.populate 3 do |event|
-        venue.event_id = event.id
         event.venue_id = venue.id
         event.date = [Date.today, Date.tomorrow, Date.yesterday]
         event.start_time = ['15:30', '12:30', '13:30']
@@ -36,9 +35,7 @@ namespace :db do
           act.description = "This is the description of this act"
           act.name = ['act1','the amazing act', 'this is an act name']
           act.act_type = ['standup', 'improv', 'workshop']
-          act.performer_act_id = ['1','2','3','5']
           pact.act_id = act.id
-          event.act_id = Act.all
           	end
           end
         end
