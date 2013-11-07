@@ -76,9 +76,6 @@
   
   
 <% for event in events %>
-
-
-
  			<div class="panel">
  				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 		    	<div class="event-contain">
@@ -89,7 +86,8 @@
 			    		<% for act in event.acts %> 
 			    		<% if act.act_type == "standup" %>
 			    		<img class="icon-standup" src="/assets/blank.png">
-			    		<% end %> 
+			    		<% end %>
+
 			    		<% if act.act_type == "openmic" %>
 			    		  <img class="icon-openmic" src="/assets/blank.png">
 			    		<% end %> 
@@ -99,8 +97,9 @@
               <% end %> 
               
 			    		<% if act.act_type == "networking" %>
-              <img class="icon-networking" src="/assets/blank.png">
+              	<img class="icon-networking" src="/assets/blank.png">
               <% end %>
+
               <% if act.act_type == "party" %>
                 <img class="icon-party" src="/assets/blank.png">
               <% end %>
@@ -108,7 +107,6 @@
               <% if act.act_type == "poetry" %>
                 <img class="icon-poetry" src="/assets/blank.png">
               <% end %>
-              
               
               <% if act.act_type == "happyhour" %>
                 <img class="icon-happyhour" src="/assets/blank.png">
