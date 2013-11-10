@@ -38,8 +38,8 @@ p.description{
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 13px;
+  font-family: $font-body;
   line-height: 1.428571429;
   text-align: center;
   vertical-align: middle;
@@ -47,6 +47,12 @@ p.description{
   border: 1px solid transparent;
   border-radius: 4px;
   white-space: nowrap;
+}
+.btn-group {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
 }
 .btn-default {
   color: $black;
@@ -110,7 +116,15 @@ p.description{
 	background: $a;
 }
 img{
-	.icon-standup{@include icon-sprite(url('/assets/pcf_logos.png') 0 0);}
+	.icon-standup{width:30px;height:30px;background:url('/assets/pcf_logos.png') 0 0;}
+  .icon-openmic{width:30px;height:30px;background:url('/assets/pcf_logos.png') -30px 0;}
+  .icon-improv{width:30px;height:30px;background:url('/assets/pcf_logos.png') -60px 0;}
+	.icon-networking{width:30px;height:30px;background:url('/assets/pcf_logos.png') -90px 0;}
+	.icon-party{width:30px;height:30px;background:url('/assets/pcf_logos.png') 0 -30px;}
+	.icon-poetry{width:30px;height:30px;background:url('/assets/pcf_logos.png') -30px -30px;}
+	.icon-happyhour{width:30px;height:30px;background:url('/assets/pcf_logos.png') -60px -30px;}
+	.icon-workshop{width:30px;height:30px;background:url('/assets/pcf_logos.png') -90px -30px;}
+	.icon-podcast{width:30px;height:30px;background:url('/assets/pcf_logos.png') -120px -30px;}
 }
 
 
@@ -130,8 +144,10 @@ body{
 	}
 	#navbar{
 		position: fixed;
+		left: 0;
 		display: block;
-		width: 100%;
+		max-width: 100%;
+		max-height: 50px;
 
 		.img-contain{
 			width: 20%;
@@ -163,8 +179,6 @@ body{
 			}
 
 			.nav {
-			  margin-bottom: 0;
-			  padding-left: 0;
 			  list-style: none;
 				display: inline-block;
 				background-color: #f5f6f6;
@@ -178,8 +192,6 @@ body{
 			}
 		}
 		.nav-starred {
-		  margin-bottom: 0;
-		  padding-left: 0;
 		  list-style: none;
 			display: inline-block;
 			background-color: #f5f6f6;
@@ -205,6 +217,7 @@ body{
 		padding: 80px 0px 10px 0px;
 		color: $gold;
 		font-size: 30px;
+		font-family: $font-datehead;
 	}
 
 	.panel{
@@ -212,12 +225,14 @@ body{
 
 		.event-contain{
 			background-color: $light-gray;
+			width: 100%;
 
 			.event-contain-left{
 				display: inline-block;
 				vertical-align: top;
 				padding: 10px;
-				width: 20%;
+				min-width: 20%;
+				max-width: 20%;
 				word-wrap: normal;
 				text-align: left;
 				border-right: 1px solid #CACACA;
@@ -225,6 +240,7 @@ body{
 
 			.event-contain-left h5{
 				font-size: 20px;
+				margin: 10px 0;
 			}
 
 			.event-contain-right{
@@ -232,9 +248,14 @@ body{
 				display: inline-block;
 				vertical-align: top;
 				padding: 10px;
-				width: 79%;
+				max-width: 80%;
 				word-wrap: normal;
 				text-align: left;
+
+				p{
+					font-size: 13px;
+					line-height: 18px;
+				}
 
 				.event-contain-right-left{
 					display: inline-block;
