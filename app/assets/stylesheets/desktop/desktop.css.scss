@@ -5,6 +5,7 @@ $font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $gold: #CC9933;
 $dark-gray: #CACACA;
+$medium-gray: #E8E8E8;
 $light-gray: #F5F6F6;
 $black: #000000;
 $white: #FFFFFF;
@@ -48,12 +49,6 @@ p.description{
   border-radius: 4px;
   white-space: nowrap;
 }
-.btn-group {
-  display: block;
-  float: none;
-  width: 100%;
-  max-width: 100%;
-}
 .btn-default {
   color: $black;
   background-color: $white;
@@ -84,7 +79,8 @@ p.description{
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: normal;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -162,19 +158,19 @@ body{
 			}
 		}
 		.nav-day {
-			max-width:400px;
 			list-style: none;
 			display: inline-block;
 			float: left;
 
 			#navm{
 				overflow-x: scroll;
+				max-height: 32px;
 				white-space: nowrap;
-				max-height: 34px;
 
-				.nav-date{
-					float: left;
-					display: inline-block;
+				.nav-date a{
+					display: block;
+					white-space: nowrap;
+					height: 32px;
 				}
 			}
 
@@ -209,6 +205,33 @@ body{
 
 		.loginnout{
 			float: right;
+			margin-top: 2px;
+
+			.login-form{
+				padding: 8px 20px;
+
+				.form-label{
+					font-weight: normal;
+				}
+				.form-input{
+					border: 1px solid $dark-gray;
+ 				  border-radius: 4px;
+ 				  background-color: $medium-gray;
+ 				  margin-bottom: 10px;
+ 				  max-width: 210px;
+ 				  padding: 0 10px;
+				}
+				#form-btn-l, #form-btn-r{
+					padding: 3px 10px;
+					display: inline;
+				}
+				#form-btn-l{
+					float:left;
+				}
+				#form-btn-r{
+					float:right;
+				}
+			}
 		}
 	}
 	
@@ -314,7 +337,7 @@ body{
 		}
 
 		.act-contain{
-			background-color: #E8E8E8;
+			background-color: $medium-gray;
 
 			.act-left{
 				display: inline-block;

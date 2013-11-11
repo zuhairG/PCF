@@ -14,14 +14,14 @@
 	</div>
 	
 	<div class="btn-group">
-	    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
-	    <ul id="venuem" class="dropdown-menu">
-        <li><a href="#">All Venues</a></li>
-        <li class="divider"></li>
-	      <% Venue.all.each do |venue| %>
-	      	<li><a href="#"><%= venue.name %></a></li>
-	      <% end %>
-	    </ul>			
+    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues <span class="caret"></span></a>
+    <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
+      <li><a href="#">All Venues</a></li>
+      <li class="divider"></li>
+      <% Venue.all.each do |venue| %>
+      	<li><a href="#"><%= venue.name %></a></li>
+      <% end %>
+    </ul>			
 	</div>
 	
 	<% if current_user %>
@@ -42,25 +42,16 @@
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         Sign in <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu pull-right" role="menu">
+      <ul class="dropdown-menu pull-right login-form" role="menu">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <li> <%= f.label :email, :style=>"margin:10px;" %> 
-        <%= f.email_field :email, :autofocus => true, :style=>"margin:10px;"  %>  </li>  
-
-        <li><%= f.label :password , :style=>"margin:0px 10px;"%>
-        <%= f.password_field :password, :style=>"margin:10px;" %></li>
-
+        <li> <%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %>  </li>
+        <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
         <% if devise_mapping.rememberable? -%>
-          <li><%= f.check_box :remember_me, :style=>"margin:0px 10px;" %> <%= f.label :remember_me %>
-        <% end %> </li>
-        
-
-        <li><%= f.submit "Sign in", :style=>"margin:0px 10px;" %></li>
+          <li><%= f.check_box :remember_me %> <%= f.label :remember_me, :class => "form-label" %></li>
+        <% end %>
+        <li><%= f.submit "Sign in", :class => "btn btn-default", :id => "form-btn-l" %></li>
+        <li><%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook"), :class => "btn btn-default", :id => "form-btn-r"%></li>
       <% end %>
-      <li> <%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook")%> </li>
-
-
-
       </ul>
     </div>
 	  <% end %>
