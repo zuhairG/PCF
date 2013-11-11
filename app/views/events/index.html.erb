@@ -106,10 +106,11 @@
                 
 
 								</div>
-								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
+								<img src="assets/facebook.png" class="social-icon" href="#" onclick="
 										window.open(
-										'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</button>
-								<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
+										'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;"></img>
+
+								<a target="_blank" href="https://twitter.com/share?text=Very%20excited%20to%20see%20<% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%>%20in%20<%= event.name %>!!&url=http://pittsburghcomedyfestival.org/&hashtags=PCF2014,PittsburghComedy" data-lang="en"><img src="assets/twitter.png" class="social-icon"></a>
 								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 							</div>
 							<div class="event-description">

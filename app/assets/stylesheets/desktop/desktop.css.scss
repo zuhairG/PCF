@@ -284,6 +284,11 @@ body{
 					text-align:right;
 					width:25%;
 
+					.social-icon{
+						cursor: pointer;
+						width: 30px;
+					}
+
 					.star_filled {
 						background:url(../star_filled.png) no-repeat ;
 						background-size: 25px 25px;
