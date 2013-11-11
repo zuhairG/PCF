@@ -47,6 +47,8 @@
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         Sign in <span class="caret"></span>
       </button>
+      
+   
       <ul class="dropdown-menu pull-right" role="menu">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <li> <%= f.label :email, :style=>"margin:10px;" %> 
@@ -63,6 +65,7 @@
         <li><%= f.submit "Sign in", :style=>"margin:0px 10px;" %></li>
       <% end %>
       <li> <%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook")%> </li>
+        <li> <%= link_to "Sign up", new_registration_path(resource_name) %> </li> 
 
 
 

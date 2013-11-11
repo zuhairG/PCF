@@ -159,16 +159,24 @@
 										
 										<% end %>
 									<% end %>
+									<% end %>
+									
 								  </div>
 									<div id='unstarred'>
 									<% if temp == 1 %>
 										<%= form_for Stared.new do |f| %>  
+										  <% if current_user %>
+											
 											<%=  f.hidden_field :event_id, :value => event.id %>
 											<%=  f.hidden_field :user_id, :value => current_user.id %>
 											<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
+											
+											<% else %>
+											<% link_to image_tag("star_unfilled.png", :class => "star_unfilled"), new_user_session_path %>
 											<% end %>
 										<% end %>
 									<% end %>
+										
 									</div>
                 
 
