@@ -154,6 +154,8 @@ body{
 				overflow-x: scroll;
 				max-height: 32px;
 				white-space: nowrap;
+				width: auto;
+				display: inline-block;
 
 				.nav-date a{
 					display: block;
