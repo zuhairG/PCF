@@ -173,8 +173,8 @@ body{
 				max-height: 34px;
 
 				.nav-date{
+					float: left;
 					display: inline-block;
-					float: 0;
 				}
 			}
 
@@ -186,7 +186,7 @@ body{
 				margin: 0px 3px;
 				-moz-border-radius: 2px;
 				border-radius: 2px;
-				font-size: 20px;
+				font-size: 13px;
 				border-radius:5px;
 				float: left;
 			}
@@ -314,7 +314,7 @@ body{
 		}
 
 		.act-contain{
-			background-color: #b8b8b8;
+			background-color: #E8E8E8;
 
 			.act-left{
 				display: inline-block;
@@ -324,7 +324,7 @@ body{
 				word-wrap: normal;
 				text-align: left;
 				border-right: 1px solid #CACACA;
-				color: #FFFFFF;
+				color: $black;
 			}
 
 			.act-right{
@@ -335,7 +335,7 @@ body{
 				width: 79%;
 				word-wrap: normal;
 				text-align: left;
-				color: #FFFFFF;
+				color: $black;
 			}
 		}
 	}

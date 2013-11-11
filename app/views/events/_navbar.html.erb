@@ -1,13 +1,13 @@
 <div id="nav-bar"></div>
 <div id="navbar" class="container">
-	<div class="img-contain"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
+	<div class="img-contain"><a href="#"><img src="assets/pcf_logo.png" id="pcf-logo"></a></div>
 	
 	
 	<div class='nav-day'>
 		<ul id="navm" class="nav nav-pills">
 		<% @event_date.sort.each do |date, events| %>
 			<li class="nav-date">
-			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
+			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %A %m/%d') %></a>
 			</li>
 		<% end %>
 		</ul>
