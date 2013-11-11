@@ -5,6 +5,7 @@
 	
 	<% @event_date.sort.each do |date, events| %>
 
+										
 		<div>	
 		  <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
