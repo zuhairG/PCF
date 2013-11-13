@@ -42,30 +42,28 @@
 										<div id='star' style="float:left">
 											<div id='starred'>
 											<% temp = 1 %>
-												<% if current_user %>
-												<% for star in Stared.all %>
-													<% if (star.user_id == current_user.id) %>
-													  <% if (star.event_id == event.id) %> 
-		                          <%= button_to "", star, :method => :delete, :class => "star_filled" %>
-		                            <% temp = 0 %>
-												<% end %>
-											<% end %>
-										  </div>
-											<div id='unstarred'>
-											<% if temp == 1 %>
-											  
-												<%= form_for Stared.new do |f| %> 
-												   
-													<%=  f.hidden_field :event_id, :value => event.id %>
-													<%=  f.hidden_field :user_id, :value => current_user.id %>
-													<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
-													<% end %>
-												<% end %>
-												<% end %>
-												
-												<% else %>
-												<%=  link_to image_tag("star_unfilled.png", :class => "star_unfilled"), new_user_session_path  %>
-											<% end %>
+                         <% if current_user %>
+                            <% for star in Stared.all %>
+                              <% if (star.user_id == current_user.id) %>
+                                <% if (star.event_id == event.id) %>
+                                  <%= button_to "", star, :method => :delete, :class => "star_filled" %>
+                                  <% temp = 0 %>
+                                <% end %>
+
+                              <% end %>
+                             <% end %>
+                            </div>
+                            <div id='unstarred'>
+                               <% if temp == 1 %>
+                                 <%= form_for Stared.new do |f| %>  
+                                   <%=  f.hidden_field :event_id, :value => event.id %>
+                                    <%=  f.hidden_field :user_id, :value => current_user.id %>
+                                       <%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
+                                <% end %>
+                                  <% end %>
+                                  <% else %>
+                                    <%=  link_to image_tag("star_unfilled.png", :class => "star_unfilled"), new_user_session_path  %>
+                                  <% end %>
 											</div>
 										</div>
 										<img src="assets/facebook.png" class="social-icon" href="#" onclick="
