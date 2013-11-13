@@ -4,7 +4,10 @@ class CreateActs < ActiveRecord::Migration
       t.string :name
       t.integer :event_id
       t.string :description
-      t.string :duration
+      t.string :url
+      t.string :facebook
+      t.string :twitter
+      t.string :photo_url
 
       t.timestamps
     end
