@@ -5,7 +5,7 @@ require File.expand_path("../../test_helper", __FILE__)
 
 class EventTest < ActiveSupport::TestCase
   should have_many(:acts)
-  should belong_to(:venue)
+(:venue)
   
   #test basic validations 
   should validate_presence_of(:date)
