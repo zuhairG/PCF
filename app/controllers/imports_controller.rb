@@ -1,7 +1,12 @@
 class ImportsController < ApplicationController
+  authorize_resource :class => false
+  
   def import
+    if current_user
+      if current_user.admin
     Rails.logger.level = 0
     data = params[:file].read
+    if data == nil
     parsed = JSON.parse(data)
     parsed.each do |key, value|
       if (key == "venue")
@@ -71,5 +76,10 @@ class ImportsController < ApplicationController
       end
     end
     redirect_to imports_path, notice: "Json imported."
+  end
+  else 
+    redirect_to events_path, notice: "Access Denied "
+  end
+end
   end
 end
