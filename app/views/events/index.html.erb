@@ -5,14 +5,15 @@
 	
 	<% @event_date.sort.each do |date, events| %>
 
-										
-		<div>	
 		  <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
+			
 				<% for event in events %>
 		 			<div class="panel">
+		 			
 		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 				    	<div class="event-contain">
+				    	
 					    	<div class="event-contain-left">
 					    		<h5><%= event.name.upcase %></h5>
 					    		
@@ -21,6 +22,7 @@
 					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
 					    		<% end %> 
 					    	</div>
+					    	
 					    	</a>
 					    	<div class="event-contain-right">
 									<div class="event-contain-right-left">
@@ -47,18 +49,22 @@
 		                          <%= button_to "", star, :method => :delete, :class => "star_filled" %>
 		                            <% temp = 0 %>
 												<% end %>
-												
-												<% end %>
 											<% end %>
 										  </div>
 											<div id='unstarred'>
 											<% if temp == 1 %>
-												<%= form_for Stared.new do |f| %>  
+											  
+												<%= form_for Stared.new do |f| %> 
+												   
 													<%=  f.hidden_field :event_id, :value => event.id %>
 													<%=  f.hidden_field :user_id, :value => current_user.id %>
 													<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
 													<% end %>
 												<% end %>
+												<% end %>
+												
+												<% else %>
+												<%=  link_to image_tag("star_unfilled.png", :class => "star_unfilled"), new_user_session_path  %>
 											<% end %>
 											</div>
 										</div>
@@ -87,7 +93,9 @@
 								</div>
 							<% end %>
 						</div>
+						
 					</div>
+					
 					<br>
 					<!-- <% if date<=Date.current %>
 				  		<% if event.end_time<Time.current %>
@@ -98,7 +106,6 @@
 				  		<% end %>
 				  	<% end %>	 -->
 				<% end %>
-			</div> 
 				  <!-- 	<% if date<=Date.current %>
 				  		<script>
 				  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {

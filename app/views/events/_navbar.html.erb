@@ -35,14 +35,14 @@
   
 	  <% if user_signed_in? %>
 	     
-	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %> </p>
+	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
 	  <% else %>
 	  
     <div class="btn-group">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
         Sign in <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu pull-right login-form" role="menu">
+      <ul id= "login" class="dropdown-menu pull-right login-form" role="menu">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <li> <%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %>  </li>
         <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
