@@ -64,4 +64,8 @@ $(function() {
     				$('#venuefilter').html("All Venues <span class='caret'></span>"); 
     			};
     		});
+			$('#login').click(function(e) {
+			   e.stopPropagation();
+			});
+
   });
