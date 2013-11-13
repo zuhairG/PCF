@@ -13,7 +13,6 @@ class Ability
          can :create, Stared
          can :destroy, Stared , :user_id => user.id
          can :edit, Stared , :user_id => user.id
-        
        end
     #
     # The first argument to `can` is the action you are giving the user 
