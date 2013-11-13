@@ -5,6 +5,7 @@
 	
 	<% @event_date.sort.each do |date, events| %>
 
+										
 		<div>	
 		  <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
@@ -76,7 +77,7 @@
 						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-left">
-									<%= act.name %><img class="icon-<%= act.act_type %>">
+									<%= act.name.upcase %><img class="icon-<%= act.act_type %>" src="/assets/blank.png">
 								</div>
 								<div class="act-right">
 									<%= act.description %> ||
