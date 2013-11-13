@@ -23,7 +23,7 @@ namespace :db do
       
       Event.populate 3 do |event|
         event.venue_id = venue.id
-        event.date = [Date.today, Date.tomorrow, Date.yesterday]
+        event.date = [Date.current, Date.tomorrow, Date.yesterday, 2.days.from_now]
         event.start_time = ['15:30', '12:30', '13:30']
         event.end_time = ['16:30', '17:30', '14:30']
         event.description = "this is the description of this event"
