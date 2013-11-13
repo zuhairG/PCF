@@ -82,10 +82,12 @@
 								<div class="act-right">
 									<%= act.description %> ||
 									<img class="act_image" src="/assets/Louis_ck.jpeg">
+									<br><a href="https://twitter.com/sennaparsa">Twitter</a>
+									<br><a href="https://www.facebook.com/senna.parsa">Facebook Page</a>
+									
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
 									<% end %>
-									<%= act.description %>
 								</div>
 							<% end %>
 						</div>
