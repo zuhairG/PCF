@@ -1,0 +1,28 @@
+{
+  "acts": [
+    {
+	  	"name": "Aaron Kleiber",
+	  	"event_name": "Pittsburgh Kick-Off",
+	  	"act_type": "standup",
+	  	"description": "Aaron Kleiber has been entertaining his entire life  from climbing atop his grandmothers coffee table as a child to taking the stage at comedy clubs across the country.<br/><br/>In July 2013, Aaron made his stand-up national television debut on 'Gotham Comedy Live' with host Jim Breuer - sharing the hour with Mitch Fatel, Ashley Austin-Morris & Dean Edwards.<br/><br/>Kleiber has been a requested feature performer for Bob Saget (Full House), Jim Breuer (Saturday Night Live), Ralphie May, Bert Kreischer (Travel Channels Bert the Conquerer), John Witherspoon, Josh Blue (winner of Last Comic Standing), Pablo Francisco (MADtv), Tommy Davidson (In Living Color), Bret Ernst (Comedy Central) and Steve-O (MTVs Jackass). Hes also had the privilege to open for Billy Gardell (Mike and Molly), Tom Green (MTV), Bobcat Goldthwait - and one of his comedy idols, Sinbad.<br/><br/>Aaron recently filmed a guest-starring role for the Nickelodeon series  Supah Ninjas, airing now. He co-starred in the film Help Me, Help You opposite Sabrina Bryan (The Cheetah Girls, Dancing with the Stars) and appeared in the acclaimed drama, Warrior, starring Tom Hardy and Nick Nolte, for Lionsgate, in addition to numerous national commercials. Kleiber was featured in the original series The Mercury Men, seen on Syfy; hes also known for producing and performing in both the groundbreaking independent film (and subsequent Web series) Captain Blasto as well as the beloved Star Wars mockumentary A Great Disturbance, both of which claimed multiple awards at film festivals nationwide.<br/><br/>A native of Munhall, Pa., and a fixture in Pittsburghs growing comedy scene, Kleiber was voted Best Local Comedian by the readers of Pittsburgh Magazine in 2012 and 2013. Aaron studied and performed at the legendary Second City in Chicago.",
+	  	"url": "http://www.aaronkleiber.com/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Player One",
+	  	"event_name": "Pittsburgh Kick-Off",
+	  	"act_type": "open mic",
+	  	"description": "Player One, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/"
+	  },
+	  {
+	  	"name": "Well Known Strangers",
+	  	"event_name": "Pittsburgh Kick-Off",
+	  	"act_type": "improv",
+	  	"description": "Well Known Strangers have been performing together since 2012 and were the longest running House Team at Steel City Improv Theater until they retired from Totally Free Mondays in September of 2013. Their short film 'Hunter Gathering' won the Audience Choice Award in the 2013 Pittsburgh 48-Hour Film Project. Official Selections: Chicago Improv Festival 2013, Detroit Improv Festival 2013",
+	  	"url": "https://vimeo.com/channels/wksradio",
+	  	"facebook": "https://www.facebook.com/wellknownstrangersimprov"
+	  }
+	]
+}
