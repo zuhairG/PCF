@@ -10,7 +10,7 @@
 				<% if date.wday==Date.current.wday %>
 					<a href= <%= "#" + date.strftime('%A%m%d') %> >Today</a>
 			  <% else %>
-					<a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %A %m/%d') %></a>
+					<a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A') %></a>
 			  <% end %>	
 			</li>
 		<% end %>

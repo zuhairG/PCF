@@ -129,7 +129,7 @@ body{
 	#navbar{
 		position: fixed;
 		left: 0;
-		display: block;
+		display: inline;
 		max-width: 100%;
 		max-height: 50px;
 
@@ -146,38 +146,42 @@ body{
 			}
 		}
 		.nav-day {
-			width:500px;
-			display: inline-block;
-			white-space: nowrap;
+			max-width:400px;
+			max-height:32px;
 			float: left;
+			overflow-y: no-content;
+			overflow-x: scroll;
 
 			#navm{
-				overflow-x: scroll;
+				width:auto;
 				max-height: 32px;
-				white-space: nowrap;
-				width: auto;
-				display: inline-block;
+				float: left;
+				overflow-y: no-content;
+				overflow-x: scroll;
 
 				.nav-date a{
 					display: block;
 					white-space: nowrap;
 					height: 32px;
-					display: inherit;
+					display: inline;
+					float: left;
+				}
+				.nav-date a{
+					display: block;
+					white-space: nowrap;
+					height: 32px;
+					display: inline;
 					float: left;
 				}
 			}
 
 			.nav {
-			  list-style: none;
-				display: inline-block;
 				background-color: #f5f6f6;
-				padding: 0px 0px;
 				margin: 0px 3px;
 				-moz-border-radius: 2px;
 				border-radius: 2px;
 				font-size: 13px;
 				border-radius:5px;
-				float: left;
 			}
 		}
 		.nav-starred {
