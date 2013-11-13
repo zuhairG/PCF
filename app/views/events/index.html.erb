@@ -80,10 +80,7 @@
 									<%= act.name.upcase %><img class="icon-<%= act.act_type %>" src="/assets/blank.png">
 								</div>
 								<div class="act-right">
-									<%= act.description %> ||
-									<% for pid in act.performer_act %>
-										<%= Performer.find(pid).name %>
-									<% end %>
+									<%= act.description %>
 								</div>
 							<% end %>
 						</div>

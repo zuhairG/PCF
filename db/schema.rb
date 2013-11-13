@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(:version => 20131106163728) do
     t.string   "name"
     t.integer  "event_id"
     t.string   "description"
-    t.string   "duration"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "performer_id"
+    t.string   "url"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "photo_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "act_type"
   end
 
