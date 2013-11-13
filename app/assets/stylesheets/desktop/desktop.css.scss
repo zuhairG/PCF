@@ -134,7 +134,7 @@ body{
 		max-height: 50px;
 
 		.img-contain{
-			width: 20%;
+			width:10%;
 			display: inline-block;
 			float: left;
 
@@ -146,19 +146,24 @@ body{
 			}
 		}
 		.nav-day {
-			list-style: none;
+			width:500px;
 			display: inline-block;
+			white-space: nowrap;
 			float: left;
 
 			#navm{
 				overflow-x: scroll;
 				max-height: 32px;
 				white-space: nowrap;
+				display: inherit;
+				float: left;
 
 				.nav-date a{
 					display: block;
 					white-space: nowrap;
 					height: 32px;
+					display: inherit;
+					float: left;
 				}
 			}
 
