@@ -1,12 +1,15 @@
 class Event < ActiveRecord::Base
 
-  attr_accessible :date, :description, :end_time, :name, :start_time, :venue_id
-  has_one :venue
+  attr_accessible :date, :description, :end_time, :start_time, :venue_id
+  # ...and :name
+  belongs_to :venue
   has_many :acts
-  has_many :stard
+  #has_many :stareds
   default_scope order('date, start_time ASC')
 
-  validates_presence_of :date, :description, :start_time, :end_time, :start_time, :venue_id  
+
+  validates_presence_of :date, :description, :start_time, :end_time, :venue_id  
+
   validate :start_must_be_before_end_time
 
 private 

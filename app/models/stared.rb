@@ -3,5 +3,8 @@ class Stared < ActiveRecord::Base
   belongs_to :user
   belongs_to :event
 
+  validates_presence_of(:user_id)
+  validates_presence_of(:event_id)
+  
   
 end

@@ -46,12 +46,13 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'sqlite3'
 end
 
 group :test do
+  gem 'shoulda'
+  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'cucumber-rails'
   gem 'capybara'

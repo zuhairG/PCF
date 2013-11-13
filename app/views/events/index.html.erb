@@ -29,7 +29,7 @@
 										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
 										<p class="event-performers">
 											<% for act in event.acts %>
-												<% for pid in act.performer_act %>
+												<% for pid in act.performer_acts %>
 													<%= Performer.find(pid).name %>
 												<% end %>
 											<% end %>
@@ -72,7 +72,7 @@
 												window.open(
 												'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;"></img>
 
-										<a target="_blank" href="https://twitter.com/share?text=Very%20excited%20to%20see%20<% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%>%20in%20<%= event.name %>!!&url=http://pittsburghcomedyfestival.org/&hashtags=PCF2014,PittsburghComedy" data-lang="en"><img src="assets/twitter.png" class="social-icon"></a>
+										<a target="_blank" href="https://twitter.com/share?text=Very%20excited%20to%20see%20<% for act in event.acts %><% for pid in act.performer_acts %><%= Performer.find(pid).name %><%end%><%end%>%20in%20<%= event.name %>!!&url=http://pittsburghcomedyfestival.org/&hashtags=PCF2014,PittsburghComedy" data-lang="en"><img src="assets/twitter.png" class="social-icon"></a>
 										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 									</div>
 									<div class="event-description">
@@ -83,10 +83,17 @@
 						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-left">
-									<%= act.name.upcase %><img class="icon-<%= act.act_type %>" src="/assets/blank.png">
+									<%= act.name.upcase %><img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png">
 								</div>
 								<div class="act-right">
-									<%= act.description %>
+									<%= act.description %> ||
+									<img class="act_image" src="/assets/Louis_ck.jpeg">
+									<br><a href="https://twitter.com/sennaparsa">Twitter</a>
+									<br><a href="https://www.facebook.com/senna.parsa">Facebook Page</a>
+									
+									<% for pid in act.performer_acts %>
+										<%= Performer.find(pid).name %>
+									<% end %>
 								</div>
 							<% end %>
 						</div>

@@ -257,7 +257,7 @@ body{
 				max-width: 20%;
 				word-wrap: normal;
 				text-align: left;
-				border-right: 1px solid #CACACA;
+				
 			}
 
 			.event-contain-left h5{
@@ -273,7 +273,8 @@ body{
 				max-width: 80%;
 				word-wrap: normal;
 				text-align: left;
-
+				min-height: 100%;
+				min-height: 100%;
 				p{
 					font-size: 13px;
 					line-height: 18px;
@@ -284,7 +285,7 @@ body{
 					float:left;
 					width:30%;
 					height:40px;
-
+					
 					.venue_name{
 						font-weight: 700;
 						height:10px;
@@ -305,7 +306,7 @@ body{
 					float:right;
 					text-align:right;
 					width:25%;
-
+					min-height: 100%;
 					.social-icon{
 						cursor: pointer;
 						width: 30px;
@@ -337,7 +338,8 @@ body{
 
 		.act-contain{
 			background-color: $medium-gray;
-
+			border-right: 1px solid #CACACA;
+			min-height: 100%;
 			.act-left{
 				display: inline-block;
 				vertical-align: top;
@@ -345,8 +347,13 @@ body{
 				width: 20%;
 				word-wrap: normal;
 				text-align: left;
-				border-right: 1px solid #CACACA;
+				min-height: 100%;
 				color: $black;
+				height: auto;
+				.icon_image{
+					display: block;
+				}
+				
 			}
 
 			.act-right{
@@ -358,6 +365,17 @@ body{
 				word-wrap: normal;
 				text-align: left;
 				color: $black;
+				min-height: auto;
+				min-height: 100%;
+				
+				.act_image{
+					width: 150px;height:100px;
+					display: inline-block;
+					float: right;
+					-moz-border-radius: 2px;
+					border-radius: 2px;
+					}
+				
 			}
 		}
 	}
