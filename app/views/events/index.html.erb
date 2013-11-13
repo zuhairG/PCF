@@ -10,7 +10,7 @@
 		  <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
 				<% for event in events %>
-		 			<div class="panel">
+		 			<div class="panel eventspanel">
 		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 				    	<div class="event-contain">
 					    	<div class="event-contain-left">
@@ -89,19 +89,29 @@
 						</div>
 					</div>
 					<br>
-					<!-- <% if date<=Date.current %>
-				  		<% if event.end_time<Time.current %>
-				  			<script>
-				  			$( ".panel" ).fadeTo( 0, 0.5, function() {
-				  			});
-				  			</script>
+					<% if date <= Date.current %>
+		  			<script>
+		  				  $( ".event-contain" ).css("background-color", "#CFCFCF");
+								$( ".panel-collapse" ).css("background-color", "#BABABA");
+								$( ".eventspanel" ).css("background-color", "#999999");
+								$( ".eventspanel" ).css("border", "1px solid transparent");
+		  			</script>
+					<% elsif date == Date.current%>
+							<% if event.end_time<Time.current %>
+			  			<script>
+			  			  $( ".event-contain" ).css("background-color", "#CFCFCF");
+								$( ".event-contain" ).css("background-color", "#BABABA");
+								$( ".eventspanel" ).css("background-color", "#999999");
+								$( ".eventspanel" ).css("border", "1px solid transparent");
+			  			</script>
 				  		<% end %>
-				  	<% end %>	 -->
+				  <% end %>	
 				<% end %>
+				
 			</div> 
 				  <!-- 	<% if date<=Date.current %>
 				  		<script>
-				  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {
+				  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.7, function() {
 				  		});
 				  		</script>
 				  	<% end %>	 -->
