@@ -1,0 +1,54 @@
+{
+    "events": [
+        {
+            "name": "Comedy Happy Hour",
+            "venue_id": 1,
+            "start_time": "2014-08-26T21:00:00-05:00",
+            "end_time": "2014-08-27T01:00:00-05:00",
+            "description": "Start the week off with a beer"
+        },
+        {
+            "name": "Standup Night: Open Mic",
+            "venue_id": 2,
+            "start_time": "2014-08-27T21:00:00-05:00",
+            "end_time": "2014-08-28T00:00:00-05:00",
+            "description": "..."
+        },
+        {
+            "name": "Pirates Game",
+            "venue_id": 3,
+            "start_time": "2014-08-28T12:00:00-05:00",
+            "end_time": "2014-08-28T17:00:00-05:00",
+            "description": "..."
+        },
+        {
+            "name": "Kickoff party",
+            "venue_id": 1,
+            "start_time": "2014-08-28T18:00:00-05:00",
+            "end_time": "2014-08-28T20:00:00-05:00",
+            "description": "Networking and free booze!"
+        },
+        {
+            "name": "Pittsburgh Kick-Off",
+            "venue_id": 2,
+            "start_time": "2014-08-28T20:00:00-05:00",
+            "end_time": "2014-08-28T22:00:00-05:00",
+            "ticketUrl": "http://pittsburghcomedyfestival.org/tickets/pghkickoff",
+            "description": "A showcase of Pittsburgh talent"
+        },
+        {
+            "name": "Improv Jam",
+            "venue_id": 3,
+            "start_time": "2014-08-28T22:00:00-05:00",
+            "end_time": "2014-08-28T23:30:00-05:00",
+            "description": "Put your name in a hat! We'll pick random teams and do 15 min long form sets."
+        },
+        {
+            "name": "Backstage Bar",
+            "venue_id": 4,
+            "start_time": "2014-08-28T23:30:00-05:00",
+            "end_time": "2014-08-29T02:00:00-05:00",
+            "description": "Come out after the jam to support a sponsor and get to know some of the local comedians"
+        }
+    ]
+}
