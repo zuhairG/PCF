@@ -25,12 +25,21 @@ twitter.png: twitter-16e94707b72bd880fe4b821007d8584a.png
 twitter/index.png: twitter-16e94707b72bd880fe4b821007d8584a.png
 whose_line.jpg: whose_line-4e5d4bb84a3d89cc5af50179eed89594.jpg
 whose_line/index.jpg: whose_line-4e5d4bb84a3d89cc5af50179eed89594.jpg
+<<<<<<< HEAD
 application.js: application-8aac808ef8da4f043d52755d707c4e4a.js
 application/index.js: application-8aac808ef8da4f043d52755d707c4e4a.js
 application-desktop.css: application-desktop-f99c1d1967518b33e0192931f9baa222.css
 application-desktop/index.css: application-desktop-f99c1d1967518b33e0192931f9baa222.css
 application-mobile.css: application-mobile-b198b85b4175270fc574084a608f9bcc.css
 application-mobile/index.css: application-mobile-b198b85b4175270fc574084a608f9bcc.css
+=======
+application.js: application-6636085a71548decc7e8a8cca6fd3971.js
+application/index.js: application-6636085a71548decc7e8a8cca6fd3971.js
+application-desktop.css: application-desktop-8589e97cc0fd7fa73604c2184cfb9648.css
+application-desktop/index.css: application-desktop-8589e97cc0fd7fa73604c2184cfb9648.css
+application-mobile.css: application-mobile-73a426824728f1f863cbaf5e5e8dc78a.css
+application-mobile/index.css: application-mobile-73a426824728f1f863cbaf5e5e8dc78a.css
+>>>>>>> be482494ed128926005eae809a7ec1b32be047db
 application.css: application-ca02e2d630da38fc80e0bd2d2caedafe.css
 application/index.css: application-ca02e2d630da38fc80e0bd2d2caedafe.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map

@@ -19,7 +19,7 @@
 					    		
 					    		<!-- displaying icons based on the type of acts --> 
 					    		<% for act in event.acts %> 
-					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
+					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
 					    		<% end %> 
 					    	</div>
 					    	
@@ -81,7 +81,7 @@
 						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-left">
-									<%= act.name.upcase %><img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png">
+									<%= act.name.upcase %><img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
 								</div>
 								<div class="act-right">
 									<%= act.description %> ||
