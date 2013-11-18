@@ -22,8 +22,12 @@
     <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
       <li><a href="#">All Venues</a></li>
       <li class="divider"></li>
+			<% temp = Hash.new %>
       <% Venue.all.each do |venue| %>
-      	<li><a href="#"><%= venue.name %></a></li>
+				<% if (!temp.has_key?(venue.name)) %>
+      		<li><a href="#"><%= venue.name %></a></li>
+					<% temp[venue.name] = 1 %>
+				<% end %>
       <% end %>
     </ul>			
 	</div>
