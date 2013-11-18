@@ -1,7 +1,7 @@
 <%= render 'navbar' %>
 
 
-<div class="container">
+<div class="container" id="body-container">
 	
 	<% @event_date.sort.each do |date, events| %>
 
@@ -86,7 +86,7 @@
 									<img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png">
 								</div>
 								<div class="act-right">
-									<%= act.description %> ||
+									<%= act.description.html_safe %> ||
 
 									<br><a href="https://twitter.com/sennaparsa">Twitter</a>
 									<br><a href="https://www.facebook.com/senna.parsa">Facebook Page</a>
