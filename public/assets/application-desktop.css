@@ -1,1 +1,441 @@
-body{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;background:url("/assets/grey_wash_wall.png") 50% 0 repeat fixed}a,h1,h2,h3,h4,h5,h6{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;color:#000;text-decoration:none}p.description{font-style:italic}.container{margin-right:auto;margin-left:auto;padding-left:10%;padding-right:10%}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:13px;font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.428571429;text-align:center;vertical-align:middle;cursor:pointer;border:1px solid transparent;border-radius:4px;white-space:nowrap}.btn-default{color:#000;background-color:#fff;border-color:#cacaca}.nav{margin-bottom:0;padding-left:0;list-style:none}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#c93}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;font-size:13px;font-weight:normal;background-color:#ffffff;border:1px solid #cccccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,0.175);box-shadow:0 6px 12px rgba(0,0,0,0.175);background-clip:padding-box}.dropdown-menu.pull-right{right:0;left:auto}img .icon-standup{width:30px;height:30px;background:url("/assets/pcf_logos.png") 0 0}img .icon-openmic{width:30px;height:30px;background:url("/assets/pcf_logos.png") -30px 0}img .icon-improv{width:30px;height:30px;background:url("/assets/pcf_logos.png") -60px 0}img .icon-networking{width:30px;height:30px;background:url("/assets/pcf_logos.png") -90px 0}img .icon-party{width:30px;height:30px;background:url("/assets/pcf_logos.png") 0 -30px}img .icon-poetry{width:30px;height:30px;background:url("/assets/pcf_logos.png") -30px -30px}img .icon-happyhour{width:30px;height:30px;background:url("/assets/pcf_logos.png") -60px -30px}img .icon-workshop{width:30px;height:30px;background:url("/assets/pcf_logos.png") -90px -30px}img .icon-podcast{width:30px;height:30px;background:url("/assets/pcf_logos.png") -120px -30px}body #nav-bar{position:fixed;background-color:#000;opacity:0.6;min-height:55px;min-width:100%;z-index:0;left:0;top:0}body #navbar{position:fixed;left:0;display:inline;max-width:100%;max-height:50px}body #navbar .img-contain{width:10%;display:inline-block;float:left}body #navbar .img-contain #pcf-logo{max-height:50px;float:left;z-index:300;position:relative}body #navbar .nav-day{max-width:400px;max-height:32px;float:left;overflow-y:no-content;overflow-x:scroll}body #navbar .nav-day #navm{width:auto;max-height:32px;float:left;overflow-y:no-content;overflow-x:scroll}body #navbar .nav-day #navm .nav-date a{display:block;white-space:nowrap;height:32px;display:inline;float:left}body #navbar .nav-day #navm .nav-date a{display:block;white-space:nowrap;height:32px;display:inline;float:left}body #navbar .nav-day .nav{background-color:#f5f6f6;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:13px;border-radius:5px}body #navbar .nav-starred{list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}body #navbar nav-starred:hover{background-color:#e1e1e1}body #navbar .loginnout{float:right;margin-top:2px}body #navbar .loginnout .login-form{padding:8px 20px}body #navbar .loginnout .login-form .form-label{font-weight:normal}body #navbar .loginnout .login-form .form-input{border:1px solid #cacaca;border-radius:4px;background-color:#e8e8e8;margin-bottom:10px;max-width:210px;padding:0 10px}body #navbar .loginnout .login-form #form-btn-l,body #navbar .loginnout .login-form #form-btn-r{padding:3px 10px;display:inline}body #navbar .loginnout .login-form #form-btn-l{float:left}body #navbar .loginnout .login-form #form-btn-r{float:right}body h2.date-header{letter-spacing:1.5px;padding:80px 0px 10px 0px;color:#c93;font-size:30px;font-family:"Lily Script One",Helvetica,Arial,sans-serif}body .panel{margin:15px 0px;background-color:#cc9933;border:3px solid transparent}body .panel .event-contain{background-color:#f5f6f6;width:100%}body .panel .event-contain .event-contain-left{display:inline-block;vertical-align:top;padding:10px;min-width:20%;max-width:20%;word-wrap:normal;text-align:left}body .panel .event-contain .event-contain-left h5{font-size:20px;margin:10px 0}body .panel .event-contain .event-contain-right{height:100%;display:inline-block;vertical-align:top;padding:10px;max-width:80%;word-wrap:normal;text-align:left;min-height:100%;min-height:100%}body .panel .event-contain .event-contain-right p{font-size:13px;line-height:18px}body .panel .event-contain .event-contain-right .event-contain-right-left{display:inline-block;float:left;width:30%;height:40px}body .panel .event-contain .event-contain-right .event-contain-right-left .venue_name{font-weight:700;height:10px}body .panel .event-contain .event-contain-right .event-contain-right-left .event-performers{font-weight:200}body .panel .event-contain .event-contain-right .event-contain-right-center{display:inline-block;float:left;text-align:center;width:25%}body .panel .event-contain .event-contain-right .event-contain-right-right{display:inline-block;float:right;text-align:right;width:25%;min-height:100%}body .panel .event-contain .event-contain-right .event-contain-right-right .social-icon{cursor:pointer;width:30px}body .panel .event-contain .event-contain-right .event-contain-right-right .star_filled{background:url(../star_filled.png) no-repeat;background-size:25px 25px;margin:0;padding:0;border:none;width:25px;height:25px;cursor:pointer}body .panel .event-contain .event-contain-right .event-contain-right-right .star_unfilled{width:25px}body .panel .event-contain .event-contain-right .event-description{display:table-row;float:left;text-align:left;width:80%}body .panel .act-contain{background-color:#e8e8e8;border-right:1px solid #CACACA;min-height:100%}body .panel .act-contain .act-left{display:inline-block;vertical-align:top;padding:10px;width:20%;word-wrap:normal;text-align:left;min-height:100%;color:#000;height:auto}body .panel .act-contain .act-left .icon_image{display:block}body .panel .act-contain .act-right{height:100%;display:inline-block;vertical-align:top;padding:10px;width:79%;word-wrap:normal;text-align:left;color:#000;min-height:auto;min-height:100%}body .panel .act-contain .act-right .act_image{width:150px;height:100px;display:inline-block;float:right;-moz-border-radius:2px;border-radius:2px}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+*/
+/* line 15, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url(/assets/grey_wash_wall.png) 50% 0 repeat fixed;
+}
+
+/* line 20, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: black;
+  text-decoration: none;
+}
+
+/* line 27, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+p.description {
+  font-style: italic;
+}
+
+/* line 31, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* line 38, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.428571429;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* line 52, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.btn-default {
+  color: black;
+  background-color: white;
+  border-color: #cacaca;
+}
+
+/* line 58, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 66, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #cc9933;
+}
+
+/* line 71, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+/* line 92, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+
+/* line 103, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-standup {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) 0 0;
+}
+/* line 104, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-openmic {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -30px 0;
+}
+/* line 105, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-improv {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -60px 0;
+}
+/* line 106, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-networking {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -90px 0;
+}
+/* line 107, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-party {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) 0 -30px;
+}
+/* line 108, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-poetry {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -30px -30px;
+}
+/* line 109, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-happyhour {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -60px -30px;
+}
+/* line 110, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-workshop {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -90px -30px;
+}
+/* line 111, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+img .icon-podcast {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -120px -30px;
+}
+
+/* line 119, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #nav-bar {
+  position: fixed;
+  background-color: black;
+  opacity: 0.6;
+  min-height: 55px;
+  min-width: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+/* line 129, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar {
+  position: fixed;
+  left: 0;
+  display: inline;
+  max-width: 100%;
+  max-height: 50px;
+}
+/* line 136, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .img-contain {
+  width: 10%;
+  display: inline-block;
+  float: left;
+}
+/* line 141, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .img-contain #pcf-logo {
+  max-height: 50px;
+  float: left;
+  z-index: 300;
+  position: relative;
+}
+/* line 148, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-day {
+  max-width: 400px;
+  max-height: 32px;
+  float: left;
+  overflow-y: no-content;
+  overflow-x: scroll;
+}
+/* line 155, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-day #navm {
+  width: auto;
+  max-height: 32px;
+  float: left;
+  overflow-y: no-content;
+  overflow-x: scroll;
+}
+/* line 162, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-day #navm .nav-date a {
+  display: block;
+  white-space: nowrap;
+  height: 32px;
+  display: inline;
+  float: left;
+}
+/* line 169, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-day #navm .nav-date a {
+  display: block;
+  white-space: nowrap;
+  height: 32px;
+  display: inline;
+  float: left;
+}
+/* line 178, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-day .nav {
+  background-color: #f5f6f6;
+  margin: 0px 3px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 13px;
+  border-radius: 5px;
+}
+/* line 187, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .nav-starred {
+  list-style: none;
+  display: inline-block;
+  background-color: #f5f6f6;
+  padding: 0px 0px;
+  margin: 0px 3px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 20px;
+  border-radius: 5px;
+  float: left;
+}
+/* line 199, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar nav-starred:hover {
+  background-color: #e1e1e1;
+}
+/* line 203, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout {
+  float: right;
+  margin-top: 2px;
+}
+/* line 207, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form {
+  padding: 8px 20px;
+}
+/* line 210, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form .form-label {
+  font-weight: normal;
+}
+/* line 213, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form .form-input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  margin-bottom: 10px;
+  max-width: 210px;
+  padding: 0 10px;
+}
+/* line 221, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form #form-btn-l, body #navbar .loginnout .login-form #form-btn-r {
+  padding: 3px 10px;
+  display: inline;
+}
+/* line 225, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form #form-btn-l {
+  float: left;
+}
+/* line 228, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body #navbar .loginnout .login-form #form-btn-r {
+  float: right;
+}
+/* line 235, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body h2.date-header {
+  letter-spacing: 1.5px;
+  padding: 80px 0px 10px 0px;
+  color: #cc9933;
+  font-size: 30px;
+  font-family: "Lily Script One", Helvetica, Arial, sans-serif;
+}
+/* line 243, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel {
+  margin: 15px 0px;
+  background-color: #cc9933;
+  border: 3px solid transparent;
+}
+/* line 248, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain {
+  background-color: #f5f6f6;
+  width: 100%;
+}
+/* line 252, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-left {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  min-width: 20%;
+  max-width: 20%;
+  word-wrap: normal;
+  text-align: left;
+}
+/* line 263, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-left h5 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+/* line 268, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  max-width: 80%;
+  word-wrap: normal;
+  text-align: left;
+  min-height: 100%;
+  min-height: 100%;
+}
+/* line 278, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right p {
+  font-size: 13px;
+  line-height: 18px;
+}
+/* line 283, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-left {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  height: 40px;
+}
+/* line 289, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-left .venue_name {
+  font-weight: 700;
+  height: 10px;
+}
+/* line 294, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-left .event-performers {
+  font-weight: 200;
+}
+/* line 298, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-center {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+/* line 304, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-right {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  width: 25%;
+  min-height: 100%;
+}
+/* line 310, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-right .social-icon {
+  cursor: pointer;
+  width: 30px;
+}
+/* line 315, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-right .star_filled {
+  background: url(../star_filled.png) no-repeat;
+  background-size: 25px 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+/* line 326, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-contain-right-right .star_unfilled {
+  width: 25px;
+}
+/* line 331, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .event-contain .event-contain-right .event-description {
+  display: table-row;
+  float: left;
+  text-align: left;
+  width: 80%;
+}
+/* line 340, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .act-contain {
+  background-color: #e8e8e8;
+  border-right: 1px solid #CACACA;
+  min-height: 100%;
+}
+/* line 344, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .act-contain .act-left {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  width: 20%;
+  word-wrap: normal;
+  text-align: left;
+  min-height: 100%;
+  color: black;
+  height: auto;
+}
+/* line 354, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .act-contain .act-left .icon_image {
+  display: block;
+}
+/* line 360, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .act-contain .act-right {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  width: 79%;
+  word-wrap: normal;
+  text-align: left;
+  color: black;
+  min-height: auto;
+  min-height: 100%;
+}
+/* line 372, ../../../app/assets/stylesheets/desktop/desktop.css.scss */
+body .panel .act-contain .act-right .act_image {
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+  float: right;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
