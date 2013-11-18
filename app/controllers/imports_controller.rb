@@ -1,5 +1,5 @@
 class ImportsController < ApplicationController
-
+  
   def import
     # if current_user
     #   if current_user.admin
@@ -8,6 +8,7 @@ class ImportsController < ApplicationController
     parsed = JSON.parse(data)
     parsed.each do |key, value|
       if (key == "venues")
+        Venue.delete_all
         value.each do |venue|
           @venue = Venue.new
           @venue.name = venue["name"]
@@ -23,6 +24,7 @@ class ImportsController < ApplicationController
       
       if (key == "events")
         if (Venue.all.length > 0)
+          Event.delete_all
           value.each do |event|
             @event = Event.new
             @event.name = event["name"]
@@ -38,6 +40,7 @@ class ImportsController < ApplicationController
       
       if (key == "acts")
         if (Event.all.length > 0)
+          Act.delete_all
           value.each do |act|
             @act = Act.new
             @act.name = act["name"]

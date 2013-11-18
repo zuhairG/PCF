@@ -1,213 +1,177 @@
-<script>
-  $(function() {
-    $('#navm a').bind('click',function(event){
-      var $anchor = $(this);
-
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
-      }, 1000,'easeInOutExpo');
-			
-      event.preventDefault();
-    });
-		
-		$('#venuem a').click(function() {
-			var venue = $(this).html();
-			if (venue == "All Venues") {
-	      $('.panel').show("slow")
-				$('#venuefilter').html(venue + '<span class="caret"></span>')
-	      event.preventDefault();
-			}
-			else {
-	      $('.panel').each(function(){
-					var $this = $(this);
-					if ($this.find('#venuename').html() == venue) {
-						$this.show("slow");
-						$('#venuefilter').html(venue + '<span class="caret"></span>')
-			     	event.preventDefault();      
-					}
-					else if ($this.find('#venuename').html() != venue) {
-						$this.hide("slow");
-			     	event.preventDefault();      
-					};
-				});
-			};
-    });
-		
-		$('#starredfilter').click(function() {
-			var venue = $(this).html();
-			if (venue == "Starred Events") {
-	      $('.panel').each(function(){
-	      	var $this = $(this);
-					if ($this.find('#starred').html() == null) {
-						$this.hide("slow");
-			     	event.preventDefault();      
-					}
-					else if ($this.find('#unstarred').html() == null) {
-						$this.show("slow");
-			     	event.preventDefault();      
-					};
-	      })
-			}
-			else {
-	      $('.panel').show("slow");    
-			};
-		});
-			
-  });
-</script>
-
-<div id="nav-bar"><img src="assets/pcf_logo.png" id="pcf-logo"></div>
-<div id="navbar" class="fixed container">
-	
-	
+<div id="nav-bar"></div>
+<div id="navbar" class="container">
 	<div class='nav-day'>
-		<ul id="navm" class="nav nav-pills">
-		<% @event_date.sort.each do |date, events| %>
-			<li >
-			 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></a>
-			</li>
-		<% end %>
-		</ul>
-	</div>
-	
-	<div class="nav-venue">
-	    <a id="venuefilter" class="btn dropdown-toggle" data-toggle="dropdown" href="#">All Venues<span class="caret"></span></a>
-	    <ul id="venuem" class="dropdown-menu">
-        <li>
-					<a href="#">All Venues</a>
-			 	</li>
-        <li class="divider">
-			 	</li>
-	      <% Venue.all.each do |venue| %>
-	      <li>
-					<a href="#"><%= venue.name %></a>
+		<div id="navm" class="nav nav-pills">
+			<% @event_date.sort.each do |date, events| %>
+				<li class="nav-date">
+				 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%a') %></a>
 				</li>
-	      <% end %>
-	    </ul>			
+			<% end %>
+		</div>
 	</div>
 	
-	
-	<div class="nav-starred">
-	    <a id="starredfilter" class="btn" href="#">Starred Events</a>
+	<div class="btn-group">
+    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues <span class="caret"></span></a>
+    <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
+      <li><a href="#">All Venues</a></li>
+      <li class="divider"></li>
+      <% Venue.all.each do |venue| %>
+      	<li><a href="#"><%= venue.name %></a></li>
+      <% end %>
+    </ul>			
 	</div>
-
-
+	
+	<% if current_user %>
+		<div class="nav-starred">
+		  <a id="starredfilter" class="btn" href="#">Starred Events</a>
+		</div>
+  <% end %>
 
 	
   <div class="loginnout">
+  
 	  <% if user_signed_in? %>
-	    Signed in as <%= current_user.email %>. Not you?
-	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
+	     
+	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default innout-btn" %> </p>
 	  <% else %>
-	    <%= link_to "Sign In", new_user_session_path, :class=>"btn btn-default" %>
+	  
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle innout-btn" data-toggle="dropdown">
+        Sign in <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu pull-right login-form" role="menu">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <li> <%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %>  </li>
+        <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
+        <% if devise_mapping.rememberable? -%>
+          <li><%= f.check_box :remember_me %> <%= f.label :remember_me, :class => "form-label" %></li>
+        <% end %>
+        <li><%= f.submit "Sign in", :class => "btn btn-default", :id => "form-btn-l" %></li>
+        <li><%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook"), :class => "btn btn-default", :id => "form-btn-r"%></li>
+      <% end %>
+
+      </ul>
+    </div>
 	  <% end %>
   </div>
 </div>
 
 
-<body data-spy="scroll" data-target="#navbar">
+<div class="container">
 	
-<% @event_date.sort.each do |date, events| %>
+	<% @event_date.sort.each do |date, events| %>
 
-<div>	
-<h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
-  <div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
-  
-  
-<% for event in events %>
-
-
-
- 			<div class="panel">
- 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
-		    	<div class="event-contain">
-			    	<div class="event-contain-left">
-			    		<h5><%= event.name.upcase %></h5>
-			    		<img class="icon-standup" src="/assets/blank.png">
-			    		<img class="icon-openmic" src="/assets/blank.png">
-			    		<img class="icon-improv" src="/assets/blank.png">
-			    		<img class="icon-networking" src="/assets/blank.png">
-			    		<img class="icon-party" src="/assets/blank.png">
-			    		<img class="icon-poetry" src="/assets/blank.png">
-			    		<img class="icon-happyhour" src="/assets/blank.png">
-			    		<img class="icon-workshop" src="/assets/blank.png">
-			    		<img class="icon-podcast" src="/assets/blank.png">
-			    	</div>
-						</a>
-			    	<div class="event-contain-right">
-							<div class="event-contain-right-left">
-								<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name %></p>
-								<p class="event-performers">
-									<% for act in event.acts %>
-										<% for pid in act.performer_act %>
-											<%= Performer.find(pid).name %>
-										<% end %>
-									<% end %>
-								</p>
-
-							</div>
-							<div class="event-contain-right-center">
-								<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
-							</div>
-							<div class="event-contain-right-right">
-								<div id='star' style="float:left">
-									<div id='starred'>
-									<% temp = 1 %>
-										<% if current_user %>
-										<% for star in Stared.all %>
-											<% if current_user.id == star.user_id && star.event_id == event.id %> 
-												<%= form_tag star, method: :delete  %> 
-												<%= submit_tag "Unstar" %>
-
-												<% temp = 0 %> 
-										<% end %>
-									<% end %>
-								  </div>
-									<div id='unstarred'>
-									<% if temp == 1 %>
-										<%= form_for Stared.new do |f| %>  
-											<%=  f.hidden_field :event_id, :value => event.id %>
-											<%=  f.hidden_field :user_id, :value => current_user.id %>
-											<%=  f.submit "Star" %>
+		<div>	
+		  <h2 class="date-header" id=<%= date.strftime('%A%m%d') %> ><%= date.strftime('%A %m/%d') %></h2>
+			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
+				<% for event in events %>
+		 			<div class="panel">
+		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
+				    	<div class="event-contain">
+				    		<div class="event-contain-top">
+					    		<h4><%= event.name.upcase %></h4>
+					    		<div class="social-icon-contain">
+					    			<div id='star' style="float:left">
+											<div id='starred'>
+											<% temp = 1 %>
+												<% if current_user %>
+												<% for star in Stared.all %>
+													<% if (star.user_id == current_user.id) %>
+													  <% if (star.event_id == event.id) %> 
+		                          <%= button_to "", star, :method => :delete, :class => "star_filled" %>
+		                            <% temp = 0 %>
+												<% end %>
+												
+												<% end %>
 											<% end %>
-										<% end %>
-									<% end %>
-									</div>
-                
-
+										  </div>
+											<div id='unstarred'>
+											<% if temp == 1 %>
+												<%= form_for Stared.new do |f| %>  
+													<%=  f.hidden_field :event_id, :value => event.id %>
+													<%=  f.hidden_field :user_id, :value => current_user.id %>
+													<%=  image_submit_tag("star_unfilled.png", :class => "star_unfilled")  %>
+													<% end %>
+												<% end %>
+											<% end %>
+											</div>
+										</div>	
+					    			<img src="assets/facebook.png" class="social-icon" href="#" onclick="
+													window.open(
+													'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;"></img>
+										<a target="_blank" href="https://twitter.com/share?text=Very%20excited%20to%20see%20<% for act in event.acts %><% for pid in act.performer_acts %><%= Performer.find(pid).name %><%end%><%end%>%20in%20<%= event.name %>!!&url=http://pittsburghcomedyfestival.org/&hashtags=PCF2014,PittsburghComedy" data-lang="en"><img src="assets/twitter.png" class="social-icon"></a>
+										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					    		</div>
 								</div>
-								<button type="button" href="#" class="btn btn-xs btn-info" onclick="
-										window.open(
-										'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://pittsburghcomedyfestival.org/'), 										'facebook-share-dialog','width=626,height=436'); return false;">Share on Facebook</button>
-								<a href="https://twitter.com/share" class="twitter-share-button" data-text="Very excited to see <% for act in event.acts %><% for pid in act.performer_act %><%= Performer.find(pid).name %><%end%><%end%> in <%= event.name %>!!" data-url="http://pittsburghcomedyfestival.org/" data-hashtags="PCF2014, PittsburghComedy" data-lang="en">Tweet</a>
-								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+								<div class="event-contain-middle">
+
+									<div class="event-contain-left">
+										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
+										<% for act in event.acts %> 
+						    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
+						    		<% end %>
+									</div>
+
+
+									<div class="event-contain-center">
+										<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
+									</div>
+
+
+									<div class="event-contain-right">
+										<p class="event-performers">
+											<% for act in event.acts %>
+												<% for pid in act.performer_acts %>
+													<%= Performer.find(pid).name %><br>
+												<% end %>
+											<% end %>
+										</p>			
+									</div>
+								</div>
+								<div class="event-contain-bottom">
+									<div class="event-description">
+										<p class="description"><%= event.description.html_safe %></p>
+									</div>
+								</div>
 							</div>
-							<div class="event-description">
-								<p class="description"><%= event.description %></p>
-							</div>
+						</a>
+
+
+						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
+						  <% event.acts.each do |act| %> 
+							  <div class="act-top">
+								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><%= act.name.upcase %>
+								</div>
+								<div class="act-bottom">
+									<%= act.description.html_safe %> ||
+									<% for pid in act.performer_acts %>
+										<%= Performer.find(pid).name %>
+									<% end %>
+								</div>
+							<% end %>
 						</div>
 					</div>
-				
-				<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
-				<% event.acts.each do |act| %> 
-					<div class="act-left">
-						<%= act.name %><img class="icon-<%= act.act_type %>">
-					</div>
-					<div class="act-right">
-						<%= act.description %> ||
-						<% for pid in act.performer_act %>
-							<%= Performer.find(pid).name %>
-						<% end %>
-					</div>
+					<br>
+					<!-- <% if date<=Date.current %>
+				  		<% if event.end_time<Time.current %>
+				  			<script>
+				  			$( ".panel" ).fadeTo( 0, 0.5, function() {
+				  			});
+				  			</script>
+				  		<% end %>
+				  	<% end %>	 -->
 				<% end %>
-				</div>
-			</div>
-	<br>
+			</div> 
+				  <!-- 	<% if date<=Date.current %>
+				  		<script>
+				  		$( "#<%= date.strftime('%A%m%d') %>" ).fadeTo( 0, 0.5, function() {
+				  		});
+				  		</script>
+				  	<% end %>	 -->
+		</div>	
 	<% end %>
-	</div>
-<% end %>
 </div>
-</body>
 
 <br />
 <% if can? :create, Event %>

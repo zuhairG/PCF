@@ -1,6 +1,6 @@
 <div id="nav-bar"></div>
 <div id="navbar" class="container">
-	<div class="img-contain"><a href="#"><img src="assets/pcf_logo.png" id="pcf-logo"></a></div>
+	<div class="img-contain"><a href="#"><img src="assets/pcf_logo_new.png" id="pcf-logo"></a></div>
 	
 	
 	<div class='nav-day'>
@@ -22,14 +22,18 @@
     <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
       <li><a href="#">All Venues</a></li>
       <li class="divider"></li>
+			<% temp = Hash.new %>
       <% Venue.all.each do |venue| %>
-      	<li><a href="#"><%= venue.name %></a></li>
+				<% if (!temp.has_key?(venue.name)) %>
+      		<li><a href="#"><%= venue.name %></a></li>
+					<% temp[venue.name] = 1 %>
+				<% end %>
       <% end %>
     </ul>			
 	</div>
 	
 	<% if current_user %>
-		<div class="nav-starred">
+		<div class="nav-starred btn-group">
 		  <a id="starredfilter" class="btn" href="#">Starred Events</a>
 		</div>
   <% end %>

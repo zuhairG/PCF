@@ -12,9 +12,70 @@
 	  {
 	  	"name": "Player One",
 	  	"event_name": "Pittsburgh Kick-Off",
-	  	"act_type": "open mic",
+	  	"act_type": "openmic",
 	  	"description": "Player One, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
 	  	"url": "http://arcadecomedytheater.com/about/player-one/"
+	  },
+	  {
+	  	"name": "Azi Ansari",
+	  	"event_name": "Standup Night: Open Mic",
+	  	"act_type": "openmic",
+	  	"description": "Azi... own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/"
+	  },
+	  {
+	  	"name": "Happy Gilmore",
+	  	"event_name": "Standup Night: Open Mic",
+	  	"act_type": "openmic",
+	  	"description": "Happy Gilmore, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Special Appearance by Russell Peters",
+	  	"event_name": "Comedy Happy Hour",
+	  	"act_type": "standup",
+	  	"description": "Happy Gilmore, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Special Appearance by Russell Peters",
+	  	"event_name": "Backstage Bar",
+	  	"act_type": "standup",
+	  	"description": "Happy Gilmore, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Pirates Game Fun",
+	  	"event_name": "Pirates Game",
+	  	"act_type": "networking",
+	  	"description": "Happy Gilmore, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Party Till You Laugh",
+	  	"event_name": "Kickoff party",
+	  	"act_type": "networking",
+	  	"description": "Happy Gilmore, Arcade Comedy Theaters own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
+	  },
+	  {
+	  	"name": "Jerome",
+	  	"event_name": "Improv Jam",
+	  	"act_type": "networking",
+	  	"description": "Jerome improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+	  	"url": "http://arcadecomedytheater.com/about/player-one/",
+	  	"facebook": "http://www.facebook.com/AaronKleiberFans",
+	  	"twitter": "http://www.twitter.com/aaronkleiber"
 	  },
 	  {
 	  	"name": "Well Known Strangers",
