@@ -1,5 +1,646 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container{margin:1px;max-width:100%}.schedule-nav{display:inline-block;border:1px solid #CACACA;padding:5px;overflow-x:scroll;white-space:nowrap;max-width:100%;-moz-border-radius:2px;border-radius:2px;float:left}.nav{margin-bottom:0;padding-left:0;list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}.nav-venue{margin-bottom:0;padding-left:0;list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}div.nav-starred:hover{background-color:#e1e1e1}.nav-starred{margin-bottom:0;padding-left:0;list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}.nav-day{overflow-x:scroll;max-width:400px;max-height:37px;list-style:none;display:inline-block;float:left}#pcf-logo{max-height:50px;float:left;z-index:300;position:relative;padding:6px}.loginnout{float:right}.venue-drop{display:inline-block;border:1px solid #CACACA;background-color:#f5f6f6;padding:10px 15px;float:left;-moz-border-radius:5px;border-radius:5px;font-size:20px}#nav-bar{position:fixed;background-color:#000;opacity:0.8;min-height:100px;min-width:100%;z-index:0;left:0;top:0}div.fixed{position:fixed;top:10px;width:100%;padding:0 30px 0 0}.panel{margin:15px 0px}.event-contain{background-color:#f5f6f6;width:100%}.event-contain-left{display:inline-block;vertical-align:top;padding:10px;width:20%;word-wrap:normal;text-align:left;border-right:1px solid #CACACA}.event-contain-left h5{font-size:20px}.event-contain-right{height:100%;display:inline-block;vertical-align:top;padding:10px;width:79%;word-wrap:normal;text-align:left}.venue_name{font-weight:700;height:10px}.act-contain{background-color:#b8b8b8}.act-left{display:inline-block;vertical-align:top;padding:10px;width:20%;word-wrap:normal;text-align:left;border-right:1px solid #CACACA;color:#FFFFFF}.act-right{height:100%;display:inline-block;vertical-align:top;padding:10px;width:79%;word-wrap:normal;text-align:left;color:#FFFFFF}h1.schedule-header{color:#f5f6f6}h2.date-header{font-family:'Lily Script One', inherit;letter-spacing:1.5px;padding:80px 0px 10px 0px;color:#CC9933}p.description{font-style:italic}li{list-style:none}*:hover{color:#000}.event-contain-right-left{display:inline-block;float:left;width:30%;height:40px}.event-contain-right-center{display:inline-block;float:left;text-align:center;width:30%}.event-contain-right-right{display:inline-block;float:right;text-align:right;width:20%}.event-description{display:table-row;float:left;text-align:left;width:80%}.event-performers{font-weight:200}img.icon-standup{width:30px;height:30px;background:url("/assets/pcf_logos.png") 0 0}img.icon-openmic{width:30px;height:30px;background:url("/assets/pcf_logos.png") -30px 0}img.icon-improv{width:30px;height:30px;background:url("/assets/pcf_logos.png") -60px 0}img.icon-networking{width:30px;height:30px;background:url("/assets/pcf_logos.png") -90px 0}img.icon-party{width:30px;height:30px;background:url("/assets/pcf_logos.png") 0 -30px}img.icon-poetry{width:30px;height:30px;background:url("/assets/pcf_logos.png") -30px -30px}img.icon-happyhour{width:30px;height:30px;background:url("/assets/pcf_logos.png") -60px -30px}img.icon-workshop{width:30px;height:30px;background:url("/assets/pcf_logos.png") -90px -30px}img.icon-podcast{width:30px;height:30px;background:url("/assets/pcf_logos.png") -120px -30px}body{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;background:url(/assets/grey_wash_wall.png) 50% 0 repeat fixed}a,h1,h2,h3,h4,h5,h6{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;color:#000;text-decoration:none}p.description{font-style:italic}.container{margin-right:auto;margin-left:auto;padding-left:2%;padding-right:2%}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;margin-top:0;font-size:13px;font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.428571429;text-align:center;vertical-align:middle;cursor:pointer;border:1px solid transparent;border-radius:4px;white-space:nowrap}.btn-default{color:#000;background-color:#fff;border-color:#cacaca}.nav{margin-bottom:0;padding-left:0;list-style:none}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#c93}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;font-size:13px;font-weight:normal;background-color:#ffffff;border:1px solid #cccccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,0.175);box-shadow:0 6px 12px rgba(0,0,0,0.175);background-clip:padding-box}.dropdown-menu.pull-right{right:0;left:auto}img .icon-standup{width:30px;height:30px;background:url(/assets/pcf_logos.png) 0 0}img .icon-openmic{width:30px;height:30px;background:url(/assets/pcf_logos.png) -30px 0}img .icon-improv{width:30px;height:30px;background:url(/assets/pcf_logos.png) -60px 0}img .icon-networking{width:30px;height:30px;background:url(/assets/pcf_logos.png) -90px 0}img .icon-party{width:30px;height:30px;background:url(/assets/pcf_logos.png) 0 -30px}img .icon-poetry{width:30px;height:30px;background:url(/assets/pcf_logos.png) -30px -30px}img .icon-happyhour{width:30px;height:30px;background:url(/assets/pcf_logos.png) -60px -30px}img .icon-workshop{width:30px;height:30px;background:url(/assets/pcf_logos.png) -90px -30px}img .icon-podcast{width:30px;height:30px;background:url(/assets/pcf_logos.png) -120px -30px}body #nav-bar{position:fixed;background-color:#000;opacity:0.6;min-height:70px;min-width:100%;z-index:0;left:0;top:0}body #navbar{position:fixed;left:0;display:block;max-width:100%;max-height:50px}body #navbar .nav-day{list-style:none;display:block;float:left;white-space:nowrap}body #navbar .nav-day #navm{overflow-x:scroll;max-height:32px;white-space:nowrap;width:auto;display:inline-block}body #navbar .nav-day #navm .nav-date a{display:inline-block;white-space:nowrap;height:32px}body #navbar .nav-day .nav{list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:1px 3px;-moz-border-radius:1px;border-radius:1px;font-size:13px;border-radius:5px;float:left}body #navbar .nav-starred{list-style:none;display:inline-block;background-color:#f5f6f6;padding:1px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}body #navbar nav-starred:hover{background-color:#e1e1e1}body #navbar #venuefilter{margin:1px 3px}body #navbar .loginnout .innout-btn{margin:1px 3px;float:right}body #navbar .loginnout .login-form{padding:8px 20px}body #navbar .loginnout .login-form .form-label{font-weight:normal}body #navbar .loginnout .login-form .form-input{border:1px solid #cacaca;border-radius:4px;background-color:#e8e8e8;margin-bottom:10px;max-width:210px;padding:0 10px}body #navbar .loginnout .login-form #form-btn-l,body #navbar .loginnout .login-form #form-btn-r{padding:3px 10px;display:inline}body #navbar .loginnout .login-form #form-btn-l{float:left}body #navbar .loginnout .login-form #form-btn-r{float:right}body h2.date-header{letter-spacing:1.5px;padding:80px 0px 10px 0px;color:#c93;font-size:30px;font-family:"Lily Script One",Helvetica,Arial,sans-serif}body .panel{margin:15px 0px;background-color:#f5f6f6}body .panel .event-contain{background-color:#f5f6f6;width:100%;padding:5px;display:block}body .panel .event-contain .event-contain-top{display:block}body .panel .event-contain .event-contain-top h4{max-width:70%;display:inline-block}body .panel .event-contain .event-contain-top .social-icon-contain{max-width:30%;display:inline-block;float:right}body .panel .event-contain .event-contain-top .social-icon-contain .social-icon{cursor:pointer;width:30px}body .panel .event-contain .event-contain-middle{display:block;width:100%;vertical-align:top}body .panel .event-contain .event-contain-middle .event-contain-left{display:inline-block;width:32%;border:0px solid transparent;text-align:left;padding:0}body .panel .event-contain .event-contain-middle .event-contain-center{display:inline-block;text-align:left;width:33%;padding:0}body .panel .event-contain .event-contain-middle .event-contain-right{display:inline-block;text-align:left;width:33%;padding:0}body .panel .event-contain .event-contain-bottom{display:block;width:100%}body .panel .event-contain .event-contain-bottom .event-description{display:inline-block}body .panel .event-contain p{font-size:13px;line-height:18px}body .panel .event-contain .venue_name{font-weight:500;height:10px}body .panel .event-contain .event-performers{font-weight:200}body .panel .event-contain .star_filled{background:url("../star_filled.png") no-repeat;background-size:25px 25px;margin:0;padding:0;border:none;width:25px;height:25px;cursor:pointer}body .panel .event-contain .star_unfilled{width:25px}body .panel .act-contain{background-color:#e8e8e8;display:block;width:100%;margin-top:20px;padding:5px}body .panel .act-contain .act-top{display:block;vertical-align:top;width:100%;word-wrap:normal;text-align:left;color:#000;padding-top:10px}body .panel .act-contain .act-bottom{height:100%;display:block;vertical-align:top;width:100%;word-wrap:normal;text-align:left;color:#000}
 =======
 body{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;background:url(/assets/grey_wash_wall.png) 50% 0 repeat fixed}a,h1,h2,h3,h4,h5,h6{font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;line-height:1.1;color:#000;text-decoration:none}p.description{font-style:italic}.container{margin-right:auto;margin-left:auto;padding-left:2%;padding-right:2%}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;margin-top:0;font-size:13px;font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.428571429;text-align:center;vertical-align:middle;cursor:pointer;border:1px solid transparent;border-radius:4px;white-space:nowrap}.btn-default{color:#000;background-color:#fff;border-color:#cacaca}.nav{margin-bottom:0;padding-left:0;list-style:none}.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{color:#fff;background-color:#c93}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;font-size:13px;font-weight:normal;background-color:#ffffff;border:1px solid #cccccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,0.175);box-shadow:0 6px 12px rgba(0,0,0,0.175);background-clip:padding-box}.dropdown-menu.pull-right{right:0;left:auto}img .icon-standup{width:30px;height:30px;background:url(/assets/pcf_logos.png) 0 0}img .icon-openmic{width:30px;height:30px;background:url(/assets/pcf_logos.png) -30px 0}img .icon-improv{width:30px;height:30px;background:url(/assets/pcf_logos.png) -60px 0}img .icon-networking{width:30px;height:30px;background:url(/assets/pcf_logos.png) -90px 0}img .icon-party{width:30px;height:30px;background:url(/assets/pcf_logos.png) 0 -30px}img .icon-poetry{width:30px;height:30px;background:url(/assets/pcf_logos.png) -30px -30px}img .icon-happyhour{width:30px;height:30px;background:url(/assets/pcf_logos.png) -60px -30px}img .icon-workshop{width:30px;height:30px;background:url(/assets/pcf_logos.png) -90px -30px}img .icon-podcast{width:30px;height:30px;background:url(/assets/pcf_logos.png) -120px -30px}body #nav-bar{position:fixed;background-color:#000;opacity:0.6;min-height:70px;min-width:100%;z-index:0;left:0;top:0}body #navbar{position:fixed;left:0;display:block;max-width:100%;max-height:50px}body #navbar .nav-day{list-style:none;display:block;float:left;white-space:nowrap}body #navbar .nav-day #navm{overflow-x:scroll;max-height:32px;white-space:nowrap;width:auto;display:inline-block}body #navbar .nav-day #navm .nav-date a{display:inline-block;white-space:nowrap;height:32px}body #navbar .nav-day .nav{list-style:none;display:inline-block;background-color:#f5f6f6;padding:0px 0px;margin:1px 3px;-moz-border-radius:1px;border-radius:1px;font-size:13px;border-radius:5px;float:left}body #navbar .nav-starred{list-style:none;display:inline-block;background-color:#f5f6f6;padding:1px 0px;margin:0px 3px;-moz-border-radius:2px;border-radius:2px;font-size:20px;border-radius:5px;float:left}body #navbar nav-starred:hover{background-color:#e1e1e1}body #navbar #venuefilter{margin:1px 3px}body #navbar .loginnout .innout-btn{margin:1px 3px;float:right}body #navbar .loginnout .login-form{padding:8px 20px}body #navbar .loginnout .login-form .form-label{font-weight:normal}body #navbar .loginnout .login-form .form-input{border:1px solid #cacaca;border-radius:4px;background-color:#e8e8e8;margin-bottom:10px;max-width:210px;padding:0 10px}body #navbar .loginnout .login-form #form-btn-l,body #navbar .loginnout .login-form #form-btn-r{padding:3px 10px;display:inline}body #navbar .loginnout .login-form #form-btn-l{float:left}body #navbar .loginnout .login-form #form-btn-r{float:right}body h2.date-header{letter-spacing:1.5px;padding:80px 0px 10px 0px;color:#c93;font-size:30px;font-family:"Lily Script One",Helvetica,Arial,sans-serif}body .panel{margin:15px 0px;background-color:#f5f6f6}body .panel .event-contain{background-color:#f5f6f6;width:100%;padding:5px;display:block}body .panel .event-contain .event-contain-top{display:block}body .panel .event-contain .event-contain-top h4{max-width:70%;display:inline-block}body .panel .event-contain .event-contain-top .social-icon-contain{max-width:30%;display:inline-block;float:right}body .panel .event-contain .event-contain-top .social-icon-contain .social-icon{cursor:pointer;width:30px}body .panel .event-contain .event-contain-middle{display:block;width:100%;vertical-align:top}body .panel .event-contain .event-contain-middle .event-contain-left{display:inline-block;width:32%;border:0px solid transparent;text-align:left;padding:0}body .panel .event-contain .event-contain-middle .event-contain-center{display:inline-block;text-align:left;width:33%;padding:0}body .panel .event-contain .event-contain-middle .event-contain-right{display:inline-block;text-align:left;width:33%;padding:0}body .panel .event-contain .event-contain-bottom{display:block;width:100%}body .panel .event-contain .event-contain-bottom .event-description{display:inline-block}body .panel .event-contain p{font-size:13px;line-height:18px}body .panel .event-contain .venue_name{font-weight:500;height:10px}body .panel .event-contain .event-performers{font-weight:200}body .panel .event-contain .star_filled{background:url("../star_filled.png") no-repeat;background-size:25px 25px;margin:0;padding:0;border:none;width:25px;height:25px;cursor:pointer}body .panel .event-contain .star_unfilled{width:25px}body .panel .act-contain{background-color:#e8e8e8;display:block;width:100%;margin-top:20px;padding:5px}body .panel .act-contain .act-top{display:block;vertical-align:top;width:100%;word-wrap:normal;text-align:left;color:#000;padding-top:10px}body .panel .act-contain .act-bottom{height:100%;display:block;vertical-align:top;width:100%;word-wrap:normal;text-align:left;color:#000}
 >>>>>>> be482494ed128926005eae809a7ec1b32be047db
+=======
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+*/
+.container{
+	margin: 1px;
+	max-width: 100%;
+}
+/* navigation bar */
+.schedule-nav{
+	display: inline-block;
+	border: 1px solid #CACACA;
+	padding: 5px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	max-width: 100%;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	float: left;
+}
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+.nav-venue {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+div.nav-starred:hover{background-color: #e1e1e1;}
+
+.nav-starred {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+	display: inline-block;
+	background-color: #f5f6f6;
+	padding: 0px 0px;
+	margin: 0px 3px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 20px;
+	border-radius:5px;
+	float: left;
+}
+.nav-day {
+  overflow-x:scroll;
+	max-width:400px;
+	max-height:37px;
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+
+#pcf-logo{
+	max-height: 50px;
+	float: left;
+	z-index: 300;
+	position: relative;
+	padding: 6px;
+}
+.loginnout{
+	float: right;
+}
+.venue-drop{
+	display: inline-block;
+	border: 1px solid #CACACA;
+	background-color: #f5f6f6;
+	padding: 10px 15px;
+	float: left;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+#nav-bar{
+	position: fixed;
+	background-color: #000;
+	opacity: 0.8;
+	min-height: 100px;
+	min-width: 100%;
+	z-index: 0;
+	left: 0;
+	top: 0;
+}
+div.fixed{
+	position: fixed;
+	top: 10px;
+	width: 100%;
+	padding: 0 30px 0 0;
+}
+.panel{
+	margin: 15px 0px;
+}
+.event-contain{
+	background-color: #f5f6f6;
+	width: 100%;
+}
+.event-contain-left{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 20%;
+	word-wrap: normal;
+	text-align: left;
+	border-right: 1px solid #CACACA;
+}
+.event-contain-left h5{
+	font-size: 20px;
+}
+.event-contain-right{
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 79%;
+	word-wrap: normal;
+	text-align: left;
+}
+
+/* Event Fonts */
+.venue_name{
+	font-weight: 700;
+	height:10px;
+}
+
+/* Act Container */
+.act-contain{
+	background-color: #b8b8b8;
+}
+.act-left{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 20%;
+	word-wrap: normal;
+	text-align: left;
+	border-right: 1px solid #CACACA;
+	color: #FFFFFF;
+}
+.act-right{
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	width: 79%;
+	word-wrap: normal;
+	text-align: left;
+	color: #FFFFFF;
+}
+
+
+/* Header Fonts */
+h1.schedule-header{
+	color: #f5f6f6;
+}
+h2.date-header{
+	font-family: 'Lily Script One', inherit;
+	letter-spacing: 1.5px;
+	padding: 80px 0px 10px 0px;
+	color: #CC9933;
+}
+p.description{
+	font-style: italic;
+}
+
+
+
+/* Other Styles */
+li{
+	list-style: none;
+}
+*:hover{
+	color: #000;
+}
+
+.event-contain-right-left{
+	display: inline-block;
+	float:left;
+	width:30%;
+	height:40px;
+}
+.event-contain-right-center{
+	display: inline-block;
+	float:left;
+	text-align:center;
+	width:30%;
+}
+.event-contain-right-right{
+	display: inline-block;
+	float:right;
+	text-align:right;
+	width:20%;
+}
+.event-description{
+	display: table-row;
+	float:left;
+	text-align:left;
+	width:80%;
+}
+.event-performers{
+	font-weight: 200;
+}
+
+
+/* Icon sprites */
+
+img.icon-standup{width:30px;height:30px;background:url('/assets/pcf_logos.png') 0 0;}
+img.icon-openmic{width:30px;height:30px;background:url('/assets/pcf_logos.png') -30px 0;}
+img.icon-improv{width:30px;height:30px;background:url('/assets/pcf_logos.png') -60px 0;}
+img.icon-networking{width:30px;height:30px;background:url('/assets/pcf_logos.png') -90px 0;}
+
+img.icon-party{width:30px;height:30px;background:url('/assets/pcf_logos.png') 0 -30px;}
+img.icon-poetry{width:30px;height:30px;background:url('/assets/pcf_logos.png') -30px -30px;}
+img.icon-happyhour{width:30px;height:30px;background:url('/assets/pcf_logos.png') -60px -30px;}
+img.icon-workshop{width:30px;height:30px;background:url('/assets/pcf_logos.png') -90px -30px;}
+img.icon-podcast{width:30px;height:30px;background:url('/assets/pcf_logos.png') -120px -30px;}
+/* line 15, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url(/assets/grey_wash_wall.png) 50% 0 repeat fixed;
+}
+
+/* line 20, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: black;
+  text-decoration: none;
+}
+
+/* line 27, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+p.description {
+  font-style: italic;
+}
+
+/* line 31, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* line 38, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 13px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.428571429;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* line 53, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.btn-default {
+  color: black;
+  background-color: white;
+  border-color: #cacaca;
+}
+
+/* line 59, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 67, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #cc9933;
+}
+
+/* line 72, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+/* line 93, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+
+/* line 104, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-standup {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) 0 0;
+}
+/* line 105, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-openmic {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -30px 0;
+}
+/* line 106, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-improv {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -60px 0;
+}
+/* line 107, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-networking {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -90px 0;
+}
+/* line 108, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-party {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) 0 -30px;
+}
+/* line 109, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-poetry {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -30px -30px;
+}
+/* line 110, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-happyhour {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -60px -30px;
+}
+/* line 111, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-workshop {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -90px -30px;
+}
+/* line 112, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+img .icon-podcast {
+  width: 30px;
+  height: 30px;
+  background: url(/assets/pcf_logos.png) -120px -30px;
+}
+
+/* line 120, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #nav-bar {
+  position: fixed;
+  background-color: black;
+  opacity: 0.6;
+  min-height: 70px;
+  min-width: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+/* line 130, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar {
+  position: fixed;
+  left: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 50px;
+}
+/* line 137, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .nav-day {
+  list-style: none;
+  display: block;
+  float: left;
+  white-space: nowrap;
+}
+/* line 143, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .nav-day #navm {
+  overflow-x: scroll;
+  max-height: 32px;
+  white-space: nowrap;
+  width: auto;
+  display: inline-block;
+}
+/* line 150, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .nav-day #navm .nav-date a {
+  display: inline-block;
+  white-space: nowrap;
+  height: 32px;
+}
+/* line 157, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .nav-day .nav {
+  list-style: none;
+  display: inline-block;
+  background-color: #f5f6f6;
+  padding: 0px 0px;
+  margin: 1px 3px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 13px;
+  border-radius: 5px;
+  float: left;
+}
+/* line 170, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .nav-starred {
+  list-style: none;
+  display: inline-block;
+  background-color: #f5f6f6;
+  padding: 1px 0px;
+  margin: 0px 3px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 20px;
+  border-radius: 5px;
+  float: left;
+}
+/* line 182, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar nav-starred:hover {
+  background-color: #e1e1e1;
+}
+/* line 186, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar #venuefilter {
+  margin: 1px 3px;
+}
+/* line 192, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .innout-btn {
+  margin: 1px 3px;
+  float: right;
+}
+/* line 197, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form {
+  padding: 8px 20px;
+}
+/* line 200, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form .form-label {
+  font-weight: normal;
+}
+/* line 203, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form .form-input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  margin-bottom: 10px;
+  max-width: 210px;
+  padding: 0 10px;
+}
+/* line 211, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form #form-btn-l, body #navbar .loginnout .login-form #form-btn-r {
+  padding: 3px 10px;
+  display: inline;
+}
+/* line 215, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form #form-btn-l {
+  float: left;
+}
+/* line 218, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body #navbar .loginnout .login-form #form-btn-r {
+  float: right;
+}
+/* line 225, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body h2.date-header {
+  letter-spacing: 1.5px;
+  padding: 80px 0px 10px 0px;
+  color: #cc9933;
+  font-size: 30px;
+  font-family: "Lily Script One", Helvetica, Arial, sans-serif;
+}
+/* line 233, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel {
+  margin: 15px 0px;
+  background-color: #f5f6f6;
+}
+/* line 237, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain {
+  background-color: #f5f6f6;
+  width: 100%;
+  padding: 5px;
+  display: block;
+}
+/* line 243, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-top {
+  display: block;
+}
+/* line 245, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-top h4 {
+  max-width: 70%;
+  display: inline-block;
+}
+/* line 249, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-top .social-icon-contain {
+  max-width: 30%;
+  display: inline-block;
+  float: right;
+}
+/* line 253, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-top .social-icon-contain .social-icon {
+  cursor: pointer;
+  width: 30px;
+}
+/* line 260, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-middle {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+/* line 264, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-middle .event-contain-left {
+  display: inline-block;
+  width: 32%;
+  border: 0px solid transparent;
+  text-align: left;
+  padding: 0;
+}
+/* line 271, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-middle .event-contain-center {
+  display: inline-block;
+  text-align: left;
+  width: 33%;
+  padding: 0;
+}
+/* line 277, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-middle .event-contain-right {
+  display: inline-block;
+  text-align: left;
+  width: 33%;
+  padding: 0;
+}
+/* line 284, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-bottom {
+  display: block;
+  width: 100%;
+}
+/* line 287, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-contain-bottom .event-description {
+  display: inline-block;
+}
+/* line 293, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain p {
+  font-size: 13px;
+  line-height: 18px;
+}
+/* line 300, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .venue_name {
+  font-weight: 500;
+  height: 10px;
+}
+/* line 305, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .event-performers {
+  font-weight: 200;
+}
+/* line 312, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .star_filled {
+  background: url("../star_filled.png") no-repeat;
+  background-size: 25px 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+/* line 322, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .event-contain .star_unfilled {
+  width: 25px;
+}
+/* line 329, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .act-contain {
+  background-color: #e8e8e8;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
+}
+/* line 336, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .act-contain .act-top {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  word-wrap: normal;
+  text-align: left;
+  color: black;
+  padding-top: 10px;
+}
+/* line 346, ../../../app/assets/stylesheets/mobile/mobile.css.scss */
+body .panel .act-contain .act-bottom {
+  height: 100%;
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  word-wrap: normal;
+  text-align: left;
+  color: black;
+}
+>>>>>>> parent of 013caa3... pulling

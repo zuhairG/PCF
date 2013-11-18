@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 Louis_ck.jpeg: Louis_ck-d7bf852b5dd83aa2f786e0ddc84e49d5.jpeg
 Louis_ck/index.jpeg: Louis_ck-d7bf852b5dd83aa2f786e0ddc84e49d5.jpeg
 blank.png: blank-e72a00947252f8b359e3ad38423d73d8.png
@@ -44,3 +45,41 @@ application.css: application-ca02e2d630da38fc80e0bd2d2caedafe.css
 application/index.css: application-ca02e2d630da38fc80e0bd2d2caedafe.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
+=======
+Louis_ck.jpeg: Louis_ck.jpeg
+Louis_ck/index.jpeg: Louis_ck.jpeg
+blank.png: blank.png
+blank/index.png: blank.png
+facebook.png: facebook.png
+facebook/index.png: facebook.png
+grey_wash_wall.png: grey_wash_wall.png
+grey_wash_wall/index.png: grey_wash_wall.png
+pcf_logo.png: pcf_logo.png
+pcf_logo/index.png: pcf_logo.png
+pcf_logos-large.png: pcf_logos-large.png
+pcf_logos-large/index.png: pcf_logos-large.png
+pcf_logos-medium.png: pcf_logos-medium.png
+pcf_logos-medium/index.png: pcf_logos-medium.png
+pcf_logos.png: pcf_logos.png
+pcf_logos/index.png: pcf_logos.png
+rails.png: rails.png
+rails/index.png: rails.png
+star_filled.png: star_filled.png
+star_filled/index.png: star_filled.png
+star_unfilled.png: star_unfilled.png
+star_unfilled/index.png: star_unfilled.png
+twitter.png: twitter.png
+twitter/index.png: twitter.png
+whose_line.jpg: whose_line.jpg
+whose_line/index.jpg: whose_line.jpg
+application.js: application.js
+application/index.js: application.js
+application-desktop.css: application-desktop.css
+application-desktop/index.css: application-desktop.css
+application-mobile.css: application-mobile.css
+application-mobile/index.css: application-mobile.css
+application.css: application.css
+application/index.css: application.css
+jquery.min.map: jquery.min.map
+jquery/index.min.map: jquery.min.map
+>>>>>>> parent of 013caa3... pulling
