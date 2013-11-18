@@ -19,7 +19,7 @@
 					    		
 					    		<!-- displaying icons based on the type of acts --> 
 					    		<% for act in event.acts %> 
-					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
+					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
 					    		<% end %> 
 					    	</div>
 					    	
