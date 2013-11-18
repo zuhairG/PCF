@@ -31,7 +31,6 @@ namespace :db do
 
         Act.populate 1 do |act|
           act.event_id = event.id
-          act.duration = "30 minutes"
           act.description = "This is the description of this act"
           act.name = ['act1','the amazing act', 'this is an act name']
           act.act_type = ['standup', 'improv', 'workshop']
