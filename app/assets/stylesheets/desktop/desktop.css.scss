@@ -244,6 +244,10 @@ body{
 		margin: 15px 0px;
 		background-color: #cc9933;
 		border: 3px solid transparent;
+		.social-icon{
+			cursor: pointer;
+			width: 30px;
+		}
 
 		.event-contain{
 			background-color: $light-gray;
@@ -301,16 +305,15 @@ body{
 					text-align:center;
 					width:25%;
 				}
+					
 				.event-contain-right-right{
 					display: inline-block;
 					float:right;
 					text-align:right;
 					width:25%;
 					min-height: 100%;
-					.social-icon{
-						cursor: pointer;
-						width: 30px;
-					}
+					
+				
 
 					.star_filled {
 						background: url(../star_filled.png) no-repeat ;
