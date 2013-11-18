@@ -131,7 +131,7 @@
 								</div>
 								<div class="event-contain-bottom">
 									<div class="event-description">
-										<p class="description"><%= event.description %></p>
+										<p class="description"><%= event.description.html_safe %></p>
 									</div>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><%= act.name.upcase %>
 								</div>
 								<div class="act-bottom">
-									<%= act.description %> ||
+									<%= act.description.html_safe %> ||
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
 									<% end %>
