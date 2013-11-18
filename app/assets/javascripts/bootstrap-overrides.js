@@ -2,6 +2,7 @@ $("#star").click(function() {
   $("#star").html('<%= image_tag("assets/star_filled.png", :height => 20)%>')
 });
 
+$('.icon_image').tooltip('toggle');
 
 $(function() {
     $('#navm a').bind('click',function(event){
