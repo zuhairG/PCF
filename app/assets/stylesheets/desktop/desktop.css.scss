@@ -116,6 +116,10 @@ p.description{
 //-------------------------- custom ---------------------------------
 
 body{
+	
+	#body-container{
+		padding-top:10px;
+	}
 
 	#nav-bar{
 		position: fixed;
@@ -139,15 +143,20 @@ body{
 	  padding-right: 0;
 
 		.img-contain{
-			width:10%;
+			width:40px;
 			display: inline-block;
 			float: left;
 
 			#pcf-logo{
-				max-height: 50px;
 				float: left;
 				z-index: 300;
 				position: relative;
+				left:-45px;
+				margin:0 auto;
+				padding: 0px 0px 0px 0px;
+				overflow: visible;
+				padding-top: 5px;
+				height: 75px;
 			}
 		}
 		.nav-day {
@@ -197,7 +206,7 @@ body{
 		  list-style: none;
 			display: inline-block;
 			background-color: #f5f6f6;
-			padding: 10px 0px;
+			padding: 0px 0px;
 			margin: 0px 3px;
 			-moz-border-radius: 2px;
 			border-radius: 2px;
@@ -255,6 +264,12 @@ body{
 		background-color: #cc9933;
 		border: 3px solid transparent;
 		width: 100%;
+		
+		.social-icon{
+			cursor: pointer;
+			width: 30px;
+		}
+
 
 		.event-contain{
 			background-color: $light-gray;
@@ -317,16 +332,15 @@ body{
 						text-align:center;
 					}
 				}
+					
 				.event-contain-right-right{
 					display: inline-block;
 					float:right;
 					text-align:right;
 					width:25%;
 					min-height: 100%;
-					.social-icon{
-						cursor: pointer;
-						width: 30px;
-					}
+					
+				
 
 					.star_filled {
 						background: url(../star_filled.png) no-repeat ;
