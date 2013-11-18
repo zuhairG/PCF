@@ -69,7 +69,36 @@ $(function() {
 			};
 		});
 		
+    $('#starredfilter').click(function() {
+    	var venue = $(this).html();
+    	if (venue == "Starred Events") {
+    		var x = 0;
+    		$('.panel').each(function(){
+    			x++;
+    			console.log("running panel "+x);
+    			var $this = $(this);
+    			console.log($this.find("input[name='commit']").attr("value"));
+    			if ($this.find("input[type='image']").attr("class") == "star_unfilled") {
+    				$this.hide("slow");
+    				event.preventDefault();      
+    			}
+    			else if ($this.find("input[type='submit']").attr("class") == "star_filled") {
+    				$this.show("slow");
+    				event.preventDefault();      
+    			};
+    		})
+    		$('#starredfilter').html("All Events");
+    	}
+    	else {
+    		$('.panel').show("slow");   
+    		$('#starredfilter').html("Starred Events");
+    		$('#venuefilter').html("All Venues <span class='caret'></span>"); 
+    	};
+    });
+    		
 		$('#login').click(function(e) {
 		   e.stopPropagation();
 		});
+  	
+    $("a.fancybox").fancybox();
 });
