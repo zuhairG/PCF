@@ -5,9 +5,12 @@ $("#star").click(function() {
 $(function() {
     $('#navm a').bind('click',function(event){
       var $anchor = $(this);
+			
+      var top = $($anchor.attr('href')).offset().top;
+ 		 	top -= 10;
 
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top
+        scrollTop: top
       }, 1000,'easeInOutExpo');
 			
       event.preventDefault();

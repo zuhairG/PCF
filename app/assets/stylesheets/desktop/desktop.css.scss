@@ -31,8 +31,9 @@ p.description{
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10%;
-  padding-right: 10%;
+	padding-left: 0;
+	padding-right: 0;
+	width:70%;
 }
 
 .btn {
@@ -115,11 +116,15 @@ img{
 //-------------------------- custom ---------------------------------
 
 body{
+	
+	#body-container{
+		padding-top:10px;
+	}
 
 	#nav-bar{
 		position: fixed;
 		background-color: $black;
-		opacity: 0.6;
+		opacity: 0.7;
 		min-height: 55px;
 		min-width: 100%;
 		z-index: 0;
@@ -128,29 +133,38 @@ body{
 	}
 	#navbar{
 		position: fixed;
-		left: 0;
+		left: 15%;
 		display: inline;
-		max-width: 100%;
+		width: 70%;
 		max-height: 50px;
+	  margin-right: auto;
+	  margin-left: auto;
+	  padding-left: 0;
+	  padding-right: 0;
 
 		.img-contain{
-			width:10%;
+			width:40px;
 			display: inline-block;
 			float: left;
 
 			#pcf-logo{
-				max-height: 50px;
 				float: left;
 				z-index: 300;
 				position: relative;
+				left:-45px;
+				margin:0 auto;
+				padding: 0px 0px 0px 0px;
+				overflow: visible;
+				padding-top: 5px;
+				height: 75px;
 			}
 		}
 		.nav-day {
 			max-width:400px;
-			max-height:32px;
 			float: left;
 			overflow-y: no-content;
 			overflow-x: scroll;
+			padding-top:10px;
 
 			#navm{
 				width:auto;
@@ -184,11 +198,15 @@ body{
 				border-radius:5px;
 			}
 		}
+		.btn-group{
+			padding-top:10px;
+		}
+		
 		.nav-starred {
 		  list-style: none;
 			display: inline-block;
 			background-color: #f5f6f6;
-			padding: 0px 0px;
+			padding: 10px 0px;
 			margin: 0px 3px;
 			-moz-border-radius: 2px;
 			border-radius: 2px;
@@ -234,20 +252,24 @@ body{
 	
 	h2.date-header {
 		letter-spacing: 1.5px;
-		padding: 80px 0px 10px 0px;
+		padding: 60px 0px 10px 0px;
+		margin: 0px 0px 0px 0px;
 		color: $gold;
 		font-size: 30px;
 		font-family: $font-datehead;
 	}
 
 	.panel{
-		margin: 15px 0px;
+		margin: 5px 0px;
 		background-color: #cc9933;
 		border: 3px solid transparent;
+		width: 100%;
+		
 		.social-icon{
 			cursor: pointer;
 			width: 30px;
 		}
+
 
 		.event-contain{
 			background-color: $light-gray;
@@ -261,12 +283,11 @@ body{
 				max-width: 20%;
 				word-wrap: normal;
 				text-align: left;
-				
 			}
 
 			.event-contain-left h5{
 				font-size: 20px;
-				margin: 10px 0;
+				margin: 0px 0;
 			}
 
 			.event-contain-right{
@@ -291,6 +312,7 @@ body{
 					height:40px;
 					
 					.venue_name{
+						margin: 0px 0px 0px 0px;	
 						font-weight: 700;
 						height:10px;
 					}
@@ -304,6 +326,11 @@ body{
 					float:left;
 					text-align:center;
 					width:25%;
+					
+					.event_time{
+						margin: 0px 0px 0px 0px;	
+						text-align:center;
+					}
 				}
 					
 				.event-contain-right-right{
