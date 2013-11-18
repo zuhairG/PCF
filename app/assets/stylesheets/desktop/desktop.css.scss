@@ -234,14 +234,15 @@ body{
 	
 	h2.date-header {
 		letter-spacing: 1.5px;
-		padding: 80px 0px 10px 0px;
+		padding: 60px 0px 10px 0px;
+		margin: 0px 0px 0px 0px;
 		color: $gold;
 		font-size: 30px;
 		font-family: $font-datehead;
 	}
 
 	.panel{
-		margin: 15px 0px;
+		margin: 5px 0px;
 		background-color: #cc9933;
 		border: 3px solid transparent;
 
@@ -262,7 +263,7 @@ body{
 
 			.event-contain-left h5{
 				font-size: 20px;
-				margin: 10px 0;
+				margin: 0px 0;
 			}
 
 			.event-contain-right{
@@ -287,6 +288,7 @@ body{
 					height:40px;
 					
 					.venue_name{
+						margin: 0px 0px 0px 0px;	
 						font-weight: 700;
 						height:10px;
 					}
@@ -300,6 +302,11 @@ body{
 					float:left;
 					text-align:center;
 					width:25%;
+					
+					.event_time{
+						margin: 0px 0px 0px 0px;	
+						text-align:center;
+					}
 				}
 				.event-contain-right-right{
 					display: inline-block;
