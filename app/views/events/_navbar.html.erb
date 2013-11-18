@@ -23,6 +23,7 @@
       <li><a href="#">All Venues</a></li>
       <li class="divider"></li>
       <% Venue.all.each do |venue| %>
+			<% print venue %>
       	<li><a href="#"><%= venue.name %></a></li>
       <% end %>
     </ul>			
