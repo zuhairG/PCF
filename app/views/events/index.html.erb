@@ -81,11 +81,13 @@
 						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-left">
-									<%= act.name.upcase %><img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+									<%= act.name.upcase %>
+									<a class="fancybox" rel="group" href="/assets/Louis_ck.jpeg"><img class="act_image" src="/assets/Louis_ck.jpeg"></a>
+									<img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png">
 								</div>
 								<div class="act-right">
-									<%= act.description.html_safe %> ||
-									<img class="act_image" src="/assets/Louis_ck.jpeg">
+									<%= act.description %> ||
+
 									<br><a href="https://twitter.com/sennaparsa">Twitter</a>
 									<br><a href="https://www.facebook.com/senna.parsa">Facebook Page</a>
 									
