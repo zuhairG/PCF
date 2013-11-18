@@ -1,5 +1,5 @@
 $("#star").click(function() {
-  $("#star").html('<%= image_tag("star_filled.png", :height => 20)%>')
+  $("#star").html('<%= image_tag("assets/star_filled.png", :height => 20)%>')
 });
 
 
@@ -67,5 +67,4 @@ $(function() {
 			$('#login').click(function(e) {
 			   e.stopPropagation();
 			});
-
-  });
+  	});
