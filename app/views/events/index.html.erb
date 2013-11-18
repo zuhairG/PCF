@@ -46,7 +46,7 @@
                             <% for star in Stared.all %>
                               <% if (star.user_id == current_user.id) %>
                                 <% if (star.event_id == event.id) %>
-                                  <%=  link_to image_tag("star_filled.png", :class => "star_filled"), star, :method => :delete  %>
+                                  <%= button_to "", star, :method => :delete, :class => "star_filled" %>
                                   <% temp = 0 %>
                                 <% end %>
 
