@@ -50,29 +50,6 @@ $(function() {
 		});
 		
     $('#starredfilter').click(function() {
-			var venue = $(this).html();
-			if (venue == "Starred Events") {
-				$('.panel').each(function(){
-					var $this = $(this);
-					if ($this.find("input[type='image']").attr("class") == "star_unfilled") {
-						$this.hide("slow");
-						event.preventDefault();      
-					}
-					else if ($this.find("input[type='submit']").attr("class") == "star_filled") {
-						$this.show("slow");
-						event.preventDefault();      
-					};
-				})
-				$('#starredfilter').html("All Events");
-			}
-			else {
-				$('.panel').show("slow");   
-				$('#starredfilter').html("Starred Events");
-				$('#venuefilter').html("All Venues <span class='caret'></span>"); 
-			};
-		});
-		
-    $('#starredfilter').click(function() {
     	var venue = $(this).html();
     	if (venue == "Starred Events") {
     		var x = 0;

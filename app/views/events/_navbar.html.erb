@@ -33,11 +33,9 @@
 	</div>
 	
 	<div class="btn-group">
-	<% if current_user %>
-		<div class="nav-starred">
-		  <a id="starredfilter" class="btn" href="#">Starred Events</a>
-		</div>
-  <% end %>
+		<% if current_user %>
+			  <a id="starredfilter" class="btn btn-default" href="#">Starred Events</a>
+	  <% end %>
   </div>
 
 	
@@ -48,9 +46,9 @@
 	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default" %>
 	  <% else %>
 	  
-    <div class="btn-group">
+    <div>
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Sign in <span class="caret"></span>
+        Sign In <span class="caret"></span>
       </button>
       <ul id= "login" class="dropdown-menu pull-right login-form" role="menu">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
