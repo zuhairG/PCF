@@ -4,4 +4,6 @@ class Venue < ActiveRecord::Base
 
   validates_presence_of :city, :state, :name, :street_address, :zip_code
 
+  scope :alphabetical, order('name') 
+  
 end

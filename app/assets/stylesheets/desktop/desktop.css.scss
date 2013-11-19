@@ -31,8 +31,9 @@ p.description{
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10%;
-  padding-right: 10%;
+	padding-left: 0;
+	padding-right: 0;
+	width:70%;
 }
 
 .btn {
@@ -99,27 +100,31 @@ p.description{
 	height: 30px;
 	background: $a;
 }
-img{
-	.icon-standup{width:30px;height:30px;background:image-url('pcf_logos.png') 0 0;}
-  .icon-openmic{width:30px;height:30px;background:image-url('pcf_logos.png') -30px 0;}
-  .icon-improv{width:30px;height:30px;background:image-url('pcf_logos.png') -60px 0;}
-	.icon-networking{width:30px;height:30px;background:image-url('pcf_logos.png') -90px 0;}
-	.icon-party{width:30px;height:30px;background:image-url('pcf_logos.png') 0 -30px;}
-	.icon-poetry{width:30px;height:30px;background:image-url('pcf_logos.png') -30px -30px;}
-	.icon-happyhour{width:30px;height:30px;background:image-url('pcf_logos.png') -60px -30px;}
-	.icon-workshop{width:30px;height:30px;background:image-url('pcf_logos.png') -90px -30px;}
-	.icon-podcast{width:30px;height:30px;background:image-url('pcf_logos.png') -120px -30px;}
-}
+
+.icon-standup{width:30px;height:30px;background:image-url('pcf_logos.png') 0 0;}
+.icon-openmic{width:30px;height:30px;background:image-url('pcf_logos.png') -30px 0;}
+.icon-improv{width:30px;height:30px;background:image-url('pcf_logos.png') -60px 0;}
+.icon-networking{width:30px;height:30px;background:image-url('pcf_logos.png') -90px 0;}
+.icon-party{width:30px;height:30px;background:image-url('pcf_logos.png') 0 -30px;}
+.icon-poetry{width:30px;height:30px;background:image-url('pcf_logos.png') -30px -30px;}
+.icon-happyhour{width:30px;height:30px;background:image-url('pcf_logos.png') -60px -30px;}
+.icon-workshop{width:30px;height:30px;background:image-url('pcf_logos.png') -90px -30px;}
+.icon-podcast{width:30px;height:30px;background:image-url('pcf_logos.png') -120px -30px;}
+
 
 
 //-------------------------- custom ---------------------------------
 
 body{
+	
+	#body-container{
+		padding-top:10px;
+	}
 
 	#nav-bar{
 		position: fixed;
 		background-color: $black;
-		opacity: 0.6;
+		opacity: 0.7;
 		min-height: 55px;
 		min-width: 100%;
 		z-index: 0;
@@ -128,29 +133,38 @@ body{
 	}
 	#navbar{
 		position: fixed;
-		left: 0;
+		left: 15%;
 		display: inline;
-		max-width: 100%;
+		width: 70%;
 		max-height: 50px;
+	  margin-right: auto;
+	  margin-left: auto;
+	  padding-left: 0;
+	  padding-right: 0;
 
 		.img-contain{
-			width:10%;
+			width:40px;
 			display: inline-block;
 			float: left;
 
 			#pcf-logo{
-				max-height: 50px;
 				float: left;
 				z-index: 300;
 				position: relative;
+				left:-45px;
+				margin:0 auto;
+				padding: 0px 0px 0px 0px;
+				overflow: visible;
+				padding-top: 5px;
+				height: 75px;
 			}
 		}
 		.nav-day {
 			max-width:400px;
-			max-height:32px;
 			float: left;
 			overflow-y: no-content;
 			overflow-x: scroll;
+			padding-top:10px;
 
 			#navm{
 				width:auto;
@@ -184,6 +198,10 @@ body{
 				border-radius:5px;
 			}
 		}
+		.btn-group{
+			padding-top:10px;
+		}
+		
 		.nav-starred {
 		  list-style: none;
 			display: inline-block;
@@ -245,6 +263,13 @@ body{
 		margin: 5px 0px;
 		background-color: #cc9933;
 		border: 3px solid transparent;
+		width: 100%;
+		
+		.social-icon{
+			cursor: pointer;
+			width: 30px;
+		}
+
 
 		.event-contain{
 			background-color: $light-gray;
@@ -258,7 +283,6 @@ body{
 				max-width: 20%;
 				word-wrap: normal;
 				text-align: left;
-				
 			}
 
 			.event-contain-left h5{
@@ -308,16 +332,15 @@ body{
 						text-align:center;
 					}
 				}
+					
 				.event-contain-right-right{
 					display: inline-block;
 					float:right;
 					text-align:right;
 					width:25%;
 					min-height: 100%;
-					.social-icon{
-						cursor: pointer;
-						width: 30px;
-					}
+					
+				
 
 					.star_filled {
 						background: url(../star_filled.png) no-repeat ;
