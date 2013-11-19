@@ -16,10 +16,9 @@
 				    	
 					    	<div class="event-contain-left">
 					    		<h5><%= event.name.upcase %></h5>
-					    		
 					    		<!-- displaying icons based on the type of acts --> 
 					    		<% for act in event.acts %> 
-					    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+					    			<img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
 					    		<% end %> 
 					    	</div>
 					    	
@@ -84,7 +83,8 @@
 							  <div class="act-left">
 									<%= act.name.upcase %>
 									<a class="fancybox" rel="group" href="/assets/Louis_ck.jpeg"><img class="act_image" src="/assets/Louis_ck.jpeg"></a>
-									<img class="icon-<%= act.act_type %> icon_image" src="/assets/blank.png">
+								</br>	<img class="icon-<%=act.act_type%>" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+				    			
 								</div>
 								<div class="act-right">
 									<%= act.description.html_safe %> 
@@ -92,8 +92,10 @@
                   
 									</br> 
 									<p> For more information about this act visit 
-									<%= link_to image_tag("/assets/facebook.png", :class => "social-icon", :target =>"_blank"), act.facebook %>
-									<%= link_to image_tag("/assets/twitter.png", :class => "social-icon", :target => "_blank"), act.twitter %>
+									<%= link_to image_tag("/assets/facebook.png", :class => "social-icon", :target =>'_blank'), act.facebook, :target => '_blank', :alt => "Act facebook page", :title=>"Act facebook page" %>
+									<%= link_to image_tag("/assets/twitter.png", :class => "social-icon", :target => '_blank'), act.twitter, :target => '_blank', :alt => "Act twitter page", :title=>"Act twitter page" %>
+									<%= link_to image_tag("/assets/website.png", :class => "social-icon"), act.url, :target => '_blank', :alt => "Act website", :title=>"Act website " %>
+									
 									</p>
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
@@ -104,7 +106,6 @@
 						
 					</div>
 					
-					<br>
 					<% if date <= Date.current %>
 		  			<script>
 		  				  $( ".event-contain" ).css("background-color", "#CFCFCF");
