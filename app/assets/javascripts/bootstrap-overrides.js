@@ -52,22 +52,31 @@ $(function() {
     $('#starredfilter').click(function() {
     	var venue = $(this).html();
     	if (venue == "Starred Events") {
-    		$('.panel').each(function(){
-    			var $this = $(this);
-    			if ($this.find("input[type='image']").attr("class") == "star_unfilled") {
-    				$this.hide("slow");
-    				event.preventDefault();      
-    			}
-    			else if ($this.find("input[type='submit']").attr("class") == "star_filled") {
-    				$this.show("slow");
-    				event.preventDefault();      
-    			};
-    		})
-    		$('#starredfilter').html("All Events");
-				$('#venuefilter').html("All Venues <span class='caret'></span>"); 
+				$('.date-header').each(function(){
+					var $dateheader = $(this);
+					var totalpanels = $dateheader.next().find('.panel').length;
+	    		$dateheader.next().find('.panel').each(function(){
+	    			var $panel = $(this);
+	    			if ($panel.find("input[type='image']").attr("class") == "star_unfilled") {
+	    				$panel.hide("slow");
+							totalpanels = totalpanels-1;
+	    				event.preventDefault();      
+	    			}
+	    			else if ($panel.find("input[type='submit']").attr("class") == "star_filled") {
+	    				$panel.show("slow");
+	    				event.preventDefault();      
+	    			};
+						if (totalpanels <= 0){
+							$dateheader.hide();
+						};
+	    		})
+	    		$('#starredfilter').html("All Events");
+					$('#venuefilter').html("All Venues <span class='caret'></span>"); 
+				})
     	}
     	else {
     		$('.panel').show("slow");   
+				$('.date-header').show("slow");
     		$('#starredfilter').html("Starred Events");
     		$('#venuefilter').html("All Venues <span class='caret'></span>"); 
     	};
