@@ -108,9 +108,7 @@
 
 									<div class="event-contain-left">
 										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
-										<% for act in event.acts %> 
-						    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
-						    		<% end %>
+
 									</div>
 
 
@@ -120,13 +118,9 @@
 
 
 									<div class="event-contain-right">
-										<p class="event-performers">
-											<% for act in event.acts %>
-												<% for pid in act.performer_acts %>
-													<%= Performer.find(pid).name %><br>
-												<% end %>
-											<% end %>
-										</p>			
+										<% for act in event.acts %> 
+						    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
+						    			<% end %>
 									</div>
 								</div>
 								<div class="event-contain-bottom">
