@@ -92,8 +92,10 @@
                   
 									</br> 
 									<p> For more information about this act visit 
-									<%= link_to image_tag("/assets/facebook.png", :class => "social-icon", :target =>"_blank"), act.facebook %>
-									<%= link_to image_tag("/assets/twitter.png", :class => "social-icon", :target => "_blank"), act.twitter %>
+									<%= link_to image_tag("/assets/facebook.png", :class => "social-icon", :target =>'_blank'), act.facebook, :target => '_blank', :alt => "Act facebook page" %>
+									<%= link_to image_tag("/assets/twitter.png", :class => "social-icon", :target => '_blank'), act.twitter, :target => '_blank', :alt => "Act twitter page" %>
+									<%= link_to image_tag("/assets/website.png", :class => "social-icon"), act.url, :target => '_blank', :alt => "Act website" %>
+									
 									</p>
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
