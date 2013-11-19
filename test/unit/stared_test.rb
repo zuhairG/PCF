@@ -1,54 +1,16 @@
 require 'test_helper'
-require File.expand_path("../../test_helper", __FILE__)
 
-#require File.dirname(__FILE__) + '/event_test'
-
-class EventTest < ActiveSupport::TestCase
-  should belong_to(:venue)
-  should have_many(:acts)
+class StaredTest < ActiveSupport::TestCase
   
-  # test basic validations 
-  should validate_presence_of(:date)
-  should validate_presence_of(:venue_id)
-  should validate_presence_of(:description)  
-  should validate_presence_of(:start_time)
-  should validate_presence_of(:end_time)
+  should belong_to(:user)
+  should belong_to(:event)
   
-  
-  # date  
-  should allow_value(1.day.from_now.to_date).for(:date)
-  should_not allow_value("asdfasdf").for(:date)
-  should_not allow_value("asdfasdf").for(:date)
-  
-  # description
-  should allow_value("Jonathan").for(:description)
-  should allow_value("jonathan").for(:description)
-  should allow_value("asdf").for(:description)
-  should allow_value("123 test game!!").for(:description)
-  should allow_value("#hashtag #unittesting #whatwhat").for(:description)
-  should_not allow_value("").for(:description)
-  
-  
-
-  # start_time and end time 
-  should allow_value(1.hour.from_now).for(:start_time)
-  should allow_value(Time.now).for(:start_time)
-  
-  should allow_value(1.hour.from_now).for(:end_time)
-  should allow_value(Time.now).for(:end_time)
-  
-  should_not allow_value("asdfasdf").for(:start_time)
-  should_not allow_value("asdfasdf").for(:end_time)
-
-
-    # ---------------------------------
-    # Testing other methods with a context
+  # Testing other methods with a context
     context "Creating three acts" do
       # create the objects I want with factories
       setup do 
         @venue1 = FactoryGirl.create(:venue, :city => "Pittsburgh", :state => "PA", :name => "Stage AE", 
         :street_address => "5000 Forbes Avenue", :zip_code => 15289)
-        
         
 
         @event1 = FactoryGirl.create(:event, :date =>  Date.today, :description => "really gr8 event", 
@@ -104,17 +66,17 @@ class EventTest < ActiveSupport::TestCase
         assert_equal "5000 Forbes Avenue", @venue1.street_address  
       end 
       
-      # test the methog 'start_must_be_before_end_time works 
-      # **** negate this!
-      should "start_must_be_before_end_time works" do 
-          assert_nil @event1.start_must_be_before_end_time 
+      should "show that the performer acts have their associated acts and performers" do 
+        assert_equal @act1.id, @performeract1.act_id
+        assert_equal @performer1.id, @performeract1.performer_id
+        
+        assert_equal @act1.id, @performeract2.act_id
+        assert_equal @performer2.id, @performeract2.performer_id
+        
+        assert_equal @act1.id, @performeract3.act_id
+        assert_equal @performer3.id, @performeract3.performer_id
+        
+        
       end 
-      
-      # test the method 'venue_name' works
-      should "shows that venue_name works" do
-        assert_equal "Stage AE", @event1.venue_name(@venue1.id)
-      end
-      
-      
     end
   end

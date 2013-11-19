@@ -4,24 +4,24 @@ class Event < ActiveRecord::Base
   # ...and :name
   belongs_to :venue
   has_many :acts
-  #has_many :stareds
+  has_many :stareds
   default_scope order('date, start_time ASC')
 
 
   validates_presence_of :date, :description, :start_time, :end_time, :venue_id  
 
-  validate :start_must_be_before_end_time
+  before_create :start_must_be_before_end_time
 
-private 
+#private 
 
-  def venue_name(id)
-    name = Venue.find(id)
-    return name
-  end
+def venue_name(id)
+  venue = Venue.find(id)
+  return venue.name
+end
   
-  def start_must_be_before_end_time
-    errors.add(:start_time, "must be before end time") unless
-       self.start_time < self.end_time
-  end
+def start_must_be_before_end_time
+  errors.add(:start_time, "must be before end time") unless
+      (self.start_time < self.end_time)
+end
 
 end

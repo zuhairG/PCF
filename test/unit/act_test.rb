@@ -13,7 +13,6 @@ class ActTest < ActiveSupport::TestCase
   
   #test basic validations 
   should validate_presence_of(:name)
-  should validate_presence_of(:duration)
   should validate_presence_of(:description)  
   should validate_presence_of(:event_id)
   should validate_presence_of(:act_type)
@@ -25,11 +24,7 @@ class ActTest < ActiveSupport::TestCase
   should allow_value("123 test act!!").for(:name)
   should allow_value("#hashtag #unittesting #whatwhat").for(:name)
   should_not allow_value("").for(:name)
-  
-  #duration 
-  should allow_value("49 days").for(:duration)
-  should_not allow_value("").for(:duration)
-  #should_not allow_value(3).for(:duration)
+
   
   #description
   should allow_value("Yo yo come to this show").for(:description)
@@ -47,7 +42,7 @@ class ActTest < ActiveSupport::TestCase
       @event1 = FactoryGirl.create(:event, :date =>  Date.today, :description => "really gr8 event", 
       :start_time => Time.now, :end_time => 5.hours.from_now, :venue_id => @venue1.id)
 
-      @act1 = FactoryGirl.create(:act, :name => "Test Act 1", :duration => "2 hours", :act_type => "Improv", :description => "Really gr8 act",
+      @act1 = FactoryGirl.create(:act, :name => "Test Act 1", :act_type => "Improv", :description => "Really gr8 act",
        :event_id => @event1.id)
 
       

@@ -24,6 +24,7 @@ a,h1,h2,h3,h4,h5,h6{
   color: $black;
   text-decoration: none;
 }
+
 p.description{
 	font-style: italic;
 }
@@ -115,6 +116,7 @@ p.description{
 
 
 
+
 //-------------------------- custom ---------------------------------
 
 body{
@@ -129,11 +131,12 @@ body{
 		opacity: 0.7;
 		min-height: 55px;
 		min-width: 100%;
-		z-index: 0;
+		z-index: 900;
 		left: 0;
 		top: 0;
 	}
 	#navbar{
+		z-index:1000;
 		position: fixed;
 		left: 15%;
 		display: inline;
@@ -274,6 +277,13 @@ body{
 				max-width: 20%;
 				word-wrap: normal;
 				text-align: left;
+				height:auto;
+				
+				.eventicons{
+					position:relative;
+					bottom:-5px;
+					z-index:0;
+				}
 			}
 
 			.event-contain-left h5{
