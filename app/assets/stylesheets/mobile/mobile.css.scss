@@ -230,6 +230,10 @@ body{
 		font-family: $font-datehead;
 	}
 
+	.panel-group .panel{
+		margin-bottom: 20px;
+	}
+
 	.panel{
 		margin: 15px 0px;
 		background-color: $light-gray;
