@@ -64,13 +64,13 @@
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
 				<% for event in events %>
 		 			<div class="panel">
-		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
+		 				
 				    	<div class="event-contain">
 				    		<div class="event-contain-top">
 				    			<% for act in event.acts %> 
 				    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
 				    			<% end %>
-				    			</a>
+				    			
 					    		<div class="social-icon-contain">
 					    			<div id='star' style="float:left">
 											<div id='starred'>
@@ -105,11 +105,13 @@
 					    		</div>
 								</div>
 								<hr>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 								<div class="event-contain-middle">
 									<h2><%= event.name.upcase %></h2>
 									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name.upcase %></span></p>
 									<p class="description"><%= event.description.html_safe %></p>
 								</div>
+								</a>
 							</div>
 						
 

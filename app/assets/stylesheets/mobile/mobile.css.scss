@@ -24,6 +24,10 @@ a,h1,h2,h3,h4,h5,h6{
   color: $black;
   text-decoration: none;
 }
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
 
 hr {
 	margin-top: 7px;
