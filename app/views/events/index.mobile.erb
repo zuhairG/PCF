@@ -24,11 +24,11 @@
 	    </ul>			
 		</div>
 		
-		<%# if current_user %>
+		<% if current_user %>
 			<div class="nav-starred">
 			  <a id="starredfilter" class="btn btn-default" href="#">Starred Events</a>
 			</div>
-	  <%# end %>
+	  <% end %>
 
 	  <div class="loginnout">
 		  <% if user_signed_in? %>
