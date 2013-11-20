@@ -253,7 +253,11 @@ body{
 				}
 			}
 		}
+		-webkit-transition: margin-top .5s ease-in-out;
 		
+	}
+	.scroll{
+		margin-top: -70px;
 	}
 	
 	h2.date-header {
