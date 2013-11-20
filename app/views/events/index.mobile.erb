@@ -107,8 +107,8 @@
 								<hr>
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 								<div class="event-contain-middle">
-									<h2><%= event.name.upcase %></h2>
-									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name.upcase %></span></p>
+									<h2><%= event.name %></h2>
+									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name %></span></p>
 									<p class="description"><%= event.description.html_safe %></p>
 								</div>
 								</a>
@@ -119,7 +119,7 @@
 						<div class="panel-collapse act-contain collapse" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-top">
-								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><h3><%= act.name.upcase %></h3>
+								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><h3><%= act.name %></h3>
 								</div>
 								<div class="act-bottom">
 									<%= act.description.html_safe %>

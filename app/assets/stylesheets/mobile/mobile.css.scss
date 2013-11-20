@@ -34,10 +34,10 @@ hr {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn {
@@ -52,7 +52,7 @@ hr {
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
   white-space: nowrap;
 }
 .btn-default {
@@ -90,7 +90,7 @@ hr {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -192,10 +192,8 @@ body{
 					background-color: #f5f6f6;
 					padding: 0px 0px;
 					margin: 1px 3px;
-					-moz-border-radius: 1px;
-					border-radius: 1px;
+					border-radius: 0;
 					font-size: 13px;
-					border-radius:5px;
 					float: left;
 				}
 			}
@@ -210,9 +208,7 @@ body{
 				background-color: #f5f6f6;
 				padding: 0;
 				margin: 1px 3px;
-				-moz-border-radius: 2px;
-				border-radius: 2px;
-				border-radius:5px;
+				border-radius: 0;
 				float: left;
 			}
 			nav-starred:hover{
@@ -244,7 +240,7 @@ body{
 					}
 					.form-input{
 						border: 1px solid $dark-gray;
-	 				  border-radius: 4px;
+	 				  border-radius: 0;
 	 				  background-color: $medium-gray;
 	 				  margin-bottom: 10px;
 	 				  max-width: 210px;
@@ -286,12 +282,15 @@ body{
 	.panel{
 		margin: 15px 0px;
 		background-color: $light-gray;
+		border-radius: 0;
 
 		.event-contain{
 			background-color: $light-gray;
 			width: 100%;
 			padding: 5px;
 			display: block;
+			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 
 			.event-contain-top{
 				display: block;
@@ -314,14 +313,16 @@ body{
 				display: block;
 				width: 100%;
 				h2{
-					font-weight: 700;
+					font-weight: 500;
 					margin-bottom: 0;
 				}
 				p.event_time{
 					margin: 0;
+					color: $dark-gray;
 				}
 				#venuename{
 					font-style: italic;
+					color: $dark-gray;
 				}
 			}
 
@@ -361,7 +362,7 @@ body{
 			padding: 0px 5px 5px 5px;
 
 			h3{
-				font-weight: 700;
+				font-weight: 500;
 			}
 			hr {
 				margin-bottom: 7px;
