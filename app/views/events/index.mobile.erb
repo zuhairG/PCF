@@ -67,7 +67,10 @@
 		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 				    	<div class="event-contain">
 				    		<div class="event-contain-top">
-					    		<h4><%= event.name.upcase %></h4>
+				    			<% for act in event.acts %> 
+				    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
+				    			<% end %>
+				    			</a>
 					    		<div class="social-icon-contain">
 					    			<div id='star' style="float:left">
 											<div id='starred'>
@@ -101,42 +104,23 @@
 										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					    		</div>
 								</div>
-
+								<hr>
 								<div class="event-contain-middle">
-
-									<div class="event-contain-left">
-										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
-
-									</div>
-
-
-									<div class="event-contain-center">
-										<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
-									</div>
-
-
-									<div class="event-contain-right">
-										<% for act in event.acts %> 
-						    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
-						    			<% end %>
-									</div>
-								</div>
-								<div class="event-contain-bottom">
-									<div class="event-description">
-										<p class="description"><%= event.description.html_safe %></p>
-									</div>
+									<h2><%= event.name.upcase %></h2>
+									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name.upcase %></span></p>
+									<p class="description"><%= event.description.html_safe %></p>
 								</div>
 							</div>
-						</a>
+						
 
 
-						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
+						<div class="panel-collapse act-contain collapse" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-top">
 								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><%= act.name.upcase %>
 								</div>
 								<div class="act-bottom">
-									<%= act.description.html_safe %> ||
+									<%= act.description.html_safe %>
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
 									<% end %>
