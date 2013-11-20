@@ -2,21 +2,26 @@ $("#star").click(function() {
   $("#star").html('<%= image_tag("assets/star_filled.png", :height => 20)%>')
 });
 
-// $(window).scroll(
-// 	function (event) {
-// 		var y = $(this).scrollTop();
-// 		if y<0{
-// 			$('#navbar').stop().removeClass('scroll');
-//   		$('#nav-bar').stop().removeClass('scroll');
-//   		$('#pcf-logo').stop().removeClass('scroll');
-// 		}, else{
-// 			$('#navbar').stop().addClass('scroll');
-//   		$('#nav-bar').stop().addClass('scroll');
-//   		$('#pcf-logo').stop().addClass('scroll');
-// 		}
-  	
-// 	}
-// );
+var previousScroll = 0,
+headerOrgOffset = $('#navbar').height();
+
+$('#nav-bar').height($('#navbar').height());
+
+$(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll > headerOrgOffset) {
+        if (currentScroll > previousScroll) {
+            $('#navbar').addClass('scroll');
+            $('#nav-bar').addClass('scroll');
+            $('#pcf-logo').addClass('scroll');
+        } else {
+        		$('#navbar').removeClass('scroll');
+            $('#nav-bar').removeClass('scroll');
+            $('#pcf-logo').removeClass('scroll');   
+        }
+    } 
+    previousScroll = currentScroll;
+});
 
 $(function() {
     $('#navm a').bind('click',function(event){
