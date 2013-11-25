@@ -276,12 +276,16 @@ body{
 	}
 
 	.panel-group .panel{
-		margin-bottom: 20px;
+		margin-bottom: 0;
+	}
+	.panel-group .panel+.panel{
+		margin: 0;
 	}
 
 	.panel{
-		margin: 15px 0px;
+		margin: 0;
 		background-color: $light-gray;
+		border: 1px solid $medium-gray;
 		border-radius: 0;
 
 		.event-contain{
@@ -357,9 +361,10 @@ body{
 
 		.act-contain{
 			background-color: $medium-gray;
-			display: block;
+			//display: block;
 			width: 100%;
 			padding: 0px 5px 5px 5px;
+			display: none;
 
 			h3{
 				font-weight: 500;
