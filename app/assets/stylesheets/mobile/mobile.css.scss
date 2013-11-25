@@ -14,7 +14,7 @@ $white: #FFFFFF;
 
 body{
 	font-family: $font-body;
-	background: image-url('grey_wash_wall.png') 50% 0 repeat fixed;
+	background: image-url('bg-maze.png') 50% 0 repeat fixed;
 }
 
 a,h1,h2,h3,h4,h5,h6{
@@ -24,15 +24,20 @@ a,h1,h2,h3,h4,h5,h6{
   color: $black;
   text-decoration: none;
 }
-p.description{
-	font-style: italic;
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
+
+hr {
+	margin-top: 7px;
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn {
@@ -47,7 +52,7 @@ p.description{
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
   white-space: nowrap;
 }
 .btn-default {
@@ -85,7 +90,7 @@ p.description{
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -126,103 +131,141 @@ body{
 		z-index: 0;
 		left: 0;
 		top: 0;
+		transition: margin-top .5s ease-in-out;
+    -moz-transition: margin-top .5s ease-in-out;
+		-webkit-transition: margin-top .5s ease-in-out;
 	}
-	#navbar{
-		position: fixed;
-		left: 0;
-		display: block;
-		max-width: 100%;
-		max-height: 50px;
 
-		.nav-day {
-			list-style: none;
+	.img-contain{
+			position: fixed;
 			display: block;
 			float: left;
-			white-space: nowrap;
+			width: 60px;
+			
+			#pcf-logo{
+				max-height: 60px;
+				transition: margin-top .5s ease-in-out;
+		    -moz-transition: margin-top .5s ease-in-out;
+				-webkit-transition: margin-top .5s ease-in-out;
+			}
+		}
 
-			#navm{
-				overflow-x: scroll;
-				max-height: 32px;
+
+	#navbar{
+		position: fixed;
+		display: block;
+		max-width: (100%-60px);
+		max-height: 50px;
+		float: left;
+		left: 60px;
+		transition: margin-top .5s ease-in-out;
+    -moz-transition: margin-top .5s ease-in-out;
+		-webkit-transition: margin-top .5s ease-in-out;
+
+		#nav-top{
+			display: block;
+			width: 100%;
+
+			.nav-day {
+				list-style: none;
+				display: block;
+				float: left;
 				white-space: nowrap;
-				width: auto;
-				display: inline-block;
 
-				.nav-date a{
-					display: inline-block;
+				#navm{
+					overflow-x: scroll;
+					max-height: 32px;
 					white-space: nowrap;
-					height: 32px;
+					width: auto;
+					display: inline-block;
+
+					.nav-date a{
+						display: inline-block;
+						white-space: nowrap;
+						height: 32px;
+					}
+				}
+
+				.nav {
+				  list-style: none;
+					display: inline-block;
+					background-color: #f5f6f6;
+					padding: 0px 0px;
+					margin: 1px 3px;
+					border-radius: 0;
+					font-size: 13px;
+					float: left;
 				}
 			}
+		}
 
-			.nav {
+		#nav-bottom{
+			display: block;
+			width: 100%;
+			.nav-starred {
 			  list-style: none;
 				display: inline-block;
 				background-color: #f5f6f6;
-				padding: 0px 0px;
+				padding: 0;
 				margin: 1px 3px;
-				-moz-border-radius: 1px;
-				border-radius: 1px;
-				font-size: 13px;
-				border-radius:5px;
+				border-radius: 0;
 				float: left;
 			}
-		}
-		.nav-starred {
-		  list-style: none;
-			display: inline-block;
-			background-color: #f5f6f6;
-			padding: 1px 0px;
-			margin: 0px 3px;
-			-moz-border-radius: 2px;
-			border-radius: 2px;
-			font-size: 20px;
-			border-radius:5px;
-			float: left;
-		}
-		nav-starred:hover{
-			background-color: #e1e1e1;
-		}
+			nav-starred:hover{
+				background-color: #e1e1e1;
+			}
 
-		#venuefilter{
-			margin: 1px 3px;
-		}
-		
+			#venue-drop{
+				float: left;
+			}
 
-		.loginnout{
-			display: inline-block;
-			float: right;
-			.innout-btn{
+
+			#venuefilter{
 				margin: 1px 3px;
-				float: right;
 			}
+			
 
-			.login-form{
-				padding: 8px 20px;
-				float: right;
+			.loginnout{
+				display: inline-block;
+				.innout-btn{
+					margin: 1px 3px;
+					float: right;
+				}
 
-				.form-label{
-					font-weight: normal;
-				}
-				.form-input{
-					border: 1px solid $dark-gray;
- 				  border-radius: 4px;
- 				  background-color: $medium-gray;
- 				  margin-bottom: 10px;
- 				  max-width: 210px;
- 				  padding: 0 10px;
-				}
-				#form-btn-l, #form-btn-r{
-					padding: 3px 10px;
-					display: inline;
-				}
-				#form-btn-l{
-					float:left;
-				}
-				#form-btn-r{
-					float:right;
+				.login-form{
+					padding: 8px 20px;
+					float: right;
+
+					.form-label{
+						font-weight: normal;
+					}
+					.form-input{
+						border: 1px solid $dark-gray;
+	 				  border-radius: 0;
+	 				  background-color: $medium-gray;
+	 				  margin-bottom: 10px;
+	 				  max-width: 210px;
+	 				  padding: 0 10px;
+					}
+					#form-btn-l, #form-btn-r{
+						padding: 3px 10px;
+						display: inline;
+					}
+					#form-btn-l{
+						float:left;
+					}
+					#form-btn-r{
+						float:right;
+					}
 				}
 			}
 		}
+	}
+	.scroll{
+		margin-top: -70px;
+		transition: margin-top .5s ease-in-out;
+    -moz-transition: margin-top .5s ease-in-out;
+		-webkit-transition: margin-top .5s ease-in-out;
 	}
 	
 	h2.date-header {
@@ -233,15 +276,22 @@ body{
 		font-family: $font-datehead;
 	}
 
+	.panel-group .panel{
+		margin-bottom: 20px;
+	}
+
 	.panel{
 		margin: 15px 0px;
 		background-color: $light-gray;
+		border-radius: 0;
 
 		.event-contain{
 			background-color: $light-gray;
 			width: 100%;
 			padding: 5px;
 			display: block;
+			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 
 			.event-contain-top{
 				display: block;
@@ -263,36 +313,17 @@ body{
 			.event-contain-middle{
 				display: block;
 				width: 100%;
-				.event-contain-left{
-					vertical-align: top;
-					display: inline-block;
-					width:32%;
-					border: 0px solid transparent;
-					text-align: left;
-					padding: 0;
+				h2{
+					font-weight: 500;
+					margin-bottom: 0;
 				}
-				.event-contain-center{
-					vertical-align: top;
-					
-					display: inline-block;
-					text-align:left;
-					width:33%;
-					padding: 0;
+				p.event_time{
+					margin: 0;
+					color: $dark-gray;
 				}
-				.event-contain-right{
-					vertical-align: bottom;
-					
-					display: inline-block;
-					text-align:right;
-					width:33%;
-					padding: 0;
-				}
-			}
-			.event-contain-bottom{
-				display: block;
-				width: 100%;
-				.event-description{
-					display: inline-block;
+				#venuename{
+					font-style: italic;
+					color: $dark-gray;
 				}
 			}
 
@@ -302,24 +333,15 @@ body{
 				line-height: 18px;
 			}
 
-			
-
 				.venue_name{
 					font-weight: 500;
 					height:10px;
 				}
 
-				.event-performers{
-					font-weight: 200;
-				}
-
-			
-			
-
 				.star_filled {
 					background:url('../star_filled.png') no-repeat ;
 					background-size: 25px 25px;
-					margin: 0;
+					margin: 2px 3px;
 					padding: 0;
 					border: none;
 					width:25px;
@@ -328,6 +350,7 @@ body{
 				}
 				.star_unfilled {
 					width:25px;
+					margin: 2px 3px;
 				}
 
 			
@@ -337,8 +360,14 @@ body{
 			background-color: $medium-gray;
 			display: block;
 			width: 100%;
-			margin-top: 20px;
-			padding: 5px;
+			padding: 0px 5px 5px 5px;
+
+			h3{
+				font-weight: 500;
+			}
+			hr {
+				margin-bottom: 7px;
+			}
 
 			.act-top{
 				display: block;

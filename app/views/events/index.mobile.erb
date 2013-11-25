@@ -1,61 +1,59 @@
 <div id="nav-bar"></div>
+<div class="img-contain"><a href="#"><img src="assets/pcf_logo_new.png" id="pcf-logo"></a></div>
 <div id="navbar" class="container">
-	<div class='nav-day'>
-		<div id="navm" class="nav nav-pills">
-			<% @event_date.sort.each do |date, events| %>
-				<li class="nav-date">
-				 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%a') %></a>
-				</li>
-			<% end %>
+	<div id="nav-top">
+		<div class='nav-day'>
+			<div id="navm" class="nav nav-pills">
+				<% @event_date.sort.each do |date, events| %>
+					<li class="nav-date">
+					 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%a') %></a>
+					</li>
+				<% end %>
+			</div>
 		</div>
 	</div>
-	
-	<div class="btn-group">
-    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues <span class="caret"></span></a>
-    <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
-      <li><a href="#">All Venues</a></li>
-      <li class="divider"></li>
-      <% Venue.all.each do |venue| %>
-      	<li><a href="#"><%= venue.name %></a></li>
-      <% end %>
-    </ul>			
-	</div>
-	
-	<% if current_user %>
-		<div class="nav-starred">
-		  <a id="starredfilter" class="btn" href="#">Starred Events</a>
+	<div id="nav-bottom">
+		<div class="btn-group" id="venue-drop">
+	    <a id="venuefilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">All Venues <span class="caret"></span></a>
+	    <ul id="venuem" class="dropdown-menu" role="menu" aria-labelledby="venuefilter">
+	      <li><a href="#">All Venues</a></li>
+	      <li class="divider"></li>
+	      <% Venue.all.each do |venue| %>
+	      	<li><a href="#"><%= venue.name %></a></li>
+	      <% end %>
+	    </ul>			
 		</div>
-  <% end %>
-
-	
-  <div class="loginnout">
-  
-	  <% if user_signed_in? %>
-	     
-	    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default innout-btn" %> </p>
-	  <% else %>
-	  
-    <div class="btn-group">
-      <button type="button" class="btn btn-default dropdown-toggle innout-btn" data-toggle="dropdown">
-        Sign in <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu pull-right login-form" role="menu">
-      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-        <li> <%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %>  </li>
-        <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
-        <% if devise_mapping.rememberable? -%>
-          <li><%= f.check_box :remember_me %> <%= f.label :remember_me, :class => "form-label" %></li>
-        <% end %>
-        <li><%= f.submit "Sign in", :class => "btn btn-default", :id => "form-btn-l" %></li>
-        <li><%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook"), :class => "btn btn-default", :id => "form-btn-r"%></li>
-      <% end %>
-
-      </ul>
-    </div>
+		
+		<% if current_user %>
+			<div class="nav-starred">
+			  <a id="starredfilter" class="btn btn-default" href="#">Starred Events</a>
+			</div>
 	  <% end %>
-  </div>
-</div>
 
+	  <div class="loginnout">
+		  <% if user_signed_in? %>
+		    <%= link_to "Sign Out", destroy_user_session_path, :class=>"btn btn-default innout-btn" %>
+		  <% else %>
+		    <div class="btn-group">
+		      <button type="button" class="btn btn-default dropdown-toggle innout-btn" data-toggle="dropdown">
+		        Sign in <span class="caret"></span>
+		      </button>
+		      <ul class="dropdown-menu pull-right login-form" role="menu">
+			      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			        <li><%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %></li>
+			        <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
+			        <% if devise_mapping.rememberable? -%>
+			          <li><%= f.check_box :remember_me %> <%= f.label :remember_me, :class => "form-label" %></li>
+			        <% end %>
+			        <li><%= f.submit "Sign in", :class => "btn btn-default", :id => "form-btn-l" %></li>
+			        <li><%= link_to "Sign in with Facebook", omniauth_authorize_path(resource_name, "facebook"), :class => "btn btn-default", :id => "form-btn-r"%></li>
+			      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+	  </div>
+	</div>
+</div>
 
 <div class="container">
 	
@@ -66,10 +64,13 @@
 			<div class="panel-group accordion-group" id="<%=date.strftime('%A')%>">
 				<% for event in events %>
 		 			<div class="panel">
-		 				<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
+		 				
 				    	<div class="event-contain">
 				    		<div class="event-contain-top">
-					    		<h4><%= event.name.upcase %></h4>
+				    			<% for act in event.acts %> 
+				    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
+				    			<% end %>
+				    			
 					    		<div class="social-icon-contain">
 					    			<div id='star' style="float:left">
 											<div id='starred'>
@@ -103,46 +104,30 @@
 										<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					    		</div>
 								</div>
-
+								<hr>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="<%=date.strftime('%A')%>" href="#eventid<%=event.id%>">
 								<div class="event-contain-middle">
-
-									<div class="event-contain-left">
-										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
-
-									</div>
-
-
-									<div class="event-contain-center">
-										<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
-									</div>
-
-
-									<div class="event-contain-right">
-										<% for act in event.acts %> 
-						    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
-						    			<% end %>
-									</div>
+									<h2><%= event.name %></h2>
+									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name %></span></p>
+									<p class="description"><%= event.description.html_safe %></p>
 								</div>
-								<div class="event-contain-bottom">
-									<div class="event-description">
-										<p class="description"><%= event.description.html_safe %></p>
-									</div>
-								</div>
+								</a>
 							</div>
-						</a>
+						
 
 
-						<div class="panel-collapse collapse act-contain" id="eventid<%=event.id%>" >
+						<div class="panel-collapse act-contain collapse" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-top">
-								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><%= act.name.upcase %>
+								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><h3><%= act.name %></h3>
 								</div>
 								<div class="act-bottom">
-									<%= act.description.html_safe %> ||
+									<%= act.description.html_safe %>
 									<% for pid in act.performer_acts %>
 										<%= Performer.find(pid).name %>
 									<% end %>
 								</div>
+								<% if act != event.acts.last %><hr><% end %>
 							<% end %>
 						</div>
 					</div>
