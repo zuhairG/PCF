@@ -17,7 +17,7 @@ $(window).scroll(function () {
         } else {
         		$('#navbar').removeClass('scroll');
             $('#nav-bar').removeClass('scroll');
-            $('#pcf-logo').removeClass('scroll');   
+            $('#pcf-logo').removeClass('scroll');
         }
     } 
     previousScroll = currentScroll;
