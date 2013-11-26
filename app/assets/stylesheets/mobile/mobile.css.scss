@@ -3,6 +3,8 @@
 $font-datehead: 'Lily Script One', Helvetica, Arial, sans-serif;
 $font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$icon-size: 25px;
+
 $gold: #CC9933;
 $dark-gray: #CACACA;
 $medium-gray: #E8E8E8;
@@ -100,10 +102,33 @@ hr {
   left: auto;
 }
 
-@mixin icon-sprite($a){
-	width: 30px;
-	height: 30px;
-	background: $a;
+.icon-standup{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') 0 0;}
+.icon-openmic{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -25px 0;}
+.icon-improv{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -50px 0;}
+.icon-networking{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -75px 0;}
+.icon-party{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') 0 -25px;}
+.icon-poetry{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -25px -25px;}
+.icon-happyhour{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -50px -25px;}
+.icon-workshop{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -75px -25px;}
+.icon-podcast{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -100px -25px;}
+.icon-family{width:$icon-size;height:$icon-size;background:image-url('pcf_family.png') 0 0;} //added family icon for mobile
+
+.arrow-left{
+	height: 10px;
+	float: left;
+	-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-top: 12px;
+}
+.arrow-right{
+	height: 10px;
+	float: right;
+	margin-top: 12px;
+}
+.head-pad{
+	padding-top: 80px;
 }
 
 .icon-standup{width:30px;height:30px;background:image-url('pcf_logos.png') 0 0;}
@@ -125,8 +150,8 @@ body{
 
 	#nav-bar{
 		position: fixed;
-		background-color: $black;
-		opacity: 0.6;
+		background-color: $white;
+		opacity: 1;
 		min-height: 70px;
 		min-width: 100%;
 		z-index: 0;
@@ -137,28 +162,23 @@ body{
 		-webkit-transition: margin-top .5s ease-in-out;
 	}
 
-	.img-contain{
-			position: fixed;
-			display: block;
-			float: left;
-			width: 60px;
-			
-			#pcf-logo{
-				max-height: 60px;
-				transition: margin-top .5s ease-in-out;
-		    -moz-transition: margin-top .5s ease-in-out;
-				-webkit-transition: margin-top .5s ease-in-out;
-			}
-		}
-
+	#pcf-logo{
+		max-height: 70px;
+		float: left;
+		display: inline-block;
+		position: fixed;
+		transition: margin-top .5s ease-in-out;
+    -moz-transition: margin-top .5s ease-in-out;
+		-webkit-transition: margin-top .5s ease-in-out;
+	}
 
 	#navbar{
 		position: fixed;
-		display: block;
-		max-width: (100%-60px);
+		display: inline-block;
+		width: 80%;
+		left: 20%;
 		max-height: 50px;
 		float: left;
-		left: 60px;
 		transition: margin-top .5s ease-in-out;
     -moz-transition: margin-top .5s ease-in-out;
 		-webkit-transition: margin-top .5s ease-in-out;
@@ -166,43 +186,9 @@ body{
 		#nav-top{
 			display: block;
 			width: 100%;
-
-			.nav-day {
-				list-style: none;
-				display: block;
-				float: left;
-				white-space: nowrap;
-
-				#navm{
-					overflow-x: scroll;
-					max-height: 32px;
-					white-space: nowrap;
-					width: auto;
-					display: inline-block;
-
-					.nav-date a{
-						display: inline-block;
-						white-space: nowrap;
-						height: 32px;
-					}
-				}
-
-				.nav {
-				  list-style: none;
-					display: inline-block;
-					background-color: #f5f6f6;
-					padding: 0px 0px;
-					margin: 1px 3px;
-					border-radius: 0;
-					font-size: 13px;
-					float: left;
-				}
-			}
-		}
-
-		#nav-bottom{
-			display: block;
-			width: 100%;
+			height: 35px;
+			box-shadow: 0 1px 3px $light-gray inset;
+				
 			.nav-starred {
 			  list-style: none;
 				display: inline-block;
@@ -218,19 +204,38 @@ body{
 
 			#venue-drop{
 				float: left;
+				border: 0px;
+				color: $dark-gray;
+				max-width: 50%;
 			}
-
 
 			#venuefilter{
 				margin: 1px 3px;
+				border: 0px;
+				color: $dark-gray;
+				overflow: hidden;
 			}
-			
+			#venuefilter:hover,
+			#venuefilter:focus{
+				background-color: $white;
+				border: 0px;
+				color: $gold;
+			}
 
 			.loginnout{
 				display: inline-block;
+				float: right;
 				.innout-btn{
 					margin: 1px 3px;
 					float: right;
+					border: 0px;
+					color: $dark-gray;
+				}
+				.innout-btn:hover,
+				.innout-btn:focus{
+					background-color: $white;
+					border: 0px;
+					color: $gold;
 				}
 
 				.login-form{
@@ -261,6 +266,51 @@ body{
 				}
 			}
 		}
+
+		#nav-bottom{
+			display: block;
+			width: 100%;
+			height: 35px;
+			box-shadow: 0 1px 3px $light-gray inset;
+			.nav-day {
+				list-style: none;
+				display: block;
+				float: left;
+				white-space: nowrap;
+
+				#navm{
+					overflow-x: scroll;
+					max-height: 32px;
+					white-space: nowrap;
+					width: auto;
+					display: inline-block;
+
+					.nav-date a{
+						display: inline-block;
+						white-space: nowrap;
+						height: 32px;
+						color: $dark-gray;
+					}
+					.nav-date a:hover, 
+					.nav-date a:focus{
+						background-color: $white;
+						border: 0px;
+						color: $gold;
+					}
+				}
+
+				.nav {
+				  list-style: none;
+					display: inline-block;
+					background-color: transparent;
+					padding: 0px 0px;
+					margin: 1px 3px;
+					border-radius: 0;
+					font-size: 13px;
+					float: left;
+				}
+			}
+		}
 	}
 	.scroll{
 		margin-top: -70px;
@@ -271,9 +321,9 @@ body{
 	
 	h2.date-header {
 		letter-spacing: 1.5px;
-		padding: 80px 0px 10px 0px;
+		padding: 20px 0px 10px 0px;
 		color: $gold;
-		font-size: 30px;
+		font-size: 20px;
 		font-family: $font-datehead;
 	}
 
@@ -283,15 +333,18 @@ body{
 	.panel-group .panel+.panel{
 		margin: 0;
 	}
+	#all-events{
+		padding-top: 60px;
+	}
 
 	.panel{
 		margin: 0;
-		background-color: $light-gray;
-		border: 1px solid $medium-gray;
+		background-color: $white;
+		border: 1px solid $light-gray;
 		border-radius: 0;
 
 		.event-contain{
-			background-color: $light-gray;
+			background-color: $white;
 			width: 100%;
 			padding: 5px;
 			display: block;
@@ -310,7 +363,7 @@ body{
 					float: right;
 					.social-icon{
 						cursor: pointer;
-						width: 30px;
+						width: $icon-size;
 					}
 				}
 			}
@@ -321,6 +374,7 @@ body{
 				h2{
 					font-weight: 500;
 					margin-bottom: 0;
+					margin-right: 5px;
 				}
 				p.event_time{
 					margin: 0;
@@ -362,11 +416,11 @@ body{
 		}
 
 		.act-contain{
-			background-color: $medium-gray;
+			background-color: $light-gray;
 			//display: block;
 			width: 100%;
 			padding: 0px 5px 5px 5px;
-			display: none;
+			//display: none;
 
 			h3{
 				font-weight: 500;
