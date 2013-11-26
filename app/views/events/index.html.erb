@@ -17,8 +17,12 @@
 					    	<div class="event-contain-left">
 					    		<h5><%= event.name.upcase %></h5>
 					    		<!-- displaying icons based on the type of acts --> 
+									<% checker = Hash.new%>
 					    		<% for act in event.acts %> 
-					    			<img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+									  <% if (!checker.has_key?(act.act_type)) %>
+										<% checker[act.act_type]=1 %>
+						    			<img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+										<% end%>
 					    		<% end %> 
 					    	</div>
 					    	
