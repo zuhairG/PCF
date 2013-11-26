@@ -18,7 +18,9 @@
 					    		<h5><%= event.name.upcase %></h5>
 					    		<!-- displaying icons based on the type of acts --> 
 					    		<% for act in event.acts %> 
-					    			<img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+					    		
+					    		 <img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+  				    		
 					    		<% end %> 
 					    	</div>
 					    	
@@ -83,6 +85,7 @@
 							  <div class="act-left">
 									<%= act.name.upcase %>
 									<a class="fancybox" rel="group" href="/assets/Louis_ck.jpeg"><img class="act_image" src="/assets/Louis_ck.jpeg"></a>
+					
 								</br>	<img class="icon-<%=act.act_type%>" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
 				    			
 								</div>

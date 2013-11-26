@@ -19,8 +19,8 @@ $(function() {
 		$('#venuem a').click(function() {
 			var venue = $(this).html();
 			if (venue == "All Venues") {
-	      $('.date-header').show();
-				$('.panel').show("slow");
+	      $('.date-header').fadeIn();
+				$('.panel').fadeIn();
 				$('#venuefilter').html(venue + '<span class="caret"></span>')
 	      event.preventDefault();
 			}
@@ -31,18 +31,18 @@ $(function() {
 		      $dateheader.next().find('.panel').each(function(){
 						var $panel = $(this);
 						if ($panel.find('#venuename').html() == venue) {
-							$dateheader.show();
-							$panel.show("slow");
+							$dateheader.fadeIn();
+							$panel.fadeIn();
 							$('#venuefilter').html(venue + '<span class="caret"></span>')
 				     	event.preventDefault();      
 						}
 						else if ($panel.find('#venuename').html() != venue) {
-							$panel.hide("slow");
+							$panel.fadeOut();
 							totalpanels = totalpanels-1;
 				     	event.preventDefault();      
 						};
 						if (totalpanels <= 0){
-							$dateheader.hide();
+							$dateheader.fadeOut();
 						}
 					});
 				})
@@ -58,16 +58,16 @@ $(function() {
 	    		$dateheader.next().find('.panel').each(function(){
 	    			var $panel = $(this);
 	    			if ($panel.find("input[type='image']").attr("class") == "star_unfilled") {
-	    				$panel.hide("slow");
+	    				$panel.fadeOut();
 							totalpanels = totalpanels-1;
 	    				event.preventDefault();      
 	    			}
 	    			else if ($panel.find("input[type='submit']").attr("class") == "star_filled") {
-	    				$panel.show("slow");
+	    				$panel.fadeIn();
 	    				event.preventDefault();      
 	    			};
 						if (totalpanels <= 0){
-							$dateheader.hide();
+							$dateheader.fadeOut();
 						};
 	    		})
 	    		$('#starredfilter').html("All Events");
@@ -75,8 +75,8 @@ $(function() {
 				})
     	}
     	else {
-    		$('.panel').show("slow");   
-				$('.date-header').show("slow");
+    		$('.panel').fadeIn();   
+				$('.date-header').fadeIn();
     		$('#starredfilter').html("Starred Events");
     		$('#venuefilter').html("All Venues <span class='caret'></span>"); 
     	};
