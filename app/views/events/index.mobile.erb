@@ -38,7 +38,8 @@
 		      <button type="button" class="btn btn-default dropdown-toggle innout-btn" data-toggle="dropdown">
 		        Sign in <span class="caret"></span>
 		      </button>
-		      <ul class="dropdown-menu pull-right login-form" role="menu">
+		      <ul id= "login" class="dropdown-menu pull-right login-form" role="menu"> <!-- added the ID to stop disappearing on click-->
+          
 			      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 			        <li><%= f.label :email, :class => "form-label" %><%= f.email_field :email, :autofocus => true, :class => "form-input" %></li>
 			        <li><%= f.label :password, :class => "form-label" %><%= f.password_field :password, :class => "form-input"%></li>
