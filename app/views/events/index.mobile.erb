@@ -115,6 +115,33 @@
 									<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %>, <span id="venuename"><%= Venue.find(event.venue_id).name %></span></p>
 									<p class="description"><%#= event.description.html_safe %></p>
 
+									<div class="event-contain-left">
+										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
+										<% for act in event.acts %> 
+						    			<a class="fancybox-mobile" href="/assets/pcf_legend_mobile.png"><img class="icon-<%=act.act_type%>" src="/assets/blank.png"></a>
+						    		<% end %>
+									</div>
+
+
+									<div class="event-contain-center">
+										<p class="event_time"><%= event.start_time.strftime('%l:%M %p')%> - <%= event.end_time.strftime('%l:%M %p') %></p>
+									</div>
+
+
+									<div class="event-contain-right">
+										<p class="event-performers">
+											<% for act in event.acts %>
+												<% for pid in act.performer_acts %>
+													<%= Performer.find(pid).name %><br>
+												<% end %>
+											<% end %>
+										</p>			
+									</div>
+								</div>
+								<div class="event-contain-bottom">
+									<div class="event-description">
+										<p class="description"><%= event.description.html_safe %></p>
+									</div>
 								</div>
 								</a>
 							</div>
