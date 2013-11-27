@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20131106163728) do
   create_table "acts", :force => true do |t|
     t.string   "name"
     t.integer  "event_id"
-    t.string   "description"
+    t.text     "description"
     t.string   "url"
     t.string   "facebook"
     t.string   "twitter"

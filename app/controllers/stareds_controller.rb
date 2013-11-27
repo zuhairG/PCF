@@ -40,7 +40,8 @@ class StaredsController < ApplicationController
 
     respond_to do |format|
       if @stared.save
-        format.html { redirect_to events_path, notice: 'Stared successfully' }
+        format.html { redirect_to events_path, notice: 'Starred successfully' }
+        format.mobile {redirect_to events_path, notice: 'Starred successfully'}
         format.json { render json: @stared, status: :created, location: @stared }
       else
         format.html { render action: "new" }
@@ -73,6 +74,8 @@ class StaredsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to events_path }
+      format.mobile {redirect_to events_path}
+      
       format.json { head :no_content }
     end
   end
