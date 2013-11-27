@@ -85,6 +85,7 @@ $(function() {
 		$('#login').click(function(e) {
 		   e.stopPropagation();
 		});
+		
   	
     $("a.fancybox").fancybox();
 });
