@@ -104,4 +104,15 @@ $(function() {
 		});
   	
     $("a.fancybox").fancybox();
+    $("a.fancybox-mobile").fancybox({
+      'type'  : 'image',
+      'closeBtn' : true,
+      'closeClick' : true,
+      'autoCenter' : false,
+      'helpers': {
+          'overlay': {
+              'locked': false
+          }
+      }
+    });
 });

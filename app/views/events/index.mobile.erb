@@ -109,7 +109,7 @@
 									<div class="event-contain-left">
 										<p id="venuename" class="venue_name"><%= Venue.find(event.venue_id).name.upcase %></p>
 										<% for act in event.acts %> 
-						    			<img class="icon-<%=act.act_type%>" src="/assets/blank.png">
+						    			<a class="fancybox-mobile" href="/assets/pcf_legend_mobile.png"><img class="icon-<%=act.act_type%>" src="/assets/blank.png"></a>
 						    		<% end %>
 									</div>
 
