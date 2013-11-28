@@ -161,6 +161,7 @@ body{
 		transition: margin-top .5s ease-in-out;
     -moz-transition: margin-top .5s ease-in-out;
 		-webkit-transition: margin-top .5s ease-in-out;
+		filter:blur(10px);
 	}
 
 	#navbar{
@@ -359,7 +360,7 @@ body{
 				}
 			}
 
-			.event-contain-middle{
+			.event-contain-bottom{
 				display: block;
 				width: 100%;
 				h2{
@@ -441,7 +442,5 @@ body{
 			}
 		}
 	}
-
-	
 	
 }
