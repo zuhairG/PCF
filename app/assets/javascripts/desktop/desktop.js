@@ -85,5 +85,7 @@ $(function() {
 	   e.stopPropagation();
 	});
 	
+	
+	
   $("a.fancybox").fancybox();
 });
