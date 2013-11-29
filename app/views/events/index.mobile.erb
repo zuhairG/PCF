@@ -15,7 +15,7 @@
 		
 		<% if current_user %>
 			<div class="nav-starred">
-			  <a id="starredfilter" class="btn btn-default" href="#">Starred Events</a>
+			  <a id="starredfilter" class="btn btn-default" href="#">Starred</a>
 			</div>
 	  <% end %>
 
@@ -47,7 +47,6 @@
 
 		<div class='nav-day'>
 		<img class="arrow-left" src="assets/arrow.png">
-		<img class="arrow-right" src="assets/arrow.png">
 			<div id="navm" class="nav nav-pills">
 				<% @event_date.sort.each do |date, events| %>
 					<li class="nav-date">
@@ -55,6 +54,7 @@
 					</li>
 				<% end %>
 			</div>
+		<img class="arrow-right" src="assets/arrow.png">
 		</div>
 		
 	</div>
@@ -71,9 +71,15 @@
 		 				
 				    	<div class="event-contain">
 				    		<div class="event-contain-top">
-				    			<% for act in event.acts %> 
-				    				<img class="icon-<%=act.act_type%> act_icon" src="/assets/blank.png">
-				    			<% end %>
+									<% checker = Hash.new%>
+					    		<% for act in event.acts %> 
+
+									  <% if (!checker.has_key?(act.act_type)) %>
+										<% checker[act.act_type]=1 %>
+						    			<img class="icon-<%=act.act_type%> eventicons" src="/assets/blank.png" alt="<%=act.act_type.capitalize%>" title="<%=act.act_type.capitalize%>">
+										<% end%>
+					    		<% end %> 
+				    			
 				    			<div class="social-icon-contain">
 					    			<div id='star' style="float:left">
 											<div id='starred'>

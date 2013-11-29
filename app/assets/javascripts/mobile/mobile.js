@@ -72,7 +72,7 @@ $(function() {
 		
     $('#starredfilter').click(function() {
     	var venue = $(this).html();
-    	if (venue == "Starred Events") {
+    	if (venue == "Starred") {
 				$('.date-header').each(function(){
 					var $dateheader = $(this);
 					var totalpanels = $dateheader.next().find('.panel').length;
@@ -98,7 +98,7 @@ $(function() {
     	else {
     		$('.panel').fadeIn();   
 				$('.date-header').fadeIn();
-    		$('#starredfilter').html("Starred Events");
+    		$('#starredfilter').html("Starred");
     		$('#venuefilter').html("All Venues <span class='caret'></span>"); 
     	};
     });
