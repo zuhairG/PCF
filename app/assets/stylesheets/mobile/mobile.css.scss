@@ -106,12 +106,12 @@ hr {
 .icon-openmic{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -25px 0;}
 .icon-improv{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -50px 0;}
 .icon-networking{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -75px 0;}
+.icon-family{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -100px 0;}
 .icon-party{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') 0 -25px;}
 .icon-poetry{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -25px -25px;}
 .icon-happyhour{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -50px -25px;}
 .icon-workshop{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -75px -25px;}
 .icon-podcast{width:$icon-size;height:$icon-size;background:image-url('pcf_logos-mobile.png') -100px -25px;}
-.icon-family{width:$icon-size;height:$icon-size;background:image-url('pcf_family.png') 0 0;} //added family icon for mobile
 
 .arrow-left{
 	height: 10px;
@@ -130,9 +130,6 @@ hr {
 .head-pad{
 	padding-top: 80px;
 }
-
-.icon-family{width:30px;height:30px;background:image-url('pcf_family.png') 0 0;} //added family icon for mobile
-
 
 
 //-------------------------- custom ---------------------------------
@@ -444,17 +441,18 @@ body{
 
 					.star_filled {
 						background:url('../star_filled.png') no-repeat ;
-						background-size: 25px 25px;
-						margin: 0px 6px;
+						background-size: 20px 20px;
+						margin: 2px 6px;
 						padding: 0;
 						border: none;
-						width:25px;
-						height:25px;
+						width:20px;
+						height:20px;
 						cursor: pointer;
 					}
 					.star_unfilled {
-						width:25px;
-						margin: 2px 3px;
+						width:20px;
+						margin: 2px 6px;
+						padding: 0;
 					}
 
 				
@@ -462,10 +460,8 @@ body{
 
 			.act-contain{
 				background-color: $light-gray;
-				//display: block;
 				width: 100%;
 				padding: 0px 5px 5px 5px;
-				//display: none;
 
 				h3{
 					font-weight: 500;
@@ -482,6 +478,13 @@ body{
 					text-align: left;
 					color: $black;
 					padding-top: 10px;
+					img.act-icon{
+						display: inline;
+						margin: 2px 15px 10px 0;
+					}
+					h3{
+						display: inline;
+					}
 				}
 
 				.act-bottom{

@@ -130,13 +130,10 @@
 						<div class="panel-collapse act-contain collapse" id="eventid<%=event.id%>" >
 						  <% event.acts.each do |act| %> 
 							  <div class="act-top">
-								<img class="icon-<%= act.act_type %>" src="/assets/blank.png"><h3><%= act.name %></h3>
+									<img class="icon-<%= act.act_type %> act-icon" src="/assets/blank.png"><h3><%= act.name %></h3>
 								</div>
 								<div class="act-bottom">
-									<%= act.description.html_safe %>
-									<% for pid in act.performer_acts %>
-										<%= Performer.find(pid).name %>
-									<% end %>
+									<p><%= act.description.html_safe %></p>
 								</div>
 								<% if act != event.acts.last %><hr><% end %>
 							<% end %>
