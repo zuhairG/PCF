@@ -141,7 +141,7 @@ body{
 
 	#nav-bar{
 		position: fixed;
-		background-color: $white;
+		background-color: #ffcc66;
 		opacity: 1;
 		min-height: 70px;
 		min-width: 100%;
@@ -151,6 +151,7 @@ body{
 		transition: margin-top .5s ease-in-out;
     -moz-transition: margin-top .5s ease-in-out;
 		-webkit-transition: margin-top .5s ease-in-out;
+		box-shadow: 0 1px 2px $dark-gray;
 	}
 
 	#pcf-logo{
@@ -161,7 +162,11 @@ body{
 		transition: margin-top .5s ease-in-out;
     -moz-transition: margin-top .5s ease-in-out;
 		-webkit-transition: margin-top .5s ease-in-out;
-		filter:blur(10px);
+		-webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		-moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		-ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		-o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
 	}
 
 	#navbar{
@@ -179,7 +184,6 @@ body{
 			display: block;
 			width: 100%;
 			height: 35px;
-			box-shadow: 0 1px 3px $light-gray inset;
 				
 			.nav-starred {
 			  list-style: none;
@@ -204,12 +208,13 @@ body{
 			#venuefilter{
 				margin: 1px 3px;
 				border: 0px;
-				color: $dark-gray;
+				color: $white;
 				overflow: hidden;
+				background-color: transparent;
 			}
 			#venuefilter:hover,
 			#venuefilter:focus{
-				background-color: $white;
+				background-color: transparent;
 				border: 0px;
 				color: $gold;
 			}
@@ -221,11 +226,12 @@ body{
 					margin: 1px 3px;
 					float: right;
 					border: 0px;
-					color: $dark-gray;
+					color: $white;
+					background-color: transparent;
 				}
 				.innout-btn:hover,
 				.innout-btn:focus{
-					background-color: $white;
+					background-color: transparent;
 					border: 0px;
 					color: $gold;
 				}
@@ -263,7 +269,6 @@ body{
 			display: block;
 			width: 100%;
 			height: 35px;
-			box-shadow: 0 1px 3px $light-gray inset;
 			.nav-day {
 				list-style: none;
 				display: block;
@@ -281,7 +286,7 @@ body{
 						display: inline-block;
 						white-space: nowrap;
 						height: 32px;
-						color: $dark-gray;
+						color: $white;
 					}
 					.nav-date a:hover, 
 					.nav-date a:focus{
