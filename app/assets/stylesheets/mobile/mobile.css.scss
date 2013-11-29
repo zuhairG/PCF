@@ -162,11 +162,11 @@ body{
 		transition: margin-top .5s ease-in-out;
     -moz-transition: margin-top .5s ease-in-out;
 		-webkit-transition: margin-top .5s ease-in-out;
-		-webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
-		-moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
-		-ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
-		-o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
-		filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+		-webkit-filter: drop-shadow(0 1px 2px $gold);
+		-moz-filter: drop-shadow(0 1px 2px $gold);
+		-ms-filter: drop-shadow(0 1px 2px $gold);
+		-o-filter: drop-shadow(0 1px 2px $gold);
+		filter: drop-shadow(0 1px 2px $gold);
 	}
 
 	#navbar{
@@ -228,6 +228,10 @@ body{
 					margin-top:1px;
 					margin-bottom:1px;
 					padding: 6px 0px 0px 0px;
+					text-shadow: 1px 1px 1px $gold;
+				}
+				#starredfilter:hover{
+					color: $gold;
 				}
 			}
 
@@ -314,7 +318,7 @@ body{
 					}
 					.nav-date a:hover, 
 					.nav-date a:focus{
-						background-color: $white;
+						background-color: transparent;
 						border: 0px;
 						color: $gold;
 					}
