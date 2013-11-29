@@ -199,6 +199,10 @@ body{
 				overflow: hidden;
 				background-color: transparent;
 				padding-bottom: 0px;
+				text-shadow: 1px 1px 1px $gold;
+				.caret{
+					border-top-color: #fff;
+				}
 			}
 			#venuefilter:hover,
 			#venuefilter:focus{
@@ -238,6 +242,10 @@ body{
 					background-color: transparent;
 					padding-bottom: 0px;
 					font-size: 14px;
+					text-shadow: 1px 1px 1px $gold;
+					.caret{
+						border-top-color: #fff;
+					}
 				}
 				.innout-btn:hover,
 				.innout-btn:focus{
@@ -302,6 +310,7 @@ body{
 						white-space: nowrap;
 						height: 32px;
 						color: $white;
+						text-shadow: 1px 1px 1px $gold;
 					}
 					.nav-date a:hover, 
 					.nav-date a:focus{
@@ -309,6 +318,8 @@ body{
 						border: 0px;
 						color: $gold;
 					}
+
+
 				}
 
 				.nav {
@@ -351,121 +362,137 @@ body{
 		margin: 0px 5px 0px 5px;
 	}
 
-	.panel{
-		margin: 0;
-		background-color: $white;
-		border: 1px solid $light-gray;
-		border-radius: 0;
 
-		.event-contain{
+	.panel-group{
+		
+
+		.panel{
+			margin: 0;
 			background-color: $white;
-			width: 100%;
-			height:auto;
-			padding: 5px;
-			display: block;
-			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+			border: 1px solid $light-gray;
+			border-radius: 0;
 
-			.event-contain-top{
+			&:first-child{
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+			&:last-child{
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				box-shadow: 0.5px 1px 2px $dark-gray;
+			}
+
+			.event-contain{
+				background-color: $white;
+				width: 100%;
+				height:auto;
+				padding: 5px;
 				display: block;
-				h4{
-					max-width: 70%;
-					display: inline-block;
-				}
-				.social-icon-contain{
-					max-width: 40%;
-					display: inline-block;
-					float: right;
-					.social-icon{
-						cursor: pointer;
-						width: $icon-size;
-						margin-right: 3px;
+	  		box-shadow: 0 1px 2px $dark-gray;
+
+				.event-contain-top{
+					display: block;
+					h4{
+						max-width: 70%;
+						display: inline-block;
+					}
+					.social-icon-contain{
+						max-width: 40%;
+						display: inline-block;
+						float: right;
+						.social-icon{
+							cursor: pointer;
+							width: $icon-size;
+							margin-right: 3px;
+						}
 					}
 				}
+
+				.event-contain-bottom{
+					display: block;
+					width: 100%;
+					h2{
+						font-weight: 500;
+						margin-top: 10px;
+						margin-bottom: 0px;
+					}
+					p.event_time{
+						margin: 0;
+						margin-top: 3px;
+						color: $dark-gray;
+					}
+					#venuename{
+						font-style: italic;
+						color: $dark-gray;
+					}
+				}
+
+				
+				p{
+					font-size: 13px;
+					line-height: 18px;
+				}
+
+					.venue_name{
+						font-weight: 500;
+						height:10px;
+					}
+
+					.star_filled {
+						background:url('../star_filled.png') no-repeat ;
+						background-size: 25px 25px;
+						margin: 0px 6px;
+						padding: 0;
+						border: none;
+						width:25px;
+						height:25px;
+						cursor: pointer;
+					}
+					.star_unfilled {
+						width:25px;
+						margin: 2px 3px;
+					}
+
+				
 			}
 
-			.event-contain-bottom{
-				display: block;
+			.act-contain{
+				background-color: $light-gray;
+				//display: block;
 				width: 100%;
-				h2{
+				padding: 0px 5px 5px 5px;
+				//display: none;
+
+				h3{
 					font-weight: 500;
-					margin-top: 10px;
-					margin-bottom: 0px;
 				}
-				p.event_time{
-					margin: 0;
-					margin-top: 3px;
-					color: $dark-gray;
+				hr {
+					margin-bottom: 7px;
 				}
-				#venuename{
-					font-style: italic;
-					color: $dark-gray;
+
+				.act-top{
+					display: block;
+					vertical-align: top;
+					width: 100%;
+					word-wrap: normal;
+					text-align: left;
+					color: $black;
+					padding-top: 10px;
+				}
+
+				.act-bottom{
+					height: 100%;
+					display: block;
+					vertical-align: top;
+					width: 100%;
+					word-wrap: normal;
+					text-align: left;
+					color: $black;
 				}
 			}
-
-			
-			p{
-				font-size: 13px;
-				line-height: 18px;
-			}
-
-				.venue_name{
-					font-weight: 500;
-					height:10px;
-				}
-
-				.star_filled {
-					background:url('../star_filled.png') no-repeat ;
-					background-size: 25px 25px;
-					margin: 0px 6px;
-					padding: 0;
-					border: none;
-					width:25px;
-					height:25px;
-					cursor: pointer;
-				}
-				.star_unfilled {
-					width:25px;
-					margin: 2px 3px;
-				}
-
-			
 		}
 
-		.act-contain{
-			background-color: $light-gray;
-			//display: block;
-			width: 100%;
-			padding: 0px 5px 5px 5px;
-			//display: none;
 
-			h3{
-				font-weight: 500;
-			}
-			hr {
-				margin-bottom: 7px;
-			}
-
-			.act-top{
-				display: block;
-				vertical-align: top;
-				width: 100%;
-				word-wrap: normal;
-				text-align: left;
-				color: $black;
-				padding-top: 10px;
-			}
-
-			.act-bottom{
-				height: 100%;
-				display: block;
-				vertical-align: top;
-				width: 100%;
-				word-wrap: normal;
-				text-align: left;
-				color: $black;
-			}
-		}
 	}
 	
 }
