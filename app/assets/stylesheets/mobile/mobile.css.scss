@@ -300,11 +300,11 @@ body{
 				margin-right:auto;
 
 				#navm{
-					overflow-x: scroll;
 					max-height: 32px;
 					white-space: nowrap;
 					width: auto;
 					display: inline-block;
+					overflow: hidden;
 
 					.nav-date a{
 						display: inline-block;

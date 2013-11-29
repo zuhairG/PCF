@@ -170,16 +170,12 @@ body{
 		.nav-day {
 			max-width:400px;
 			float: left;
-			overflow-y: no-content;
-			overflow-x: scroll;
 			padding-top:10px;
 
 			#navm{
 				width:auto;
 				max-height: 32px;
 				float: left;
-				overflow-y: no-content;
-				overflow-x: scroll;
 
 				.nav-date a{
 					display: block;

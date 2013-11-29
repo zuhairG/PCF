@@ -46,15 +46,17 @@
 	<div id="nav-bottom">
 
 		<div class='nav-day'>
-		<img class="arrow-left" src="assets/arrow.png">
+		
 			<div id="navm" class="nav nav-pills">
+				<img class="arrow-left" src="assets/arrow.png">
 				<% @event_date.sort.each do |date, events| %>
 					<li class="nav-date">
 					 <a href= <%= "#" + date.strftime('%A%m%d') %> ><%= date.strftime('%a') %></a>
 					</li>
 				<% end %>
 			</div>
-		<img class="arrow-right" src="assets/arrow.png">
+				<img class="arrow-right" src="assets/arrow.png">
+
 		</div>
 		
 	</div>
