@@ -1,6 +1,4 @@
-$("#star").click(function() {
-  $("#star").html('<%= image_tag("assets/star_filled.png", :height => 20)%>')
-});
+
 
 var previousScroll = 0,
 headerOrgOffset = $('#navbar').height();
