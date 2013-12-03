@@ -1,14 +1,16 @@
 class ImportsController < ApplicationController
   
   def import
-    # if current_user
-    #   if current_user.admin
+ if current_user
+  if current_user.admin
     Rails.logger.level = 0
     data = params[:file].read
     parsed = JSON.parse(data)
     parsed.each do |key, value|
       if (key == "venues")
         Venue.delete_all
+        Event.delete_all
+        Act.delete_all
         value.each do |venue|
           @venue = Venue.new
           @venue.name = venue["name"]
@@ -25,6 +27,7 @@ class ImportsController < ApplicationController
       if (key == "events")
         if (Venue.all.length > 0)
           Event.delete_all
+          Act.delete_all
           value.each do |event|
             @event = Event.new
             @event.name = event["name"]
@@ -85,9 +88,11 @@ class ImportsController < ApplicationController
       #   end
       # end
     end
-  #   redirect_to events_path, notice: "Json imported."
-  # end
-  # else 
-    redirect_to events_path, notice: "Access Denied "
+  redirect_to imports_path, notice: "Json imported."
+  
+  else 
+   redirect_to events_path, notice: "Access Denied "
+ end
+ end
   end
 end

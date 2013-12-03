@@ -1,6 +1,24 @@
-<h2>Import Json</h2>
+<%= render 'importsnav' %>
+<div class="container" id="body-container">
+
+<div class="signinupform">
+
+<h2>Import Json </h2>
 
 <%= form_tag import_imports_path, multipart: true do %>
-  <%= file_field_tag :file %>
+  <%= file_field_tag :file %><br />
   <%= submit_tag "Import" %>
 <% end %>
+
+</div>
+
+<div class="uploadinstructions">
+<h2> Uploading instructions </h2>
+<ol> 
+<li>  Upload the VENUES file</li> 
+<li>  Upload the EVENTS file</li> 
+<li>  Upload the ACTS file</li> 
+
+</ol>
+</div>
+</div>

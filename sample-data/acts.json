@@ -1,0 +1,121 @@
+{
+    "acts": [
+        {
+            "id": 1,
+            "name": "Aaron Kleiber",
+            "description": "Aaron Kleiber has been entertaining his entire life ? from climbing atop his grandmother?s coffee table as a child to taking the stage at comedy clubs across the country.<br/><br/>In July 2013, Aaron made his stand-up national television debut on 'GothamComedyLive' with host Jim Breuer - sharing the hour with Mitch Fatel, Ashley Austin-Morris & Dean Edwards.<br/><br/>Kleiber has been a requested feature performer for Bob Saget ('Full House'), Jim Breuer ('Saturday Night Live'), Ralphie May, Bert Kreischer (Travel Channel?s 'Bert the Conquerer'), John Witherspoon, Josh Blue (winner of 'Last Comic Standing'), Pablo Francisco ('MADtv'), Tommy Davidson (In Living Color), Bret Ernst (Comedy Central) and Steve-O (MTV?s 'Jackass'). He?s also had the privilege to open for Billy Gardell ('Mike and Molly'), Tom Green (MTV), Bobcat Goldthwait - and one of his comedy idols, Sinbad.<br/><br/>Aaron recently filmed a guest-starring role for the Nickelodeon series 'Supah Ninjas', airing now. He co-starred in the film Help Me, Help You opposite Sabrina Bryan (The Cheetah Girls, Dancing with the Stars) and appeared in the acclaimed drama, Warrior, starring Tom Hardy and Nick Nolte, for Lionsgate, in addition to numerous national commercials. Kleiber was featured in the original series The Mercury Men, seen on Syfy; he?s also known for producing and performing in both the groundbreaking independent film (and subsequent Web series) Captain Blasto as well as the beloved Star Wars mockumentary A Great Disturbance, both of which claimed multiple awards at film festivals nationwide.<br/><br/>A native of Munhall, Pa., and a fixture in Pittsburgh?s growing comedy scene, Kleiber was voted 'Best Local Comedian' by the readers of Pittsburgh Magazine in 2012 and 2013. Aaron studied and performed at the legendary Second City in Chicago.",
+            "url": "http://www.aaronkleiber.com/",
+            "facebook": "http://www.facebook.com/AaronKleiberFans",
+            "twitter": "http://www.twitter.com/aaronkleiber",
+            "photo_url": "http://nbandp.com/wp-content/uploads/2013/11/Aaron-Kleiber.jpg",
+            "act_type": "standup"
+        },
+        {
+            "id": 2,
+            "name": "Player One",
+            "description": "Player One, Arcade Comedy Theater?s own in-house improv troupe, presents an evening of hilarious and unpredictable theater improv. The team is coached by Michael Rubino and comprised of experienced improvisers from both the Second City Touring Company and iO West, as well local veterans from various troupes and venues across Pittsburgh, including Friday Nite Improvs and The Pittsburgh Improv Jam.",
+            "url": "http://arcadecomedytheater.com/about/player-one/",
+            "photo_url": "https://scontent-b-atl.xx.fbcdn.net/hphotos-prn1/603584_347725315350603_1528447533_n.jpg",
+            "act_type": "improv"
+        },
+        {
+            "id": 3,
+            "name": "Well Known Strangers",
+            "description": "Well Known Strangers have been performing together since 2012 and were the longest running House Team at Steel City Improv Theater until they retired from Totally Free Mondays in September of 2013. Their short film 'HunterGathering' won the Audience Choice Award in the 2013 Pittsburgh 48-Hour Film Project. Official Selections: Chicago Improv Festival 2013, Detroit Improv Festival 2013",
+            "url": "https://vimeo.com/channels/wksradio",
+            "facebook": "https://www.facebook.com/wellknownstrangersimprov",
+            "photo_url": "http://steelcityimprov.com/wp-content/uploads/2013/05/well-known-strangers-pizza-730.jpg",
+            "act_type": "improv"
+        },
+        {
+            "id": 4,
+            "name": "Iguanatron",
+            "description": "Iguanatron",
+            "facebook": "https://www.facebook.com/iguanatron?ref=br_tf",
+            "photo_url": "http://static.squarespace.com/static/511db8c9e4b06f6f68aa0c70/t/51e9505de4b05c683ca4cef4/1374244958228/iguanatron-logo.jpg",
+            "act_type": "improv"
+        },
+        {
+            "id": 5,
+            "name": "Cackowski & Talarico",
+            "description": "Cackowski & Talarico",
+            "photo_url": "http://www.richtalarico.com/wp-content/uploads/2013/07/Cackowski-and-Talarico.jpg",
+            "act_type": "improv"
+        },
+        {
+            "id": 6,
+            "name": "Lee Camp",
+            "description": "Lee Camp",
+            "url": "http://leecamp.net/",
+            "photo_url": "http://upload.wikimedia.org/wikipedia/commons/6/6c/LeeCamp_BW_alley_lighter.jpg",
+            "act_type": "standup"
+        },
+        {
+            "id": 7,
+            "name": "A.D.D. Comedy Podcast with David Razowsky",
+            "description": "A.D.D. Comedy Podcast with David Razowsky and Ian Foley is hosted by the former Artistic Director of the Second City Training Center Dave Razowsky and Comedian Ian Foley. Dave is a Second City Mainstage Alum (performing alongside Steve Carrell and Stephan Colbert). Ian is on the run from his questionable past. Both are funny. A.D.D. Comedy. Enjoy!",
+            "url": "Dave Razowski",
+            "photo_url": "https://s3.amazonaws.com/webassets.ticketmob.com/LS/templates/images/podGalleries/ADD_360x600temp.png",
+            "act_type": "podcast"
+        },
+        {
+            "id": 8,
+            "name": "T.J. Jagodowski",
+            "description": "A.D.D. Comedy Podcast with David Razowsky and Ian Foley is hosted by the former Artistic Director of the Second City Training Center Dave Razowsky and Comedian Ian Foley. Dave is a Second City Mainstage Alum (performing alongside Steve Carrell and Stephan Colbert). Ian is on the run from his questionable past. Both are funny. A.D.D. Comedy. Enjoy!",
+            "url": "http://tjanddave.com/",
+            "facebook": "https://www.facebook.com/pages/T-J-Jagodowski/107975242557270",
+            "photo_url": "http://i.cdn.turner.com/v5cache/TBS/Images/Dynamic/i88/jfl13_TjJagdowski_715x353_050820131132.jpg",
+            "act_type": "podcast"
+        },
+        {
+            "id": 9,
+            "name": "Zach Simons",
+            "description": "Outside this show, Zach is a multi-media producer and digital marketing consultant, working with clients to help them understand how best to use online and social platforms to market their business. <br/>When it comes to the show, Zach didn?t always sit at a desk, talking into a microphone about stuff. In fact, at one point in his life he was a child.<br/>In college Zach spent many hours producing all sorts of stuff, including radio and TV shows. Since that time this trend has not changed much. The advent of the Podcast as a new medium was a welcome addition to the world of broadcasting, in Zach?s opinion. It?s like radio, but you choose what you want to hear, when you listen to it, where you listen to it, and how loud. It is a wonderful thing.<br/>Zach lives in Pittsburgh where he finds the parking authority to be a nuisance and a bother. Those are two different things, right? On the weekends he often goes to the Strip District to wander around and smell the smells. A frequent stop is Wholey?s ? ?The Free Aquarium?. Zach has always been a dog person, although he currently has a roommate who is 100% feline, and he is OK with this.",
+            "url": "http://writingonthefloor.com/",
+            "facebook": "https://www.facebook.com/ZacharyCSimons?fref=ts",
+            "photo_url": "http://writingonthefloor.com/wp-content/uploads/2013/06/IMG_5532.jpg",
+            "act_type": "podcast"
+        },
+        {
+            "id": 10,
+            "name": "Craig Cackowski",
+            "description": "Craig Cackowski is a busy fellow ? actor, improviser, popular iO West teacher, and sometime-police officer on hit NBC comedy Community.  I stole some of Officer Cackowski's time, in brief, so that he could provide some insights into the man, the myth, the...instructor. ",
+            "facebook": "https://www.facebook.com/craig.cackowski?fref=ts",
+            "photo_url": "http://tvduck-imgs.s3.amazonaws.com/castimg/1854497-0.jpg",
+            "act_type": "workshop"
+        },
+        {
+            "id": 11,
+            "name": "Rick Andrews",
+            "description": "Rick Andrews is a teacher and performer at The Magnet Theater, and has been studying, performing, and teaching improvisation since 1999. He began improvising with Improv Boston, and continued with a stint in Saint Louis, MO. He has been fortunate to learn from many improv greats, including Armando Diaz, Ed Herbstman, Joe Bill, Mark Sutton, Amy Pohler, Ian Roberts, Will Luera, Jill Bernard, and more.<br/><br/>Rick has taught workshops at improv festivals across the country, including the Boston Improv Festival, Baltimore Improv Festival, Black Box Atlanta, and many more. He has taught improvisation to people as old as 75 and as young as 6, and has done workshops for production companies and zoos alike.<br/><br/>He enjoys running, putting words on pages, thinking about the brain, and he loves improv more than anything.",
+            "url": "http://www.magnettheater.com/instructors/Rick-Andrews",
+            "facebook": "https: //www.facebook.com/Rick.A?fref=ts",
+            "photo_url": "http://www.magnettheater.com/headshots_lg/large_rickandrews.jpg",
+            "act_type": "workshop"
+        },
+        {
+            "id": 12,
+            "name": "The Josh & Gab Show",
+            "description": "Rick Andrews is a teacher and performer at The Magnet Theater, and has been studying, performing, and teaching improvisation since 1999. He began improvising with Improv Boston, and continued with a stint in Saint Louis, MO. He has been fortunate to learn from many improv greats, including Armando Diaz, Ed Herbstman, Joe Bill, Mark Sutton, Amy Pohler, Ian Roberts, Will Luera, Jill Bernard, and more.<br/><br/>Rick has taught workshops at improv festivals across the country, including the Boston Improv Festival, Baltimore Improv Festival, Black Box Atlanta, and many more. He has taught improvisation to people as old as 75 and as young as 6, and has done workshops for production companies and zoos alike.<br/><br/>He enjoys running, putting words on pages, thinking about the brain, and he loves improv more than anything.",
+            "url": "http://www.joshandgab.com/",
+            "facebook": "https://www.facebook.com/pages/The-Josh-and-Gab-Show/597113220311456",
+            "photo_url": "http://www.joshandgab.com/images/joshandgab.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Rich Talarico",
+            "description": "Rich took his first improv class from Stephen Colbert at Chicago?s Second City Theater in 1992.  Rich went on to tour with SC?s National Touring Company and also co-created five original revues for SC?s resident companies.",
+            "url": "http://www.richtalarico.com/",
+            "photo_url": "http://www.richtalarico.com/wp-content/uploads/2010/12/RT6.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Wyatt Cenac",
+            "description": "While in LA, Wyatt spent three seasons as a writer on FOX's animated show 'KingoftheHill' and also performed stand up at shows like 'ComedyDeathRay' and 'TheTomorrowShow.' To avoid his debt collectors, Wyatt spent most of his time performing at places like the Upright Citizens Brigade and Improv Olympic, where he performed in shows like 'RapCrisisCenter', 'TheArmandoShow' and did a regrettably terrible Barack Obama impression that found its way onto the Internet. In 2008, Wyatt starred in the film 'MedicineforMelancholy' which was nominated for three Independent Spirit Awards and lost all three (Thanks a lot, Synecdoche, New York). Wanting to return to the big city he gave the finger to as a toddler, Wyatt moved back to New York in 2008 to join the news team of The Daily Show as a correspondent and writer. He forgot how cold it gets in the winter.",
+            "url": "http://www.jesterjournal.com/Cenac.jpg",
+            "facebool": "https://www.facebook.com/wyattcenac",
+            "twitter": "https://twitter.com/wyattcenac",
+            "photo_url": "http://www.richtalarico.com/wp-content/uploads/2010/12/RT6.jpg"
+        }
+    ]
+}

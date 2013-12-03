@@ -10,7 +10,7 @@ PCF::Application.routes.draw do
   end
   
 match '/stared/staring/:id', :to => 'stared#staring'
-
+match '/imports/import', :to => 'imports#import'
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   devise_scope :user do

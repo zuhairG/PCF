@@ -1,0 +1,317 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Comedy Happy Hour",
+            "venue_id": 6,
+            "start_time": "2014-08-26T21:00:00-05:00",
+            "end_time": "2014-08-27T01:00:00-05:00",
+            "description": "start_time the week off with a beer",
+            "types": [
+                "community"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Standup Night: Open Mic",
+            "venue_id": 3,
+            "start_time": "2014-08-27T21:00:00-05:00",
+            "end_time": "2014-08-28T00:00:00-05:00",
+            "description": "...",
+            "types": [
+                "standup"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Pirates Game",
+            "venue_id": 7,
+            "start_time": "2014-08-28T12:00:00-05:00",
+            "end_time": "2014-08-28T17:00:00-05:00",
+            "description": "...",
+            "types": [
+                "community"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Kickoff party",
+            "venue_id": 1,
+            "start_time": "2014-08-28T18:00:00-05:00",
+            "end_time": "2014-08-28T20:00:00-05:00",
+            "description": "Networking and free booze!",
+            "types": [
+                "community",
+                "party"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Pittsburgh Kick-Off",
+            "venue_id": 1,
+            "start_time": "2014-08-28T20:00:00-05:00",
+            "end_time": "2014-08-28T22:00:00-05:00",
+            "ticketUrl": "http://pittsburghcomedyfestival.org/tickets/pghkickoff",
+            "description": "A showcase of Pittsburgh talent",
+            "types": [
+                "improv"
+            ],
+            "acts": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Improv Jam",
+            "venue_id": 1,
+            "start_time": "2014-08-28T22:00:00-05:00",
+            "end_time": "2014-08-28T23:30:00-05:00",
+            "description": "Put your name in a hat! We'll pick random teams and do 15 min long form sets.",
+            "types": [
+                "improv",
+                "community"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Backstage Bar",
+            "venue_id": 4,
+            "start_time": "2014-08-28T23:30:00-05:00",
+            "end_time": "2014-08-29T02:00:00-05:00",
+            "description": "Come out after the jam to support a sponsor and get to know some of the local comedians",
+            "types": [
+                "community"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "The Way Of Improv",
+            "venue_id": 10,
+            "start_time": "2014-08-29T12:00:00-05:00",
+            "end_time": "2014-08-29T15:00:00-05:00",
+            "description": "Take away the pressure of having to think up the entire premise of your scene before you initiate. That?s not improv, that?s invention.  Improv is about cooperation and discovery.  Abandon the ?flame thrower method? of start_timeing a scene.  Learn the ?two-sticks rubbing together method? to light the fire of character and scenic discovery.  You?ll learn to create strong funny sustainable, organic character and scenes.  Walk the plotless path.  ?We don?t serve plot, plot serves us.?  Students learn to focus on ?Who? and ?Where? so ?What? simply appears.  Meditations and group mind exercises will help you realize that everything that happens on stage is an obstacle or an opportunity, the choice is yours.",
+            "types": [
+                "workshop"
+            ],
+            "acts": [
+                13
+            ]
+        },
+        {
+            "id": 9,
+            "name": "A.D.D. Podcast with Dave Razowsky featuring TJ Jagodowski",
+            "venue_id": 5,
+            "start_time": "2014-08-29T17:30:00-05:00",
+            "end_time": "2014-08-29T18:30:00-05:00",
+            "description": "Dave Razowski recalls the old days with special guest TJ",
+            "types": [
+                "podcast"
+            ],
+            "acts": [
+                7,
+                8
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Comedy Panel, hosted by Zach Simons",
+            "venue_id": 5,
+            "start_time": "2014-08-29T18:30:00-05:00",
+            "end_time": "2014-08-29T19:30:00-05:00",
+            "description": "Zach Simons of Writing on the Floor Podcast moderates a comedy panel where standups and improvisers talk about comedy",
+            "types": [
+                "podcast",
+                "community"
+            ],
+            "acts": [
+                9
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Opening Night, featuring Iguanatron, Lee Camp and Cackowski & Talarico",
+            "venue_id": 5,
+            "start_time": "2014-08-29T20:00:00-05:00",
+            "end_time": "2014-08-29T21:00:00-05:00",
+            "description": "...",
+            "types": [
+                "improv",
+                "standup"
+            ],
+            "acts": [
+                4,
+                6,
+                5
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Hypeman + The Writer's Room + Holiday Road",
+            "venue_id": 5,
+            "start_time": "2014-08-29T21:30:00-05:00",
+            "end_time": "2014-08-29T23:00:00-05:00",
+            "description": "...",
+            "types": [
+                "improv"
+            ],
+            "acts": [
+                4,
+                6,
+                5
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Friday Performer/Volunteer Party",
+            "venue_id": 2,
+            "start_time": "2014-08-29T23:30:00-05:00",
+            "end_time": "2014-08-30T02:00:00-05:00",
+            "description": "Party!",
+            "types": [
+                "party"
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Craig Cackowski - Dr. Cacky's Improv Cleansing",
+            "venue_id": 10,
+            "start_time": "2014-08-30T10:00:00-05:00",
+            "end_time": "2014-08-30T13:00:00-05:00",
+            "description": "Is your scenework tired and sluggish? Are you falling back on the same tired choices and characters you always make? Do you need to get back to basics and be playful and strong again? If so, Dr. Cacky's improv cleansing is for you. He'll give you the improv equivalent of a high colonic, flushing the toxins of insecurity and indecision out of your system. You'll also receive some personalized feedback via email.",
+            "types": [
+                "workshop"
+            ],
+            "acts": [
+                10
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Rick Andrews - Play Game Without Thinking",
+            "venue_id": 10,
+            "start_time": "2014-08-30T14:00:00-05:00",
+            "end_time": "2014-08-30T17:00:00-05:00",
+            "description": "Finding a game to a scene and heightening that game is one way to make a successful scene.  However, pattern play can often get folks stuck in their heads.  We'll spend less time thinking, 'what'sthegameofthisscene.' and more time actually playing it.  We'll focus in on the  simple improv behaviors that will help us create fun patterns and rich,  tight scenework.",
+            "types": [
+                "workshop"
+            ],
+            "acts": [
+                11
+            ]
+        },
+        {
+            "id": 17,
+            "name": "Barbecue",
+            "venue_id": 11,
+            "start_time": "2014-08-30T12:00:00-05:00",
+            "end_time": "2014-08-30T16:00:00-05:00",
+            "description": "Come meet friends new and old, and get some delicious food from Big Burrito!",
+            "types": [
+                "community"
+            ]
+        },
+        {
+            "id": 18,
+            "name": "Family Friendly Comedy Showcase",
+            "venue_id": 1,
+            "start_time": "2014-08-30T12:00:00-05:00",
+            "end_time": "2014-08-30T14:00:00-05:00",
+            "description": "We've gathered some of the best family friendly performers from around the country for a special performance. Kids, parents, and grandparents alike will have a great time!",
+            "types": [
+                "improv",
+                "family"
+            ],
+            "acts": [
+                12
+            ]
+        },
+        {
+            "id": 19,
+            "name": "Stand-up Showcase, hosted by Derek Minto",
+            "venue_id": 3,
+            "start_time": "2014-08-30T16:00:00-05:00",
+            "end_time": "2014-08-30T18:00:00-05:00",
+            "description": "Some of the region's best standups take the mic rapid-fire",
+            "types": [
+                "standup"
+            ]
+        },
+        {
+            "id": 20,
+            "name": "Performer's Jam, hosted by David Fedor",
+            "venue_id": 5,
+            "start_time": "2014-08-30T16:00:00-05:00",
+            "end_time": "2014-08-30T17:00:00-05:00",
+            "description": "Any PCF performer is welcome to jump up on stage to warm up, chill out and meet other performers in the format of Pittsburgh's longest running improv jam. Sign up to be assigned to a random team, come up with a format, and get a 10-20 min set.",
+            "types": [
+                "improv",
+                "community"
+            ]
+        },
+        {
+            "id": 21,
+            "name": "CMU ETC Performance and Talkback",
+            "venue_id": 5,
+            "start_time": "2014-08-30T17:00:00-05:00",
+            "end_time": "2014-08-30T18:00:00-05:00",
+            "description": "Performance by those who worked on the Entertainment Technology Center project and talkback with performers and students",
+            "types": [
+                "improv",
+                "community"
+            ]
+        },
+        {
+            "id": 22,
+            "name": "Cheap Date + Big Beautiful Warlock + Squirrel Buddies",
+            "venue_id": 5,
+            "start_time": "2014-08-30T18:30:00-05:00",
+            "end_time": "2014-08-30T19:30:00-05:00",
+            "description": "...",
+            "types": [
+                "improv",
+                "standup"
+            ],
+            "acts": [
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Local Genius Society + Your Dad's Friends + Nice Astronaut",
+            "venue_id": 5,
+            "start_time": "2014-08-30T20:00:00-05:00",
+            "end_time": "2014-08-30T21:00:00-05:00",
+            "description": "...",
+            "types": [
+                "improv",
+                "standup"
+            ],
+            "acts": [
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Writer's Room + Brain Trust + Wyatt Cenac",
+            "venue_id": 5,
+            "start_time": "2014-08-30T21:30:00-05:00",
+            "end_time": "2014-08-30T23:00:00-05:00",
+            "description": "...",
+            "types": [
+                "improv",
+                "standup"
+            ],
+            "acts": [
+                4,
+                5,
+                14
+            ]
+        }
+    ]
+}
