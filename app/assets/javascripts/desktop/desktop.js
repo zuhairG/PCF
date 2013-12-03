@@ -1,8 +1,5 @@
 $(function() {
   
-  $("#star").click(function() {
-    $("#star").html('<%= image_tag("../assets/star_filled.png", :height => 20)%>')
-  });
   
   $('#navm a').bind('click',function(event){
     var $anchor = $(this);
