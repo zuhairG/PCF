@@ -8,9 +8,9 @@ class ImportsController < ApplicationController
     parsed = JSON.parse(data)
     parsed.each do |key, value|
       if (key == "venues")
-        Venue.delete_all
-        Event.delete_all
         Act.delete_all
+        Event.delete_all
+        Venue.delete_all
         value.each do |venue|
           @venue = Venue.new
           @venue.name = venue["name"]
@@ -26,8 +26,8 @@ class ImportsController < ApplicationController
       
       if (key == "events")
         if (Venue.all.length > 0)
-          Event.delete_all
           Act.delete_all
+          Event.delete_all
           value.each do |event|
             @event = Event.new
             @event.name = event["name"]
