@@ -51,6 +51,7 @@
                               <% if (star.user_id == current_user.id) %>
                                 <% if (star.event_id == event.id) %>
                                   <%= button_to "", star, :method => :delete, :class => "star_filled" %>
+                                  
                                   <% temp = 0 %>
                                 <% end %>
 
