@@ -185,10 +185,12 @@ body{
 				float: left;
 				border: 0px;
 				color: $dark-gray;
-				max-width: 50%;
+				max-width: 35%;
 			}
 
 			#venuefilter{
+				max-width: 100%;
+				overflow: hidden;
 				font-size: 14px;
 				margin: 1px 0px;
 				border: 0px;
