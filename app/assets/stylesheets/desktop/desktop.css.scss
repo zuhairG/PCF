@@ -205,6 +205,14 @@ body{
 		.btn-group{
 			padding-top:10px;
 		}
+			
+		#venue-drop{
+			max-width: 20%;
+			#venuefilter{
+				max-width: 100%;
+				overflow: hidden;
+			}
+		}
 		
 		.loginnout{
 			float: right;
@@ -273,7 +281,7 @@ body{
 				padding: 10px;
 				min-width: 20%;
 				max-width: 20%;
-				word-wrap: normal;
+				word-wrap: break-word;
 				text-align: left;
 				min-height:110px;
 				border-right: solid $gold;
